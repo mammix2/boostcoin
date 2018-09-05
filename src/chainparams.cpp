@@ -131,24 +131,24 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            (0, uint256S("0x00000e81cae8e8cbbf9679d53ff1df5e23062dc667a332fd121f86e68f5d25e3"))
-			(100, uint256S ("0x000000ff3b169878019e2ef990113cb47dfe4b92d18f49ac0233011b89d0ae3b")) // Checkpoint at block 100
-			(1000, uint256S ("0x00000000087645f692b29da415d7cc55e0d0925ed1492c4703c2c4b634b8f29b")) // Checkpoint at block 1000
-			(5002, uint256S ("0x0000000007499ff2a0bad402934236edb780872b3c3defe5f1612981b2307c8b")) // Checkpoint at block 5002
-			(10000, uint256S ("0x000000000d0d85fcccc2c8e1e36ade1427006ec7ebdac9f9d7499c11251bb1fc")) // Checkpoint at block 10000
-			(15001, uint256S ("0x000000000470415c747542f89ff3aaeb0e5387f0132035c9370fe7503796ca28")) // Checkpoint at block 15001
-			(25002, uint256S ("0x00000000003d118a65638737be61aba2f8ff9f655d60153bb3c8607003f73e10")) // Checkpoint at block 25002
-			(30001, uint256S ("0x000000000065dfe36520036c8c414baf9986a948fe9f793437f5e45c9c4ccd68")) // Checkpoint at block 30001
-			(140000, uint256S ("0x20cc8a57580d99c07f2f3c77aab95f54ead88feb6a1d292f7eb51854944e0256")) // Checkpoint at block 140000
-			(156000, uint256S ("0xc9c0e2e598da65a7a2036586403003f9994ccfaa7906fb2caaab5a50361ce049")) // Checkpoint at block 156000
-			(306500, uint256S ("0xd509595cfd52380ac4059e8baedd01e3ac89694279c5fd79d2693308cf8ffa3e")) // Checkpoint at block 306500
-			(489550, uint256S ("0x9801f200e470a13aca3c3fd54f0a17e5945eea24b378c535a008835af527beb0")) // checkpoint at block 489550
-			(600000, uint256S ("0x9dcdc9959bb6d16f6fc852f8a77828779d265d45c52ec216f6a7d235a689ee1d")) // Checkpoint at block 600000
-			(811300, uint256S ("0x000002539bf0373bd1adc04e30fcb9ae5f46f27694d3bdbbdd6b0195e709db5c")) // Checkpoint at block 811300
-			(884400, uint256S ("0x00000c0d2c9d2d326ca6413eb362f8576366f4559837006f88da773ebf556fc2")) // Checkpoint at block 884400
-			(900000, uint256S ("0x0000028d002d0e42a0aefae9eb7d526fc1e6a212f2af90fb893daf95dad0c729")) // Checkpoint at block 900000
-			(930500, uint256S ("0x000005de51c6c8cbd82b480195f6ac9665c5e7963b9531f7c6a7bf077443050f")) // Checkpoint at block 930500
-			(1319500, uint256S ("0x6ae145bba3b4eb2b15e6dc98f43f4d70eafa981150c8669db2d0cf87c1b7987e")), // checkpoint at block 1319500
+            (0, uint256S("0x00000e81cae8e8cbbf9679d53ff1df5e23062dc667a332fd121f86e68f5d25e3")),
+//			(100, uint256S ("0x000000ff3b169878019e2ef990113cb47dfe4b92d18f49ac0233011b89d0ae3b")) // Checkpoint at block 100
+//			(1000, uint256S ("0x00000000087645f692b29da415d7cc55e0d0925ed1492c4703c2c4b634b8f29b")) // Checkpoint at block 1000
+//			(5002, uint256S ("0x0000000007499ff2a0bad402934236edb780872b3c3defe5f1612981b2307c8b")) // Checkpoint at block 5002
+//			(10000, uint256S ("0x000000000d0d85fcccc2c8e1e36ade1427006ec7ebdac9f9d7499c11251bb1fc")) // Checkpoint at block 10000
+//			(15001, uint256S ("0x000000000470415c747542f89ff3aaeb0e5387f0132035c9370fe7503796ca28")) // Checkpoint at block 15001
+//			(25002, uint256S ("0x00000000003d118a65638737be61aba2f8ff9f655d60153bb3c8607003f73e10")) // Checkpoint at block 25002
+//			(30001, uint256S ("0x000000000065dfe36520036c8c414baf9986a948fe9f793437f5e45c9c4ccd68")) // Checkpoint at block 30001
+//			(140000, uint256S ("0x20cc8a57580d99c07f2f3c77aab95f54ead88feb6a1d292f7eb51854944e0256")) // Checkpoint at block 140000
+//			(156000, uint256S ("0xc9c0e2e598da65a7a2036586403003f9994ccfaa7906fb2caaab5a50361ce049")) // Checkpoint at block 156000
+//			(306500, uint256S ("0xd509595cfd52380ac4059e8baedd01e3ac89694279c5fd79d2693308cf8ffa3e")) // Checkpoint at block 306500
+//			(489550, uint256S ("0x9801f200e470a13aca3c3fd54f0a17e5945eea24b378c535a008835af527beb0")) // checkpoint at block 489550
+//			(600000, uint256S ("0x9dcdc9959bb6d16f6fc852f8a77828779d265d45c52ec216f6a7d235a689ee1d")) // Checkpoint at block 600000
+//			(811300, uint256S ("0x000002539bf0373bd1adc04e30fcb9ae5f46f27694d3bdbbdd6b0195e709db5c")) // Checkpoint at block 811300
+//			(884400, uint256S ("0x00000c0d2c9d2d326ca6413eb362f8576366f4559837006f88da773ebf556fc2")) // Checkpoint at block 884400
+//			(900000, uint256S ("0x0000028d002d0e42a0aefae9eb7d526fc1e6a212f2af90fb893daf95dad0c729")) // Checkpoint at block 900000
+//			(930500, uint256S ("0x000005de51c6c8cbd82b480195f6ac9665c5e7963b9531f7c6a7bf077443050f")) // Checkpoint at block 930500
+//			(1319500, uint256S ("0x6ae145bba3b4eb2b15e6dc98f43f4d70eafa981150c8669db2d0cf87c1b7987e")), // checkpoint at block 1319500
 
 
             1527684187, // * UNIX timestamp of last checkpoint block
