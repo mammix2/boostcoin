@@ -7519,16 +7519,29 @@ bool CheckProofOfStake(const CTransaction& tx, unsigned int nBits, arith_uint256
     return true;
 }
 
-int64_t PastDrift(int64_t nTime) {
-    if (nTime < Params().GetConsensus().timeLimitChange)
-        return nTime - 2 * 60 * 60;
-    else
+
+
+// m2: some dirty overrides here!
+int64_t nTimeDriftCondition1 = 1457136000; // Sat, 05 Mar 2016 00:00:00 GMT
+int64_t nTimeDriftCondition2 = 1461873600; // Thu, 28 Apr 2016 20:00:00 GMT
+
+int64_t PastDrift(int64_t nTime){
+    if (nTime >= nTimeDriftCondition1 && nTime < nTimeDriftCondition2){
         return nTime - 10 * 60;
+    } else if (nTime >= nTimeDriftCondition2){
+        return nTime - 2 * 60 * 60;
+    } else {
+        return nTime - 24 * 60 * 60;
+    }
 }
 
 int64_t FutureDrift(int64_t nTime) {
-    if (nTime < Params().GetConsensus().timeLimitChange)
-        return nTime + 2 * 60 * 60;
-    else
+    if (nTime >= nTimeDriftCondition1 && nTime < nTimeDriftCondition2){
         return nTime + 10 * 60;
+    } else if (nTime >= nTimeDriftCondition2){
+        return nTime + 2 * 60 * 60;
+    } else {
+        return nTime + 24 * 60 * 60;
+    }
+
 }
