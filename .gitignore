@@ -6,7 +6,7 @@ src/boostcoind
 src/boostcoin-cli
 src/boostcoin-tx
 src/test/test_bitcoin
-src/qt/test/test_bitcoin-qt
+src/qt/test/test_boostcoin-qt
 
 # autoreconf
 Makefile.in
@@ -76,10 +76,11 @@ src/qt/test/moc*.cpp
 Makefile
 boostcoin-qt
 boostcoin-Qt.app
+*.user*
 
 # Unit-tests
 Makefile.test
-bitcoin-qt_test
+boostcoin-qt_test
 src/test/buildenv.py
 
 # Resources cpp

@@ -13,12 +13,12 @@ The following are some helpful notes on how to run Bitcoin on your native platfo
 
 Unpack the files into a directory and run:
 
-- `bin/bitcoin-qt` (GUI) or
+- `bin/boostcoin-qt` (GUI) or
 - `bin/bitcoind` (headless)
 
 ### Windows
 
-Unpack the files into a directory, and then run bitcoin-qt.exe.
+Unpack the files into a directory, and then run boostcoin-qt.exe.
 
 ### OS X
 

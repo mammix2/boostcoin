@@ -29,7 +29,7 @@ Source10:	https://raw.githubusercontent.com/bitcoin/bitcoin/v%{version}/contrib/
 #man pages
 Source20:	https://raw.githubusercontent.com/bitcoin/bitcoin/v%{version}/contrib/debian/manpages/bitcoind.1
 Source21:	https://raw.githubusercontent.com/bitcoin/bitcoin/v%{version}/contrib/debian/manpages/bitcoin-cli.1
-Source22:	https://raw.githubusercontent.com/bitcoin/bitcoin/v%{version}/contrib/debian/manpages/bitcoin-qt.1
+Source22:	https://raw.githubusercontent.com/bitcoin/bitcoin/v%{version}/contrib/debian/manpages/boostcoin-qt.1
 Source23:	https://raw.githubusercontent.com/bitcoin/bitcoin/v%{version}/contrib/debian/manpages/bitcoin.conf.5
 
 #selinux
@@ -270,7 +270,7 @@ Name=Bitcoin
 Comment=Bitcoin P2P Cryptocurrency
 Comment[fr]=Bitcoin, monnaie virtuelle cryptographique pair à pair
 Comment[tr]=Bitcoin, eşten eşe kriptografik sanal para birimi
-Exec=bitcoin-qt %u
+Exec=boostcoin-qt %u
 Terminal=false
 Type=Application
 Icon=bitcoin128
@@ -285,7 +285,7 @@ touch -a -m -t 201511100546 %{buildroot}%{_datadir}/applications/bitcoin-core.de
 mkdir -p %{buildroot}%{_datadir}/kde4/services
 cat <<EOF > %{buildroot}%{_datadir}/kde4/services/bitcoin-core.protocol
 [Protocol]
-exec=bitcoin-qt '%u'
+exec=boostcoin-qt '%u'
 protocol=bitcoin
 input=none
 output=none
@@ -304,7 +304,7 @@ touch -a -m -t 201511100546 %{buildroot}%{_datadir}/kde4/services/bitcoin-core.p
 install -D -p %{SOURCE20} %{buildroot}%{_mandir}/man1/bitcoind.1
 install -p %{SOURCE21} %{buildroot}%{_mandir}/man1/bitcoin-cli.1
 %if %{_buildqt}
-install -p %{SOURCE22} %{buildroot}%{_mandir}/man1/bitcoin-qt.1
+install -p %{SOURCE22} %{buildroot}%{_mandir}/man1/boostcoin-qt.1
 %endif
 install -D -p %{SOURCE23} %{buildroot}%{_mandir}/man5/bitcoin.conf.5
 
@@ -376,7 +376,7 @@ rm -rf %{buildroot}
 %defattr(-,root,root,-)
 %license COPYING db-%{bdbv}.NC-LICENSE
 %doc COPYING bitcoin.conf.example doc/README.md doc/bips.md doc/files.md doc/multiwallet-qt.md doc/reduce-traffic.md doc/release-notes.md doc/tor.md
-%attr(0755,root,root) %{_bindir}/bitcoin-qt
+%attr(0755,root,root) %{_bindir}/boostcoin-qt
 %attr(0644,root,root) %{_datadir}/applications/bitcoin-core.desktop
 %attr(0644,root,root) %{_datadir}/kde4/services/bitcoin-core.protocol
 %attr(0644,root,root) %{_datadir}/pixmaps/*.ico
@@ -384,7 +384,7 @@ rm -rf %{buildroot}
 %attr(0644,root,root) %{_datadir}/pixmaps/*.svg
 %attr(0644,root,root) %{_datadir}/pixmaps/*.png
 %attr(0644,root,root) %{_datadir}/pixmaps/*.xpm
-%attr(0644,root,root) %{_mandir}/man1/bitcoin-qt.1*
+%attr(0644,root,root) %{_mandir}/man1/boostcoin-qt.1*
 %endif
 
 %files libs
