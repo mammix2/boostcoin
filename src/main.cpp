@@ -1725,28 +1725,40 @@ bool ReadBlockFromDisk(CBlock& block, const CBlockIndex* pindex, const Consensus
 
 CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
 {
+	
     CAmount nSubsidy;
-
-    if (nHeight == 2) {
-        nSubsidy = 71750 * COIN;
-    } else if (nHeight > 100607 && nHeight < 114603) {
-        nSubsidy = 0.3 * COIN;
+	if (nHeight == 1){
+        nSubsidy = 400000 * COIN;
+    } else if (nHeight > 640400 && nHeight <= 641250 ) {
+        nSubsidy = 1.301 * COIN;
+    } else if (nHeight > 641250 && nHeight <= 1060000) {
+        nSubsidy = 1.31 * COIN;
+    } else if (nHeight > 1070000 && nHeight <= 1140000 ) {
+        nSubsidy = 101.31 * COIN;
+    } else if (nHeight > 1140000) {
+        nSubsidy = 1.31 * COIN;
     } else {
-        nSubsidy = 0 * COIN;
+        nSubsidy = 515 * COIN;
     }
-
-    return nSubsidy;
+    return nSubsidy;	
 }
 
 // staker's coin stake reward based on coin age spent (coin-days)
 int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees)
 {
+
     int64_t nRewardCoinYear;
     nRewardCoinYear = MAX_MINT_PROOF_OF_STAKE;
-
-    int64_t nSubsidy = nCoinAge * nRewardCoinYear / 365;
+	
+    if(nHeight < 641250 ) {
+        nSubsidy = nCoinAge * nRewardCoinYear / 365 / COIN; // original PoS reward
+    } else {
+        nSubsidy = nCoinAge * nRewardCoinYear / 365; // PoS reward on V2 chain
+    }
 
     return nSubsidy + nFees;
+	
+	
 }
 
 bool IsInitialBlockDownload()
