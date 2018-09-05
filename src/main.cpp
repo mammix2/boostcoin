@@ -5051,6 +5051,8 @@ uint32_t GetFetchFlags(CNode* pfrom, CBlockIndex* pprev, const Consensus::Params
 
 string setSubVerString(int version, string subVer) {
     switch (version) {
+        case 80002:
+            return "/bitcoinplus:2.5.0/";
         case 80003:
             return "/bitcoinplus:2.6.0/";
         case 80004:
