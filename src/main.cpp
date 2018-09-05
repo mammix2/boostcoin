@@ -1727,7 +1727,7 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
 {
 	
     CAmount nSubsidy;
-	if (nHeight == 1){
+    if (nHeight == 2){
         nSubsidy = 400000 * COIN;
     } else if (nHeight > 640400 && nHeight <= 641250 ) {
         nSubsidy = 1.301 * COIN;
