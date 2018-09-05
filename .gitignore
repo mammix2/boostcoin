@@ -1,10 +1,10 @@
 *.tar.gz
 
 *.exe
-src/bitcoinplus
-src/bitcoinplusd
-src/bitcoinplus-cli
-src/bitcoinplus-tx
+src/boostcoin
+src/boostcoind
+src/boostcoin-cli
+src/boostcoin-tx
 src/test/test_bitcoin
 src/qt/test/test_bitcoin-qt
 
@@ -55,7 +55,7 @@ src/qt/test/moc*.cpp
 *.o
 *.o-*
 *.patch
-.bitcoinplus
+.boostcoin
 *.a
 *.pb.cc
 *.pb.h
@@ -74,8 +74,8 @@ src/qt/test/moc*.cpp
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-bitcoinplus-qt
-BitcoinPlus-Qt.app
+boostcoin-qt
+boostcoin-Qt.app
 
 # Unit-tests
 Makefile.test

@@ -158,8 +158,8 @@
         <translation>Besig met herindeksering van blokke op hardeskyf...</translation>
     </message>
     <message>
-        <source>Send coins to a BitcoinPlus address</source>
-        <translation>Stuur munte na 'n BitcoinPlus adres</translation>
+        <source>Send coins to a boostcoin address</source>
+        <translation>Stuur munte na 'n boostcoin adres</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -170,8 +170,8 @@
         <translation>Verander die wagwoord wat ek vir kodifikasie van my beursie gebruik</translation>
     </message>
     <message>
-        <source>BitcoinPlus</source>
-        <translation>BitcoinPlus</translation>
+        <source>boostcoin</source>
+        <translation>boostcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -194,12 +194,12 @@
         <translation>Kodifiseer die private sleutes wat aan jou beursie gekoppel is.</translation>
     </message>
     <message>
-        <source>Sign messages with your BitcoinPlus addresses to prove you own them</source>
-        <translation>Onderteken boodskappe met u BitcoinPlus adresse om u eienaarskap te bewys</translation>
+        <source>Sign messages with your boostcoin addresses to prove you own them</source>
+        <translation>Onderteken boodskappe met u boostcoin adresse om u eienaarskap te bewys</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified BitcoinPlus addresses</source>
-        <translation>Verifieër boodskappe om seker te maak dat dit met die gespesifiseerde BitcoinPlus adresse</translation>
+        <source>Verify messages to ensure they were signed with specified boostcoin addresses</source>
+        <translation>Verifieër boodskappe om seker te maak dat dit met die gespesifiseerde boostcoin adresse</translation>
     </message>
     <message>
         <source>&amp;Help</source>
@@ -210,8 +210,8 @@
         <translation>Orebalk</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoinplus: URIs)</source>
-        <translation>Versoek betalings (genereer QR-kodes en bitcoinplus: URI's)</translation>
+        <source>Request payments (generates QR codes and boostcoin: URIs)</source>
+        <translation>Versoek betalings (genereer QR-kodes en boostcoin: URI's)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -222,8 +222,8 @@
         <translation>Vertoon die lys van gebruikte ontvangers-adresse en etikette</translation>
     </message>
     <message>
-        <source>Open a bitcoinplus: URI or payment request</source>
-        <translation>Skep 'n bitcoinplus: URI of betalingsversoek</translation>
+        <source>Open a boostcoin: URI or payment request</source>
+        <translation>Skep 'n boostcoin: URI of betalingsversoek</translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -710,8 +710,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>BitcoinPlus Core</source>
-        <translation>BitcoinPlus Kern</translation>
+        <source>boostcoin Core</source>
+        <translation>boostcoin Kern</translation>
     </message>
     <message>
         <source>Information</source>

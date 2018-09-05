@@ -146,8 +146,8 @@
         <translation>Дискдаги блоклар қайта индексланмоқда...</translation>
     </message>
     <message>
-        <source>Send coins to a BitcoinPlus address</source>
-        <translation>Тангаларни BitcoinPlus манзилига жўнатиш</translation>
+        <source>Send coins to a boostcoin address</source>
+        <translation>Тангаларни boostcoin манзилига жўнатиш</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -170,8 +170,8 @@
         <translation>Хабарни &amp;тасдиқлаш...</translation>
     </message>
     <message>
-        <source>BitcoinPlus</source>
-        <translation>BitcoinPlus</translation>
+        <source>boostcoin</source>
+        <translation>boostcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -198,12 +198,12 @@
         <translation>Ҳамёнингизга тегишли махфий калитларни кодлаш</translation>
     </message>
     <message>
-        <source>Sign messages with your BitcoinPlus addresses to prove you own them</source>
-        <translation>BitcoinPlus манзилидан унинг эгаси эканлигингизни исботлаш учун хабарлар ёзинг</translation>
+        <source>Sign messages with your boostcoin addresses to prove you own them</source>
+        <translation>boostcoin манзилидан унинг эгаси эканлигингизни исботлаш учун хабарлар ёзинг</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified BitcoinPlus addresses</source>
-        <translation>Хабарларни махсус BitcoinPlus манзилларингиз билан ёзилганлигига ишонч ҳосил қилиш учун уларни тасдиқланг</translation>
+        <source>Verify messages to ensure they were signed with specified boostcoin addresses</source>
+        <translation>Хабарларни махсус boostcoin манзилларингиз билан ёзилганлигига ишонч ҳосил қилиш учун уларни тасдиқланг</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -222,8 +222,8 @@
         <translation>Ички ойналар асбоблар панели</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoinplus: URIs)</source>
-        <translation>Тўловлар (QR кодлари ва bitcoinplus ёрдамида яратишлар: URI’лар) сўраш</translation>
+        <source>Request payments (generates QR codes and boostcoin: URIs)</source>
+        <translation>Тўловлар (QR кодлари ва boostcoin ёрдамида яратишлар: URI’лар) сўраш</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -234,7 +234,7 @@
         <translation>Фойдаланилган қабул қилинган манзиллар ва ёрлиқлар рўйхатини кўрсатиш</translation>
     </message>
     <message>
-        <source>Open a bitcoinplus: URI or payment request</source>
+        <source>Open a boostcoin: URI or payment request</source>
         <translation>Bitcoin’ни очиш: URI ёки тўлов сўрови</translation>
     </message>
     <message>
@@ -242,8 +242,8 @@
         <translation>&amp;Буйруқлар сатри мосламалари</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to BitcoinPlus network</source>
-        <translation><numerusform>%n та BitcoinPlus тармоғига фаол уланиш мавжуд</numerusform></translation>
+        <source>%n active connection(s) to boostcoin network</source>
+        <translation><numerusform>%n та boostcoin тармоғига фаол уланиш мавжуд</numerusform></translation>
     </message>
     <message>
         <source>No block source available...</source>
@@ -622,8 +622,8 @@
         <translation>Шакл</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BitcoinPlus network after a connection is established, but this process has not completed yet.</source>
-        <translation>Кўрсатилган маълумот эскирган бўлиши мумкин. Ҳамёнингиз алоқа ўрнатилгандан сўнг BitcoinPlus тармоқ билан автоматик тарзда синхронланади, аммо жараён ҳалигача тугалланмади.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the boostcoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Кўрсатилган маълумот эскирган бўлиши мумкин. Ҳамёнингиз алоқа ўрнатилгандан сўнг boostcoin тармоқ билан автоматик тарзда синхронланади, аммо жараён ҳалигача тугалланмади.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -707,8 +707,8 @@
         <translation>Миқдори</translation>
     </message>
     <message>
-        <source>Enter a BitcoinPlus address (e.g. %1)</source>
-        <translation>BitcoinPlus манзилини киритинг (масалан.  %1)</translation>
+        <source>Enter a boostcoin address (e.g. %1)</source>
+        <translation>boostcoin манзилини киритинг (масалан.  %1)</translation>
     </message>
     <message>
         <source>%1 m</source>
@@ -1234,8 +1234,8 @@
         <translation>Демон сифатида орқа фонда ишга туширинг ва буйруқларга рози бўлинг</translation>
     </message>
     <message>
-        <source>BitcoinPlus Core</source>
-        <translation>BitcoinPlus Core</translation>
+        <source>boostcoin Core</source>
+        <translation>boostcoin Core</translation>
     </message>
     <message>
         <source>Connection options:</source>

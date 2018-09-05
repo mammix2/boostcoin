@@ -94,8 +94,8 @@
         <translation>Ndrysho frazkalimin e përdorur per enkriptimin e portofolit</translation>
     </message>
     <message>
-        <source>BitcoinPlus</source>
-        <translation>BitcoinPlus</translation>
+        <source>boostcoin</source>
+        <translation>boostcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -438,8 +438,8 @@
         <translation>Opsionet:</translation>
     </message>
     <message>
-        <source>BitcoinPlus Core</source>
-        <translation>Berthama BitcoinPlus</translation>
+        <source>boostcoin Core</source>
+        <translation>Berthama boostcoin</translation>
     </message>
     <message>
         <source>Information</source>

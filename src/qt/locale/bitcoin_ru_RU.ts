@@ -58,8 +58,8 @@
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <source>BitcoinPlus</source>
-        <translation>BitcoinPlus Core</translation>
+        <source>boostcoin</source>
+        <translation>boostcoin Core</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -218,8 +218,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>BitcoinPlus Core</source>
-        <translation>BitcoinPlus Core</translation>
+        <source>boostcoin Core</source>
+        <translation>boostcoin Core</translation>
     </message>
     <message>
         <source>Whitelisted peers cannot be DoS banned and their transactions are always relayed, even if they are already in the mempool, useful e.g. for a gateway</source>

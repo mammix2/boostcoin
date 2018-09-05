@@ -70,7 +70,7 @@
         <translation>Құпия сөзді өзгерту</translation>
     </message>
     <message>
-        <source>BitcoinPlus</source>
+        <source>boostcoin</source>
         <translation>Биткоин</translation>
     </message>
     <message>

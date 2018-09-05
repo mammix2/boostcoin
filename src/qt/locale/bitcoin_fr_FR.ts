@@ -166,8 +166,8 @@
         <translation>Réindexer les blocs sur le disque...</translation>
     </message>
     <message>
-        <source>Send coins to a BitcoinPlus address</source>
-        <translation>Envoyer des pièces à une adresse BitcoinPlus</translation>
+        <source>Send coins to a boostcoin address</source>
+        <translation>Envoyer des pièces à une adresse boostcoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -190,8 +190,8 @@
         <translation>&amp;Vérification du message</translation>
     </message>
     <message>
-        <source>BitcoinPlus</source>
-        <translation>BitcoinPlus</translation>
+        <source>boostcoin</source>
+        <translation>boostcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -218,8 +218,8 @@
         <translation>Crypter les clé privées qui appartiennent votre portefeuille</translation>
     </message>
     <message>
-        <source>Sign messages with your BitcoinPlus addresses to prove you own them</source>
-        <translation>Signer vos messages avec vos adresses BitcoinPlus pour prouver que vous les détenez</translation>
+        <source>Sign messages with your boostcoin addresses to prove you own them</source>
+        <translation>Signer vos messages avec vos adresses boostcoin pour prouver que vous les détenez</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -238,24 +238,24 @@
         <translation>Barre d'outils des onglets</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoinplus: URIs)</source>
-        <translation>Demander des paiements (générer QR codes et bitcoinplus: URIs)</translation>
+        <source>Request payments (generates QR codes and boostcoin: URIs)</source>
+        <translation>Demander des paiements (générer QR codes et boostcoin: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
         <translation>Montrer la liste des adresses d'envois utilisées et les étiquettes</translation>
     </message>
     <message>
-        <source>Open a bitcoinplus: URI or payment request</source>
-        <translation>Ouvrir un bitcoinplus: URI ou demande de paiement</translation>
+        <source>Open a boostcoin: URI or payment request</source>
+        <translation>Ouvrir un boostcoin: URI ou demande de paiement</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Options de ligne de commande</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to BitcoinPlus network</source>
-        <translation><numerusform>%n connexion active au réseau BitcoinPlus</numerusform><numerusform>%n connexions actives au réseau BitcoinPlus</numerusform></translation>
+        <source>%n active connection(s) to boostcoin network</source>
+        <translation><numerusform>%n connexion active au réseau boostcoin</numerusform><numerusform>%n connexions actives au réseau boostcoin</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -617,8 +617,8 @@
         <translation>Expert</translation>
     </message>
     <message>
-        <source>Automatically open the BitcoinPlus client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Ouvrir le port du client BitcoinPlus automatiquement sur le routeur. Cela ne fonctionne que si votre routeur supporte l'UPnP et si la fonctionnalité est activée.</translation>
+        <source>Automatically open the boostcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Ouvrir le port du client boostcoin automatiquement sur le routeur. Cela ne fonctionne que si votre routeur supporte l'UPnP et si la fonctionnalité est activée.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -781,8 +781,8 @@
         <translation>Montant</translation>
     </message>
     <message>
-        <source>Enter a BitcoinPlus address (e.g. %1)</source>
-        <translation>Entrer une adresse BitcoinPlus (e.g. %1)</translation>
+        <source>Enter a boostcoin address (e.g. %1)</source>
+        <translation>Entrer une adresse boostcoin (e.g. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1380,8 +1380,8 @@
         <translation>Impossible de démarrer le serveur HTTP. Voir le journal de débogage pour plus de détails.</translation>
     </message>
     <message>
-        <source>BitcoinPlus Core</source>
-        <translation>BitcoinPlus Core</translation>
+        <source>boostcoin Core</source>
+        <translation>boostcoin Core</translation>
     </message>
     <message>
         <source>&lt;category&gt; can be:</source>

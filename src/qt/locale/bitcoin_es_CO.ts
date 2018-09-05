@@ -126,8 +126,8 @@
         <translation>Abrir &amp;URL...</translation>
     </message>
     <message>
-        <source>Send coins to a BitcoinPlus address</source>
-        <translation>Enviando monedas a una dirección de BitcoinPlus</translation>
+        <source>Send coins to a boostcoin address</source>
+        <translation>Enviando monedas a una dirección de boostcoin</translation>
     </message>
     <message>
         <source>Change the passphrase used for wallet encryption</source>
@@ -146,8 +146,8 @@
         <translation>&amp;Verificar Mensaje...</translation>
     </message>
     <message>
-        <source>BitcoinPlus</source>
-        <translation>BitcoinPlus</translation>
+        <source>boostcoin</source>
+        <translation>boostcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -290,8 +290,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>BitcoinPlus Core</source>
-        <translation>BitcoinPlus Core</translation>
+        <source>boostcoin Core</source>
+        <translation>boostcoin Core</translation>
     </message>
     <message>
         <source>Insufficient funds</source>

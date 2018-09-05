@@ -142,8 +142,8 @@
         <translation>Deschide &amp;URI...</translation>
     </message>
     <message>
-        <source>Send coins to a BitcoinPlus address</source>
-        <translation>Trimite monedele către o adresă BitcoinPlus</translation>
+        <source>Send coins to a boostcoin address</source>
+        <translation>Trimite monedele către o adresă boostcoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -166,8 +166,8 @@
         <translation>&amp;Verifică mesajul...</translation>
     </message>
     <message>
-        <source>BitcoinPlus</source>
-        <translation>BitcoinPlus</translation>
+        <source>boostcoin</source>
+        <translation>boostcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -194,12 +194,12 @@
         <translation>Criptează cheile private care aparțin portofelului tău.</translation>
     </message>
     <message>
-        <source>Sign messages with your BitcoinPlus addresses to prove you own them</source>
-        <translation>Semnează mesajele cu adresa ta de BitcoinPlus pentru a face dovada că îți aparțin.</translation>
+        <source>Sign messages with your boostcoin addresses to prove you own them</source>
+        <translation>Semnează mesajele cu adresa ta de boostcoin pentru a face dovada că îți aparțin.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified BitcoinPlus addresses</source>
-        <translation>Verifică mesajele cu scopul de a asigura faptul că au fost semnate cu adresa de BitcoinPlus specificată.</translation>
+        <source>Verify messages to ensure they were signed with specified boostcoin addresses</source>
+        <translation>Verifică mesajele cu scopul de a asigura faptul că au fost semnate cu adresa de boostcoin specificată.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -214,12 +214,12 @@
         <translation>&amp;Ajutor</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoinplus: URIs)</source>
-        <translation>Cerere plată (generează coduri QR și bitcoinplus: URIs)</translation>
+        <source>Request payments (generates QR codes and boostcoin: URIs)</source>
+        <translation>Cerere plată (generează coduri QR și boostcoin: URIs)</translation>
     </message>
     <message>
-        <source>Open a bitcoinplus: URI or payment request</source>
-        <translation>Deschide un bitcoinplus: URI sau cerere de plată</translation>
+        <source>Open a boostcoin: URI or payment request</source>
+        <translation>Deschide un boostcoin: URI sau cerere de plată</translation>
     </message>
     <message>
         <source>%1 and %2</source>
@@ -746,8 +746,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>BitcoinPlus Core</source>
-        <translation>BitcoinPlus Core</translation>
+        <source>boostcoin Core</source>
+        <translation>boostcoin Core</translation>
     </message>
     <message>
         <source>Information</source>

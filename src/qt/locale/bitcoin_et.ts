@@ -62,12 +62,12 @@
         <translation>Vastuvõtvad aadressid</translation>
     </message>
     <message>
-        <source>These are your BitcoinPlus addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Need on sinu BitcoinPlus aadressid maksete saatmiseks. Ennem müntide saatmist kontrolli alati summat ja makse saaja aadressi.</translation>
+        <source>These are your boostcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Need on sinu boostcoin aadressid maksete saatmiseks. Ennem müntide saatmist kontrolli alati summat ja makse saaja aadressi.</translation>
     </message>
     <message>
-        <source>These are your BitcoinPlus addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Need on sinu BitcoinPlus aadressid sisenevate maksete vastu võtmiseks. Soovitav on iga tehingu tarbeks kasutada uut aadressi.</translation>
+        <source>These are your boostcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Need on sinu boostcoin aadressid sisenevate maksete vastu võtmiseks. Soovitav on iga tehingu tarbeks kasutada uut aadressi.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,7 +168,7 @@
         <translation>Kinnita rahakoti krüpteerimine.</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINPLUS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR boostcoin&lt;/b&gt;!</source>
         <translation>Hoiatus:Kui sa krüpteerid oma rahakoti ja kaotad salafraasi, siis sa&lt;b&gt;KAOTAD OMA BITCOINID&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -286,8 +286,8 @@
         <translation>Kettal olevate blokkide re-indekseerimine...</translation>
     </message>
     <message>
-        <source>Send coins to a BitcoinPlus address</source>
-        <translation>Saada münte BitcoinPlusi aadressile</translation>
+        <source>Send coins to a boostcoin address</source>
+        <translation>Saada münte boostcoini aadressile</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -310,8 +310,8 @@
         <translation>&amp;Kontrolli sõnumit...</translation>
     </message>
     <message>
-        <source>BitcoinPlus</source>
-        <translation>BitcoinPlus</translation>
+        <source>boostcoin</source>
+        <translation>boostcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -338,12 +338,12 @@
         <translation>Krüpteeri oma rahakoti privaatvõtmed</translation>
     </message>
     <message>
-        <source>Sign messages with your BitcoinPlus addresses to prove you own them</source>
-        <translation>Omandi tõestamiseks allkirjasta sõnumid oma BitcoinPlusi aadressiga</translation>
+        <source>Sign messages with your boostcoin addresses to prove you own them</source>
+        <translation>Omandi tõestamiseks allkirjasta sõnumid oma boostcoini aadressiga</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified BitcoinPlus addresses</source>
-        <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud BitcoinPlusi aadressiga</translation>
+        <source>Verify messages to ensure they were signed with specified boostcoin addresses</source>
+        <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud boostcoini aadressiga</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -362,20 +362,20 @@
         <translation>Vahelehe tööriistariba</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoinplus: URIs)</source>
-        <translation>Loo maksepäring (genereerib QR koodid ja bitcoinplusi: URId)</translation>
+        <source>Request payments (generates QR codes and boostcoin: URIs)</source>
+        <translation>Loo maksepäring (genereerib QR koodid ja boostcoini: URId)</translation>
     </message>
     <message>
-        <source>Open a bitcoinplus: URI or payment request</source>
-        <translation>Ava bitcoinplusi: URI või maksepäring</translation>
+        <source>Open a boostcoin: URI or payment request</source>
+        <translation>Ava boostcoini: URI või maksepäring</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>Käsurea valikud</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to BitcoinPlus network</source>
-        <translation><numerusform>%n aktiivne ühendus BitcoinPlusi võrku</numerusform><numerusform>%n aktiivset ühendust BitcoinPlusi võrku</numerusform></translation>
+        <source>%n active connection(s) to boostcoin network</source>
+        <translation><numerusform>%n aktiivne ühendus boostcoini võrku</numerusform><numerusform>%n aktiivset ühendust boostcoini võrku</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -710,8 +710,8 @@
         <translation>Muuda saatvat aadressi</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid BitcoinPlus address.</source>
-        <translation>Sisestatud aadress "%1" ei ole korrektne BitcoinPlus aadress.</translation>
+        <source>The entered address "%1" is not a valid boostcoin address.</source>
+        <translation>Sisestatud aadress "%1" ei ole korrektne boostcoin aadress.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -825,7 +825,7 @@
         <translation>Ekspert</translation>
     </message>
     <message>
-        <source>Automatically open the BitcoinPlus client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the boostcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>Bitcoini kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
     </message>
     <message>
@@ -908,7 +908,7 @@
         <translation>Vorm</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BitcoinPlus network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the boostcoin network after a connection is established, but this process has not completed yet.</source>
         <translation>Kuvatav info ei pruugi olla ajakohane. Ühenduse loomisel süngitakse sinu rahakott automaatselt Bitconi võrgustikuga, kuid see toiming on hetkel lõpetamata.</translation>
     </message>
     <message>
@@ -1375,8 +1375,8 @@
         <translation>Maksepäring aegunud.</translation>
     </message>
     <message>
-        <source>Warning: Invalid BitcoinPlus address</source>
-        <translation>Hoiatus: Ebakorrektne BitcoinPlus aadress</translation>
+        <source>Warning: Invalid boostcoin address</source>
+        <translation>Hoiatus: Ebakorrektne boostcoin aadress</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -1455,8 +1455,8 @@
         <translation>&amp;Allkirjastamise teade</translation>
     </message>
     <message>
-        <source>The BitcoinPlus address to sign the message with</source>
-        <translation>BitcoinPlus aadress millega sõnum allkirjastada</translation>
+        <source>The boostcoin address to sign the message with</source>
+        <translation>boostcoin aadress millega sõnum allkirjastada</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1487,8 +1487,8 @@
         <translation>Kopeeri praegune signatuur vahemällu</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this BitcoinPlus address</source>
-        <translation>Allkirjasta sõnum BitcoinPlusi aadressi sulle kuulumise tõestamiseks</translation>
+        <source>Sign the message to prove you own this boostcoin address</source>
+        <translation>Allkirjasta sõnum boostcoini aadressi sulle kuulumise tõestamiseks</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1507,12 +1507,12 @@
         <translation>&amp;Kinnita Sõnum</translation>
     </message>
     <message>
-        <source>The BitcoinPlus address the message was signed with</source>
-        <translation>BitcoinPlus aadress millega sõnum on allkirjastatud</translation>
+        <source>The boostcoin address the message was signed with</source>
+        <translation>boostcoin aadress millega sõnum on allkirjastatud</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified BitcoinPlus address</source>
-        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud BitcoinPlusi aadressiga.</translation>
+        <source>Verify the message to ensure it was signed with the specified boostcoin address</source>
+        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud boostcoini aadressiga.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1800,7 +1800,7 @@
         <translation>Luba välisühendusi (vaikeväärtus: 1 kui puudub -proxy või -connect)</translation>
     </message>
     <message>
-        <source>BitcoinPlus Core</source>
+        <source>boostcoin Core</source>
         <translation>Bitcoini tuumik</translation>
     </message>
     <message>

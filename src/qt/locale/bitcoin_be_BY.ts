@@ -146,7 +146,7 @@
         <translation>Пераіндэксацыя блокаў на дыску...</translation>
     </message>
     <message>
-        <source>Send coins to a BitcoinPlus address</source>
+        <source>Send coins to a boostcoin address</source>
         <translation>Даслаць манеты на Біткойн-адрас</translation>
     </message>
     <message>
@@ -170,7 +170,7 @@
         <translation>Праверыць паведамленне...</translation>
     </message>
     <message>
-        <source>BitcoinPlus</source>
+        <source>boostcoin</source>
         <translation>Біткойн</translation>
     </message>
     <message>
@@ -198,11 +198,11 @@
         <translation>Зашыфраваць прыватныя ключы, якия належаць вашаму гаманцу</translation>
     </message>
     <message>
-        <source>Sign messages with your BitcoinPlus addresses to prove you own them</source>
+        <source>Sign messages with your boostcoin addresses to prove you own them</source>
         <translation>Падпісаць паведамленне з дапамогай Біткойн-адраса каб даказаць, што яно належыць вам</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified BitcoinPlus addresses</source>
+        <source>Verify messages to ensure they were signed with specified boostcoin addresses</source>
         <translation>Спраўдзіць паведамленне з дапамогай Біткойн-адраса каб даказаць, што яно належыць вам</translation>
     </message>
     <message>
@@ -218,7 +218,7 @@
         <translation>Дапамога</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoinplus: URIs)</source>
+        <source>Request payments (generates QR codes and boostcoin: URIs)</source>
         <translation>Запатрабаваць плацёж (генеруецца QR-код для біткойн URI)</translation>
     </message>
     <message>
@@ -230,7 +230,7 @@
         <translation>Паказаць спіс адрасоў і метак для прымання</translation>
     </message>
     <message>
-        <source>Open a bitcoinplus: URI or payment request</source>
+        <source>Open a boostcoin: URI or payment request</source>
         <translation>Адкрыць біткойн: URI ці запыт плацяжу</translation>
     </message>
     <message>
@@ -238,8 +238,8 @@
         <translation>Опцыі каманднага радка</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to BitcoinPlus network</source>
-        <translation><numerusform>%n актыўнае злучэнне з сецівам BitcoinPlus</numerusform><numerusform>%n актыўных злучэнняў з сецівам BitcoinPlus</numerusform><numerusform>%n актыўных злучэнняў з сецівам BitcoinPlus</numerusform><numerusform>%n актыўных злучэнняў з сецівам BitcoinPlus</numerusform></translation>
+        <source>%n active connection(s) to boostcoin network</source>
+        <translation><numerusform>%n актыўнае злучэнне з сецівам boostcoin</numerusform><numerusform>%n актыўных злучэнняў з сецівам boostcoin</numerusform><numerusform>%n актыўных злучэнняў з сецівам boostcoin</numerusform><numerusform>%n актыўных злучэнняў з сецівам boostcoin</numerusform></translation>
     </message>
     <message>
         <source>No block source available...</source>
@@ -736,8 +736,8 @@
         <translation>Запусціць у фоне як дэман і прымаць каманды</translation>
     </message>
     <message>
-        <source>BitcoinPlus Core</source>
-        <translation>BitcoinPlus Core</translation>
+        <source>boostcoin Core</source>
+        <translation>boostcoin Core</translation>
     </message>
     <message>
         <source>Do you want to rebuild the block database now?</source>

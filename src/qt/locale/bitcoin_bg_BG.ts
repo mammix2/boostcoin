@@ -262,7 +262,7 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>BitcoinPlus Core</source>
+        <source>boostcoin Core</source>
         <translation>Биткойн ядро</translation>
     </message>
     </context>

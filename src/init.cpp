@@ -486,8 +486,8 @@ std::string HelpMessage(HelpMessageMode mode)
 
 std::string LicenseInfo()
 {
-    const std::string URL_SOURCE_CODE = "<https://github.com/bitcoinplusorg/xbcwalletsource>";
-    const std::string URL_WEBSITE = "<https://www.bitcoinplus.org/>";
+    const std::string URL_SOURCE_CODE = "<https://github.com/boostcoinorg/xbcwalletsource>";
+    const std::string URL_WEBSITE = "<https://www.boostcoin.org/>";
     // todo: remove urls from translations on next change
     return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2014, COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +
@@ -779,7 +779,7 @@ void InitLogging()
     fLogIPs = GetBoolArg("-logips", DEFAULT_LOGIPS);
 
     LogPrintf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-    LogPrintf("BitcoinPlus version %s\n", FormatFullVersion());
+    LogPrintf("boostcoin version %s\n", FormatFullVersion());
 }
 
 /** Initialize bitcoin.

@@ -114,8 +114,8 @@
         <translation>Newid y cyfrinymadrodd a ddefnyddiwyd ar gyfer amgryptio'r waled</translation>
     </message>
     <message>
-        <source>BitcoinPlus</source>
-        <translation>BitcoinPlus</translation>
+        <source>boostcoin</source>
+        <translation>boostcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -490,8 +490,8 @@
         <translation>Opsiynau:</translation>
     </message>
     <message>
-        <source>BitcoinPlus Core</source>
-        <translation>Craidd BitcoinPlus</translation>
+        <source>boostcoin Core</source>
+        <translation>Craidd boostcoin</translation>
     </message>
     <message>
         <source>Information</source>

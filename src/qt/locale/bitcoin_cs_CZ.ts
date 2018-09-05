@@ -86,8 +86,8 @@
         <translation>Změnit heslo k šifrování peněženky</translation>
     </message>
     <message>
-        <source>BitcoinPlus</source>
-        <translation>BitcoinPlus</translation>
+        <source>boostcoin</source>
+        <translation>boostcoin</translation>
     </message>
     <message>
         <source>&amp;File</source>

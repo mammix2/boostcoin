@@ -154,8 +154,8 @@
         <translation>正在為磁碟區塊重建索引...</translation>
     </message>
     <message>
-        <source>Send coins to a BitcoinPlus address</source>
-        <translation>付款至一個 BitcoinPlus 位址</translation>
+        <source>Send coins to a boostcoin address</source>
+        <translation>付款至一個 boostcoin 位址</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -178,8 +178,8 @@
         <translation>驗證訊息... &amp;V</translation>
     </message>
     <message>
-        <source>BitcoinPlus</source>
-        <translation>BitcoinPlus</translation>
+        <source>boostcoin</source>
+        <translation>boostcoin</translation>
     </message>
     <message>
         <source>Wallet</source>

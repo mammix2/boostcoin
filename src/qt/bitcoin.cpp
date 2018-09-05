@@ -475,7 +475,7 @@ void BitcoinApplication::initializeResult(int retval)
 
 #ifdef ENABLE_WALLET
         // Now that initialization/startup is done, process any command-line
-        // bitcoinplus: URIs or payment requests:
+        // boostcoin: URIs or payment requests:
         connect(paymentServer, SIGNAL(receivedPaymentRequest(SendCoinsRecipient)),
                          window, SLOT(handlePaymentRequest(SendCoinsRecipient)));
         connect(window, SIGNAL(receivedURI(QString)),
@@ -497,7 +497,7 @@ void BitcoinApplication::shutdownResult(int retval)
 
 void BitcoinApplication::handleRunawayException(const QString &message)
 {
-    QMessageBox::critical(0, "Runaway exception", BitcoinGUI::tr("A fatal error occurred. BitcoinPlus can no longer continue safely and will quit.") + QString("\n\n") + message);
+    QMessageBox::critical(0, "Runaway exception", BitcoinGUI::tr("A fatal error occurred. boostcoin can no longer continue safely and will quit.") + QString("\n\n") + message);
     ::exit(EXIT_FAILURE);
 }
 
@@ -635,7 +635,7 @@ int main(int argc, char *argv[])
         exit(EXIT_SUCCESS);
 
     // Start up the payment server early, too, so impatient users that click on
-    // bitcoinplus: links repeatedly have their payment requests routed to this process:
+    // boostcoin: links repeatedly have their payment requests routed to this process:
     app.createPaymentServer();
 #endif
 

@@ -158,7 +158,7 @@
         <translation>Переіндексація блоків на диску ...</translation>
     </message>
     <message>
-        <source>Send coins to a BitcoinPlus address</source>
+        <source>Send coins to a boostcoin address</source>
         <translation>Відправити монети на вказану адресу</translation>
     </message>
     <message>
@@ -182,8 +182,8 @@
         <translation>П&amp;еревірити повідомлення...</translation>
     </message>
     <message>
-        <source>BitcoinPlus</source>
-        <translation>BitcoinPlus</translation>
+        <source>boostcoin</source>
+        <translation>boostcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -210,12 +210,12 @@
         <translation>Зашифрувати закриті ключі, що знаходяться у вашому гаманці</translation>
     </message>
     <message>
-        <source>Sign messages with your BitcoinPlus addresses to prove you own them</source>
-        <translation>Підтвердіть, що Ви є власником повідомлення підписавши його Вашою BitcoinPlus-адресою </translation>
+        <source>Sign messages with your boostcoin addresses to prove you own them</source>
+        <translation>Підтвердіть, що Ви є власником повідомлення підписавши його Вашою boostcoin-адресою </translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified BitcoinPlus addresses</source>
-        <translation>Перевірте повідомлення для впевненості, що воно підписано вказаною BitcoinPlus-адресою</translation>
+        <source>Verify messages to ensure they were signed with specified boostcoin addresses</source>
+        <translation>Перевірте повідомлення для впевненості, що воно підписано вказаною boostcoin-адресою</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -234,8 +234,8 @@
         <translation>Панель вкладок</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoinplus: URIs)</source>
-        <translation>Створити запит платежу (генерує QR-код та bitcoinplus: URI)</translation>
+        <source>Request payments (generates QR codes and boostcoin: URIs)</source>
+        <translation>Створити запит платежу (генерує QR-код та boostcoin: URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -246,16 +246,16 @@
         <translation>Показати список адрес і міток, що були використані для отримання</translation>
     </message>
     <message>
-        <source>Open a bitcoinplus: URI or payment request</source>
-        <translation>Відкрити bitcoinplus: URI чи запит платежу</translation>
+        <source>Open a boostcoin: URI or payment request</source>
+        <translation>Відкрити boostcoin: URI чи запит платежу</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>П&amp;араметри командного рядка</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to BitcoinPlus network</source>
-        <translation><numerusform>%n активне з'єднання з мережею BitcoinPlus</numerusform><numerusform>%n активні з'єднання з мережею BitcoinPlus</numerusform><numerusform>%n активних з'єднань з мережею BitcoinPlus</numerusform></translation>
+        <source>%n active connection(s) to boostcoin network</source>
+        <translation><numerusform>%n активне з'єднання з мережею boostcoin</numerusform><numerusform>%n активні з'єднання з мережею boostcoin</numerusform><numerusform>%n активних з'єднань з мережею boostcoin</numerusform></translation>
     </message>
     <message>
         <source>No block source available...</source>
@@ -673,7 +673,7 @@
         <translation>&amp;Витрачати непідтверджену решту</translation>
     </message>
     <message>
-        <source>Automatically open the BitcoinPlus client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the boostcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>Автоматично відкривати порт для клієнту біткоін на роутері. Працює лише якщо ваш роутер підтримує UPnP і ця функція увімкнена.</translation>
     </message>
     <message>
@@ -681,8 +681,8 @@
         <translation>Відображення порту через &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the BitcoinPlus network through a SOCKS5 proxy.</source>
-        <translation>Підключення до мережі BitcoinPlus через SOCKS5 проксі.</translation>
+        <source>Connect to the boostcoin network through a SOCKS5 proxy.</source>
+        <translation>Підключення до мережі boostcoin через SOCKS5 проксі.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -721,8 +721,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the BitcoinPlus network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Підключатися до мережі BitcoinPlus через окремий SOCKS5 проксі для прихованих сервісів Tor.</translation>
+        <source>Connect to the boostcoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Підключатися до мережі boostcoin через окремий SOCKS5 проксі для прихованих сервісів Tor.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -808,8 +808,8 @@
         <translation>Форма</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BitcoinPlus network after a connection is established, but this process has not completed yet.</source>
-        <translation>Показана інформація вже може бути застарілою. Ваш гаманець буде автоматично синхронізовано з мережею BitcoinPlus після встановлення підключення, але цей процес ще не завершено.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the boostcoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Показана інформація вже може бути застарілою. Ваш гаманець буде автоматично синхронізовано з мережею boostcoin після встановлення підключення, але цей процес ще не завершено.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -901,8 +901,8 @@
         <translation>Кількість</translation>
     </message>
     <message>
-        <source>Enter a BitcoinPlus address (e.g. %1)</source>
-        <translation>Введіть адресу BitcoinPlus (наприклад %1)</translation>
+        <source>Enter a boostcoin address (e.g. %1)</source>
+        <translation>Введіть адресу boostcoin (наприклад %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1230,8 +1230,8 @@
         <translation>По&amp;вторно використати адресу для отримання (не рекомендується)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the BitcoinPlus network.</source>
-        <translation>Необов'язкове повідомлення на додаток до запиту платежу, котре буде показане під час відкриття запиту. Примітка: Це повідомлення не буде відправлено з платежем через мережу BitcoinPlus.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the boostcoin network.</source>
+        <translation>Необов'язкове повідомлення на додаток до запиту платежу, котре буде показане під час відкриття запиту. Примітка: Це повідомлення не буде відправлено з платежем через мережу boostcoin.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1387,8 +1387,8 @@
         <translation>всього щонайменше</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bitcoinplus transactions than the network can process.</source>
-        <translation>Оплата тільки мінімальної комісії є прийнятною, допоки обсяг транзакцій є меншим простору в блоках. Але майте на увазі, що це може анулювати транзакцію, якщо попит на BitcoinPlus транзакції стане більшим, ніж мережа зможе обробити.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for boostcoin transactions than the network can process.</source>
+        <translation>Оплата тільки мінімальної комісії є прийнятною, допоки обсяг транзакцій є меншим простору в блоках. Але майте на увазі, що це може анулювати транзакцію, якщо попит на boostcoin транзакції стане більшим, ніж мережа зможе обробити.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -1474,8 +1474,8 @@
         <translation>Це звичайний платіж.</translation>
     </message>
     <message>
-        <source>The BitcoinPlus address to send the payment to</source>
-        <translation>Адреса BitcoinPlus для відправлення платежу</translation>
+        <source>The boostcoin address to send the payment to</source>
+        <translation>Адреса boostcoin для відправлення платежу</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -1494,7 +1494,7 @@
         <translation>Видалити цей запис</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less bitcoinplus than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less boostcoin than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation>Комісію буде знято зі вказаної суми. До отримувача надійде менше біткоінів, ніж було вказано в полі кількості. Якщо ж отримувачів декілька - комісію буде розподілено між ними.</translation>
     </message>
     <message>
@@ -1518,8 +1518,8 @@
         <translation>Введіть мітку для цієї адреси для додавання її в список використаних адрес</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoinplus: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the BitcoinPlus network.</source>
-        <translation>Повідомлення, що було додане до bitcoinplus:URI та буде збережено разом з транзакцією для довідки. Примітка: Це повідомлення не буде відправлено в мережу BitcoinPlus.</translation>
+        <source>A message that was attached to the boostcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the boostcoin network.</source>
+        <translation>Повідомлення, що було додане до boostcoin:URI та буде збережено разом з транзакцією для довідки. Примітка: Це повідомлення не буде відправлено в мережу boostcoin.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -1551,12 +1551,12 @@
         <translation>&amp;Підписати повідомлення</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive bitcoinplus sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive boostcoin sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>Ви можете підписувати повідомлення/угоди своїми адресами, щоб довести можливість отримання біткоінів, що будуть надіслані на них. Остерігайтеся підписувати будь-що нечітке чи неочікуване, так як за допомогою фішинг-атаки вас можуть спробувати ввести в оману для отримання вашого підпису під чужими словами. Підписуйте лише чіткі твердження, з якими ви повністю згодні.</translation>
     </message>
     <message>
-        <source>The BitcoinPlus address to sign the message with</source>
-        <translation>Адреса BitcoinPlus для підпису цього повідомлення</translation>
+        <source>The boostcoin address to sign the message with</source>
+        <translation>Адреса boostcoin для підпису цього повідомлення</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1587,7 +1587,7 @@
         <translation>Копіювати поточну сигнатуру до системного буферу обміну</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this BitcoinPlus address</source>
+        <source>Sign the message to prove you own this boostcoin address</source>
         <translation>Підпишіть повідомлення щоб довести, що ви є власником цієї адреси</translation>
     </message>
     <message>
@@ -1611,12 +1611,12 @@
         <translation>Введіть нижче адресу отримувача, повідомлення (впевніться, що ви точно скопіювали символи завершення рядка, табуляцію, пробіли тощо) та підпис для перевірки повідомлення. Впевніться, що в підпис не було додано зайвих символів: це допоможе уникнути атак типу «людина посередині». Зауважте, що це лише засвідчує можливість отримання транзакцій підписувачем, але не в стані підтвердити джерело жодної транзакції!</translation>
     </message>
     <message>
-        <source>The BitcoinPlus address the message was signed with</source>
-        <translation>Адреса BitcoinPlus, якою було підписано це повідомлення</translation>
+        <source>The boostcoin address the message was signed with</source>
+        <translation>Адреса boostcoin, якою було підписано це повідомлення</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified BitcoinPlus address</source>
-        <translation>Перевірте повідомлення для впевненості, що воно підписано вказаною BitcoinPlus-адресою</translation>
+        <source>Verify the message to ensure it was signed with the specified boostcoin address</source>
+        <translation>Перевірте повідомлення для впевненості, що воно підписано вказаною boostcoin-адресою</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1740,8 +1740,8 @@
         <translation>Приймати підключення ззовні (типово: 1 за відсутності -proxy чи -connect)</translation>
     </message>
     <message>
-        <source>BitcoinPlus Core</source>
-        <translation>BitcoinPlus Core</translation>
+        <source>boostcoin Core</source>
+        <translation>boostcoin Core</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>

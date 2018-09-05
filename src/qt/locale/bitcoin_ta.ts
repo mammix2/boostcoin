@@ -90,8 +90,8 @@
         <translation>&amp;செய்தியை சரிசெய்...</translation>
     </message>
     <message>
-        <source>BitcoinPlus</source>
-        <translation>BitcoinPlus</translation>
+        <source>boostcoin</source>
+        <translation>boostcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -714,8 +714,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>BitcoinPlus Core</source>
-        <translation>BitcoinPlus மையம்</translation>
+        <source>boostcoin Core</source>
+        <translation>boostcoin மையம்</translation>
     </message>
     <message>
         <source>(default: %u)</source>

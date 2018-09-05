@@ -142,8 +142,8 @@
         <translation>Cargando el index de bloques...</translation>
     </message>
     <message>
-        <source>Send coins to a BitcoinPlus address</source>
-        <translation>Enviar monedas a una dirección bitcoinplus</translation>
+        <source>Send coins to a boostcoin address</source>
+        <translation>Enviar monedas a una dirección boostcoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -166,8 +166,8 @@
         <translation>Verificar mensaje....</translation>
     </message>
     <message>
-        <source>BitcoinPlus</source>
-        <translation>BitcoinPlus</translation>
+        <source>boostcoin</source>
+        <translation>boostcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -186,7 +186,7 @@
         <translation>&amp;Mostrar/Ocultar</translation>
     </message>
     <message>
-        <source>Sign messages with your BitcoinPlus addresses to prove you own them</source>
+        <source>Sign messages with your boostcoin addresses to prove you own them</source>
         <translation>Firmar un mensaje para provar que usted es dueño de esta dirección</translation>
     </message>
     <message>
@@ -206,8 +206,8 @@
         <translation>Barra de pestañas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoinplus: URIs)</source>
-        <translation>Pide pagos (genera codigos QR and bitcoinplus: URls)</translation>
+        <source>Request payments (generates QR codes and boostcoin: URIs)</source>
+        <translation>Pide pagos (genera codigos QR and boostcoin: URls)</translation>
     </message>
     <message>
         <source>%1 and %2</source>
@@ -368,8 +368,8 @@
         <translation>experto</translation>
     </message>
     <message>
-        <source>Automatically open the BitcoinPlus client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abre automáticamente el puerto del cliente BitcoinPlus en el router. Esto funciona solo cuando tu router es compatible con UPnP y está habilitado.</translation>
+        <source>Automatically open the boostcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abre automáticamente el puerto del cliente boostcoin en el router. Esto funciona solo cuando tu router es compatible con UPnP y está habilitado.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -689,7 +689,7 @@
         <translation>Firma</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this BitcoinPlus address</source>
+        <source>Sign the message to prove you own this boostcoin address</source>
         <translation>Firmar un mensjage para probar que usted es dueño de esta dirección</translation>
     </message>
     <message>
@@ -774,8 +774,8 @@
 </translation>
     </message>
     <message>
-        <source>BitcoinPlus Core</source>
-        <translation>bitcoinplus core</translation>
+        <source>boostcoin Core</source>
+        <translation>boostcoin core</translation>
     </message>
     <message>
         <source>Connect only to the specified node(s)</source>

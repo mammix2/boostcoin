@@ -166,7 +166,7 @@
         <translation>Повторно индексиране на блоковете на диска...</translation>
     </message>
     <message>
-        <source>Send coins to a BitcoinPlus address</source>
+        <source>Send coins to a boostcoin address</source>
         <translation>Изпращане към Биткоин адрес</translation>
     </message>
     <message>
@@ -190,7 +190,7 @@
         <translation>&amp;Проверка на съобщение...</translation>
     </message>
     <message>
-        <source>BitcoinPlus</source>
+        <source>boostcoin</source>
         <translation>Биткоин</translation>
     </message>
     <message>
@@ -218,11 +218,11 @@
         <translation>Шифроване на личните ключове,които принадлежат на портфейла Ви.</translation>
     </message>
     <message>
-        <source>Sign messages with your BitcoinPlus addresses to prove you own them</source>
+        <source>Sign messages with your boostcoin addresses to prove you own them</source>
         <translation>Пишете съобщения със своя Биткойн адрес за да докажете,че е ваш.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified BitcoinPlus addresses</source>
+        <source>Verify messages to ensure they were signed with specified boostcoin addresses</source>
         <translation>Потвърждаване на съобщения  за да се знае,че са написани с дадените Биткойн адреси.</translation>
     </message>
     <message>
@@ -242,7 +242,7 @@
         <translation>Раздели</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoinplus: URIs)</source>
+        <source>Request payments (generates QR codes and boostcoin: URIs)</source>
         <translation>Изискване на плащания(генерира QR кодове и биткойн: URIs)</translation>
     </message>
     <message>
@@ -254,7 +254,7 @@
         <translation>Покажи списък с използваните адреси и имена.</translation>
     </message>
     <message>
-        <source>Open a bitcoinplus: URI or payment request</source>
+        <source>Open a boostcoin: URI or payment request</source>
         <translation>Отворете биткойн: URI  или заявка за плащане</translation>
     </message>
     <message>
@@ -262,7 +262,7 @@
         <translation>&amp;Налични команди</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to BitcoinPlus network</source>
+        <source>%n active connection(s) to boostcoin network</source>
         <translation><numerusform>%n активна връзка към Биткойн мрежата</numerusform><numerusform>%n активни връзки към Биткойн мрежата</numerusform></translation>
     </message>
     <message>
@@ -330,7 +330,7 @@
         <translation>Синхронизиран</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible BitcoinPlus command-line options</source>
+        <source>Show the %1 help message to get a list with possible boostcoin command-line options</source>
         <translation>Покажи %1 помощно съобщение за да получиш лист с възможни Биткойн команди</translation>
     </message>
     <message>
@@ -681,15 +681,15 @@
         <translation>&amp;Похарчете непотвърденото ресто</translation>
     </message>
     <message>
-        <source>Automatically open the BitcoinPlus client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Автоматично отваряне на входящия BitcoinPlus порт. Работи само с рутери поддържащи UPnP.</translation>
+        <source>Automatically open the boostcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Автоматично отваряне на входящия boostcoin порт. Работи само с рутери поддържащи UPnP.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Отваряне на входящия порт чрез &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the BitcoinPlus network through a SOCKS5 proxy.</source>
+        <source>Connect to the boostcoin network through a SOCKS5 proxy.</source>
         <translation>Свързване с Биткойн мрежата чрез SOCKS5  прокси.</translation>
     </message>
     <message>
@@ -784,7 +784,7 @@
         <translation>Формуляр</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BitcoinPlus network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the boostcoin network after a connection is established, but this process has not completed yet.</source>
         <translation>Текущата информация на екрана може да не е актуална. Вашият портфейл ще се синхронизира автоматично с мрежата на Биткоин, щом поне една връзката с нея се установи; този процес все още не е приключил.</translation>
     </message>
     <message>
@@ -853,7 +853,7 @@
         <translation>Сума</translation>
     </message>
     <message>
-        <source>Enter a BitcoinPlus address (e.g. %1)</source>
+        <source>Enter a boostcoin address (e.g. %1)</source>
         <translation>Въведете Биткойн адрес (например: %1)</translation>
     </message>
     <message>
@@ -1367,7 +1367,7 @@
         <translation>Копиране на текущия подпис</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this BitcoinPlus address</source>
+        <source>Sign the message to prove you own this boostcoin address</source>
         <translation>Подпишете съобщение като доказателство, че притежавате определен адрес</translation>
     </message>
     <message>
@@ -1383,7 +1383,7 @@
         <translation>&amp;Провери</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified BitcoinPlus address</source>
+        <source>Verify the message to ensure it was signed with the specified boostcoin address</source>
         <translation>Проверете съобщение, за да сте сигурни че е подписано с определен Биткоин адрес</translation>
     </message>
     <message>
@@ -1456,7 +1456,7 @@
         <translation>Приемайте връзки отвън.(по подразбиране:1 в противен случай -proxy или -connect)</translation>
     </message>
     <message>
-        <source>BitcoinPlus Core</source>
+        <source>boostcoin Core</source>
         <translation>Биткойн ядро</translation>
     </message>
     <message>

@@ -126,7 +126,7 @@
         <translation>Оношилгоо ба засварын консолыг онгойлго</translation>
     </message>
     <message>
-        <source>BitcoinPlus</source>
+        <source>boostcoin</source>
         <translation>Биткойн</translation>
     </message>
     <message>

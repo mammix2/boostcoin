@@ -114,8 +114,8 @@
         <translation>Reindexando bloques en el disco...</translation>
     </message>
     <message>
-        <source>Send coins to a BitcoinPlus address</source>
-        <translation>Enviar monedas a una dirección BitcoinPlus</translation>
+        <source>Send coins to a boostcoin address</source>
+        <translation>Enviar monedas a una dirección boostcoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -130,8 +130,8 @@
         <translation>Abre la consola de depuración y diágnostico</translation>
     </message>
     <message>
-        <source>BitcoinPlus</source>
-        <translation>BitcoinPlus</translation>
+        <source>boostcoin</source>
+        <translation>boostcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -158,12 +158,12 @@
         <translation>Encriptar las llaves privadas que pertenecen a tu billetera</translation>
     </message>
     <message>
-        <source>Sign messages with your BitcoinPlus addresses to prove you own them</source>
-        <translation>Firma mensajes con tus direcciones BitcoinPlus para probar que eres dueño de ellas</translation>
+        <source>Sign messages with your boostcoin addresses to prove you own them</source>
+        <translation>Firma mensajes con tus direcciones boostcoin para probar que eres dueño de ellas</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified BitcoinPlus addresses</source>
-        <translation>Verificar mensajes para asegurar que estaban firmados con direcciones BitcoinPlus especificas</translation>
+        <source>Verify messages to ensure they were signed with specified boostcoin addresses</source>
+        <translation>Verificar mensajes para asegurar que estaban firmados con direcciones boostcoin especificas</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -614,8 +614,8 @@
         <translation>Correr en segundo plano como daemon y aceptar comandos</translation>
     </message>
     <message>
-        <source>BitcoinPlus Core</source>
-        <translation>BitcoinPlus Core</translation>
+        <source>boostcoin Core</source>
+        <translation>boostcoin Core</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>

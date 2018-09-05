@@ -50,12 +50,12 @@
         <translation>Adresy odbioru</translation>
     </message>
     <message>
-        <source>These are your BitcoinPlus addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Tutaj znajdują się adresy BitcoinPlus na które wysyłasz płatności. Zawsze sprawdzaj ilość i adres odbiorcy przed wysyłką monet.</translation>
+        <source>These are your boostcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Tutaj znajdują się adresy boostcoin na które wysyłasz płatności. Zawsze sprawdzaj ilość i adres odbiorcy przed wysyłką monet.</translation>
     </message>
     <message>
-        <source>These are your BitcoinPlus addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>To są twoje adresy BitcoinPlus do odbierania płatności. Zaleca się używanie nowych adresów odbiorczych dla każdej transakcji.</translation>
+        <source>These are your boostcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>To są twoje adresy boostcoin do odbierania płatności. Zaleca się używanie nowych adresów odbiorczych dla każdej transakcji.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -258,8 +258,8 @@
         <translation>Ponowne indeksowanie bloków na dysku...</translation>
     </message>
     <message>
-        <source>Send coins to a BitcoinPlus address</source>
-        <translation>Wyślij monety na adres bitcoinplusowy</translation>
+        <source>Send coins to a boostcoin address</source>
+        <translation>Wyślij monety na adres boostcoinowy</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -282,8 +282,8 @@
         <translation>&amp;Zweryfikuj wiadomość...</translation>
     </message>
     <message>
-        <source>BitcoinPlus</source>
-        <translation>BitcoinPlus</translation>
+        <source>boostcoin</source>
+        <translation>boostcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -310,12 +310,12 @@
         <translation>Szyfruj klucze prywatne, które są w twoim portfelu</translation>
     </message>
     <message>
-        <source>Sign messages with your BitcoinPlus addresses to prove you own them</source>
+        <source>Sign messages with your boostcoin addresses to prove you own them</source>
         <translation>Podpisz wiadomości swoim adresem aby udowodnić jego posiadanie</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified BitcoinPlus addresses</source>
-        <translation>Zweryfikuj wiadomość,  aby upewnić się, że została podpisana podanym adresem bitcoinplusowym.</translation>
+        <source>Verify messages to ensure they were signed with specified boostcoin addresses</source>
+        <translation>Zweryfikuj wiadomość,  aby upewnić się, że została podpisana podanym adresem boostcoinowym.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -334,8 +334,8 @@
         <translation>Pasek zakładek</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoinplus: URIs)</source>
-        <translation>Żądaj płatności (generuje kod QR oraz bitcoinplusowe URI)</translation>
+        <source>Request payments (generates QR codes and boostcoin: URIs)</source>
+        <translation>Żądaj płatności (generuje kod QR oraz boostcoinowe URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -346,16 +346,16 @@
         <translation>Pokaż listę adresów i etykiet użytych do odbierania</translation>
     </message>
     <message>
-        <source>Open a bitcoinplus: URI or payment request</source>
-        <translation>Otwórz URI bitcoinplus: lub żądanie zapłaty</translation>
+        <source>Open a boostcoin: URI or payment request</source>
+        <translation>Otwórz URI boostcoin: lub żądanie zapłaty</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Opcje linii komend</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to BitcoinPlus network</source>
-        <translation><numerusform>%n aktywnych połączeń do sieci BitcoinPlus</numerusform><numerusform>%n aktywnych połączeń do sieci BitcoinPlus</numerusform><numerusform>%n aktywnych połączeń do sieci BitcoinPlus</numerusform></translation>
+        <source>%n active connection(s) to boostcoin network</source>
+        <translation><numerusform>%n aktywnych połączeń do sieci boostcoin</numerusform><numerusform>%n aktywnych połączeń do sieci boostcoin</numerusform><numerusform>%n aktywnych połączeń do sieci boostcoin</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -422,7 +422,7 @@
         <translation>Aktualny</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible BitcoinPlus command-line options</source>
+        <source>Show the %1 help message to get a list with possible boostcoin command-line options</source>
         <translation>Pokaż pomoc %1 aby zobaczyć listę wszystkich opcji lnii poleceń.</translation>
     </message>
     <message>
@@ -755,8 +755,8 @@
         <translation>Ponieważ jest to pierwsze uruchomienie programu, możesz wybrać gdzie %1 będzie przechowywał swoje dane.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the BitcoinPlus block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>%1 pobierze i będzie przechowywał kopię łańcucha bloków BitcoinPlus. W wybranym katalogu zostanie zapisanych %2GB danych, a z czasem ta ilość będzie rosła. Portfel będzie przechowywany w tym samym katalogu.</translation>
+        <source>%1 will download and store a copy of the boostcoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>%1 pobierze i będzie przechowywał kopię łańcucha bloków boostcoin. W wybranym katalogu zostanie zapisanych %2GB danych, a z czasem ta ilość będzie rosła. Portfel będzie przechowywany w tym samym katalogu.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -897,16 +897,16 @@
         <translation>Wydaj niepotwierdzoną re&amp;sztę</translation>
     </message>
     <message>
-        <source>Automatically open the BitcoinPlus client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatycznie otwiera port klienta BitcoinPlus na routerze. Ta opcja dzieła tylko jeśli twój router wspiera UPnP i jest ono włączone.</translation>
+        <source>Automatically open the boostcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatycznie otwiera port klienta boostcoin na routerze. Ta opcja dzieła tylko jeśli twój router wspiera UPnP i jest ono włączone.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Mapuj port używając &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the BitcoinPlus network through a SOCKS5 proxy.</source>
-        <translation>Połącz się z siecią BitcoinPlus poprzez proxy SOCKS5.</translation>
+        <source>Connect to the boostcoin network through a SOCKS5 proxy.</source>
+        <translation>Połącz się z siecią boostcoin poprzez proxy SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -945,8 +945,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the BitcoinPlus network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Połącz się z siecią BitcoinPlus przy pomocy oddzielnego SOCKS5 proxy dla sieci TOR</translation>
+        <source>Connect to the boostcoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Połącz się z siecią boostcoin przy pomocy oddzielnego SOCKS5 proxy dla sieci TOR</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -1044,8 +1044,8 @@
         <translation>Formularz</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BitcoinPlus network after a connection is established, but this process has not completed yet.</source>
-        <translation>Wyświetlana informacja może być nieaktualna. Twój portfel synchronizuje się automatycznie z siecią bitcoinplus, zaraz po tym jak uzyskano połączenie, ale proces ten nie został jeszcze ukończony.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the boostcoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Wyświetlana informacja może być nieaktualna. Twój portfel synchronizuje się automatycznie z siecią boostcoin, zaraz po tym jak uzyskano połączenie, ale proces ten nie został jeszcze ukończony.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1137,8 +1137,8 @@
         <translation>Kwota</translation>
     </message>
     <message>
-        <source>Enter a BitcoinPlus address (e.g. %1)</source>
-        <translation>Wprowadź adres bitcoinplusowy (np. %1)</translation>
+        <source>Enter a boostcoin address (e.g. %1)</source>
+        <translation>Wprowadź adres boostcoinowy (np. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1486,8 +1486,8 @@
         <translation>U&amp;żyj ponownie istniejącego adresu odbiorczego (niepolecane)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the BitcoinPlus network.</source>
-        <translation>Opcjonalna wiadomość do dołączenia do żądania płatności, która będzie wyświetlana, gdy żądanie zostanie otwarte. Uwaga: wiadomość ta nie zostanie wysłana wraz z płatnością w sieci BitcoinPlus.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the boostcoin network.</source>
+        <translation>Opcjonalna wiadomość do dołączenia do żądania płatności, która będzie wyświetlana, gdy żądanie zostanie otwarte. Uwaga: wiadomość ta nie zostanie wysłana wraz z płatnością w sieci boostcoin.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1663,8 +1663,8 @@
         <translation>razem przynajmniej</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bitcoinplus transactions than the network can process.</source>
-        <translation>Zapłacenie tylko minimalnej opłaty jest nadal wystarczające, dopóki jest mniejszy wolumen transakcji niż miejsca w blokach. Należy jednak mieć świadomość, że może skończyć się to niezatwierdzeniem nigdy transakcji, gdy jest większe zapotrzebowanie na transakcje bitcoinplusa niż sieć może przetworzyć.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for boostcoin transactions than the network can process.</source>
+        <translation>Zapłacenie tylko minimalnej opłaty jest nadal wystarczające, dopóki jest mniejszy wolumen transakcji niż miejsca w blokach. Należy jednak mieć świadomość, że może skończyć się to niezatwierdzeniem nigdy transakcji, gdy jest większe zapotrzebowanie na transakcje boostcoina niż sieć może przetworzyć.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -1766,8 +1766,8 @@
         <translation>To jest standardowa płatność</translation>
     </message>
     <message>
-        <source>The BitcoinPlus address to send the payment to</source>
-        <translation>Adres BitcoinPlus gdzie wysłać płatność</translation>
+        <source>The boostcoin address to send the payment to</source>
+        <translation>Adres boostcoin gdzie wysłać płatność</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -1786,8 +1786,8 @@
         <translation>Usuń ten wpis</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less bitcoinplus than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Opłata zostanie odjęta od kwoty wysyłane.Odbiorca otrzyma mniej niż bitcoinplus wpisz w polu kwoty. Jeśli wybrano kilku odbiorców, opłata jest podzielona równo.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less boostcoin than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Opłata zostanie odjęta od kwoty wysyłane.Odbiorca otrzyma mniej niż boostcoin wpisz w polu kwoty. Jeśli wybrano kilku odbiorców, opłata jest podzielona równo.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -1810,8 +1810,8 @@
         <translation>Wprowadź etykietę dla tego adresu by dodać go do listy użytych adresów</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoinplus: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the BitcoinPlus network.</source>
-        <translation>Wiadomość, która została dołączona do URI bitcoinplus:, która będzie przechowywana wraz z transakcją w celach informacyjnych. Uwaga: Ta wiadomość nie będzie rozsyłana w sieci BitcoinPlus.</translation>
+        <source>A message that was attached to the boostcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the boostcoin network.</source>
+        <translation>Wiadomość, która została dołączona do URI boostcoin:, która będzie przechowywana wraz z transakcją w celach informacyjnych. Uwaga: Ta wiadomość nie będzie rozsyłana w sieci boostcoin.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -1847,12 +1847,12 @@
         <translation>Podpi&amp;sz Wiadomość</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive bitcoinplus sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive boostcoin sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>Możesz podpisywać wiadomości swoimi adresami aby udowodnić, że jesteś ich właścicielem. Uważaj, aby nie podpisywać niczego co wzbudza Twoje podejrzenia, ponieważ ktoś może stosować phishing próbując nakłonić Cię do ich podpisania. Akceptuj i podpisuj tylko w pełni zrozumiałe komunikaty i wiadomości.</translation>
     </message>
     <message>
-        <source>The BitcoinPlus address to sign the message with</source>
-        <translation>Adres BitcoinPlus, za pomocą którego podpisać wiadomość</translation>
+        <source>The boostcoin address to sign the message with</source>
+        <translation>Adres boostcoin, za pomocą którego podpisać wiadomość</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1883,7 +1883,7 @@
         <translation>Kopiuje aktualny podpis do schowka systemowego</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this BitcoinPlus address</source>
+        <source>Sign the message to prove you own this boostcoin address</source>
         <translation>Podpisz wiadomość aby dowieść, że ten adres jest twój</translation>
     </message>
     <message>
@@ -1908,12 +1908,12 @@
 Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadawca posiada klucz do adresu, natomiast nie potwierdza to, że poprawne wysłanie jakiejkolwiek transakcji! </translation>
     </message>
     <message>
-        <source>The BitcoinPlus address the message was signed with</source>
-        <translation>Adres BitcoinPlus, którym została podpisana wiadomość</translation>
+        <source>The boostcoin address the message was signed with</source>
+        <translation>Adres boostcoin, którym została podpisana wiadomość</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified BitcoinPlus address</source>
-        <translation>Zweryfikuj wiadomość,  aby upewnić się, że została podpisana odpowiednim adresem BitcoinPlus.</translation>
+        <source>Verify the message to ensure it was signed with the specified boostcoin address</source>
+        <translation>Zweryfikuj wiadomość,  aby upewnić się, że została podpisana odpowiednim adresem boostcoin.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2073,8 +2073,8 @@ Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadaw
         <translation>Akceptuj połączenia z zewnątrz (domyślnie: 1 jeśli nie ustawiono -proxy lub -connect)</translation>
     </message>
     <message>
-        <source>BitcoinPlus Core</source>
-        <translation>Rdzeń BitcoinPlusa</translation>
+        <source>boostcoin Core</source>
+        <translation>Rdzeń boostcoina</translation>
     </message>
     <message>
         <source>The %s developers</source>
