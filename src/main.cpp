@@ -1751,7 +1751,7 @@ int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees)
     nRewardCoinYear = MAX_MINT_PROOF_OF_STAKE;
 	int64_t nSubsidy;
 	
-    if(nHeight < 641250 ) {
+    if(pindexBest->nHeight < 641250 ) {
         nSubsidy = nCoinAge * nRewardCoinYear / 365 / COIN; // original PoS reward
     } else {
         nSubsidy = nCoinAge * nRewardCoinYear / 365; // PoS reward on V2 chain
