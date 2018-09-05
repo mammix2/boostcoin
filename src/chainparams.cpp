@@ -279,17 +279,18 @@ public:
         // The best chain should have at least this much work.
         consensus.nMinimumChainWork = uint256S("0x00");
 
-        pchMessageStart[0] = 0xfa;
-        pchMessageStart[1] = 0xbf;
-        pchMessageStart[2] = 0xb5;
-        pchMessageStart[3] = 0xda;
+        pchMessageStart[0] = 0xf1;
+        pchMessageStart[1] = 0xb2;
+        pchMessageStart[2] = 0xb3;
+        pchMessageStart[3] = 0xd4;
         nDefaultPort = 29697;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1296688602, 0, 0x207fffff, 1);
+        genesis = CreateGenesisBlock(1400512373, 1908795, 0x1f00ffff, 1);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x502738ac5fdf9de575558e7d090b9abad173f05570aa9ced54b8fb00b30e71d0"));
-        assert(genesis.hashMerkleRoot == uint256S("0x48c347e8ffa4e3b7f313f2301b055f3c35fe7ed6d0f5397e069f5afb2fb764da"));
+        assert(consensus.hashGenesisBlock == uint256S("0x0000bfc0a4fd7d2215718380aae7e92f0821b0c4785a64039b173840ea1c36fb"));
+        assert(genesis.hashMerkleRoot == uint256S("0x603add6547a4c67f12f5a5fb5100fb455e3515b05e58a44a29a4496f7fcaaaf7"));
+
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //!< Regtest mode doesn't have any DNS seeds.
@@ -302,7 +303,7 @@ public:
 
         checkpointData = (CCheckpointData){
             boost::assign::map_list_of
-            ( 0, uint256S("0x502738ac5fdf9de575558e7d090b9abad173f05570aa9ced54b8fb00b30e71d0")),
+            ( 0, uint256S("0x0000bfc0a4fd7d2215718380aae7e92f0821b0c4785a64039b173840ea1c36fb")),
             0,
             0,
             0
