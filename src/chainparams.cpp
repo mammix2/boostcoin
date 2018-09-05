@@ -148,7 +148,7 @@ public:
 			(884400, uint256S ("0x00000c0d2c9d2d326ca6413eb362f8576366f4559837006f88da773ebf556fc2")) // Checkpoint at block 884400
 			(900000, uint256S ("0x0000028d002d0e42a0aefae9eb7d526fc1e6a212f2af90fb893daf95dad0c729")) // Checkpoint at block 900000
 			(930500, uint256S ("0x000005de51c6c8cbd82b480195f6ac9665c5e7963b9531f7c6a7bf077443050f")) // Checkpoint at block 930500
-			(1319500, uint256S ("0x6ae145bba3b4eb2b15e6dc98f43f4d70eafa981150c8669db2d0cf87c1b7987e"), // checkpoint at block 1319500
+			(1319500, uint256S ("0x6ae145bba3b4eb2b15e6dc98f43f4d70eafa981150c8669db2d0cf87c1b7987e")), // checkpoint at block 1319500
 
 
             1527684187, // * UNIX timestamp of last checkpoint block
