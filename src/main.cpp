@@ -3680,7 +3680,7 @@ bool ContextualCheckBlockHeader(const CBlockHeader& block, CValidationState& sta
 
     // Reject outdated version blocks when 95% (75% on testnet) of the network has upgraded:
 
-    if (pindexBestHeader->nHeight > 34996) { // m2: chain was poisoned at this block height with an invalid header version.
+    if (pindexPrev->nHeight != 34996 +1) { // m2: chain was poisoned at this block height with an invalid header version.
         for (int32_t version = 2; version < 5; ++version) // check for version 2, 3 and 4 upgrades
             if (block.nVersion < version && IsSuperMajority(version, pindexPrev, consensusParams.nMajorityRejectBlockOutdated, consensusParams))
                 return state.Invalid(false, REJECT_OBSOLETE, strprintf("bad-version(0x%08x)", version - 1),
