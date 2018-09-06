@@ -67,6 +67,13 @@ unsigned int static GetNextWorkRequired_legacy(const CBlockIndex* pindexLast)
 
  unsigned int GetNextWorkRequired_DGW(const CBlockIndex* pindexLast, bool fProofOfStake)
  {
+    CBigNum nTargetSpacing;
+        if(pindexLast->nHeight + 1 > 640450) {
+            nTargetSpacing = Params().GetConsensus().nPowTargetSpacing2;
+        } else {
+            nTargetSpacing = Params().GetConsensus().nPowTargetSpacing;
+        }
+
      CBigNum bnTargetLimit = CBigNum(ArithToUint256(bnProofOfStakeLimit));
 
      if (pindexLast == NULL)
@@ -82,7 +89,7 @@ unsigned int static GetNextWorkRequired_legacy(const CBlockIndex* pindexLast)
      int64_t nActualSpacing = pindexPrev->GetBlockTime() - pindexPrevPrev->GetBlockTime();
 
      if (nActualSpacing < 0)
-         nActualSpacing = Params().GetConsensus().nPowTargetSpacing;
+         nActualSpacing = nTargetSpacing;
 
      // target change every block
      // retarget with exponential moving toward target spacing
@@ -90,9 +97,9 @@ unsigned int static GetNextWorkRequired_legacy(const CBlockIndex* pindexLast)
 
      CBigNum bnNew;
      bnNew.SetCompact(pindexPrev->nBits);
-     CBigNum nInterval = (Params().GetConsensus().nPowTargetTimespan) / (Params().GetConsensus().nPowTargetSpacing);
-     bnNew *= ((nInterval - 1) * Params().GetConsensus().nPowTargetSpacing + nActualSpacing + nActualSpacing);
-     bnNew /= ((nInterval + 1) * Params().GetConsensus().nPowTargetSpacing);
+     CBigNum nInterval = (Params().GetConsensus().nPowTargetTimespan) / (nTargetSpacing);
+     bnNew *= ((nInterval - 1) * nTargetSpacing + nActualSpacing + nActualSpacing);
+     bnNew /= ((nInterval + 1) * nTargetSpacing);
 
      if (bnNew <= 0 || bnNew > bnTargetLimit)
          bnNew = bnTargetLimit;
