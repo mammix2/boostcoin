@@ -1729,13 +1729,13 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
     CAmount nSubsidy;
     if (nHeight == 2){
         nSubsidy = 400000 * COIN;
-    } else if (nHeight > 640400 && nHeight <= 641250 ) {
+    } else if (nHeight > 640401 && nHeight <= 641251 ) {
         nSubsidy = 1.301 * COIN;
-    } else if (nHeight > 641250 && nHeight <= 1060000) {
+    } else if (nHeight > 641251 && nHeight <= 1060001) {
         nSubsidy = 1.31 * COIN;
-    } else if (nHeight > 1070000 && nHeight <= 1140000 ) {
+    } else if (nHeight > 1070001 && nHeight <= 1140001 ) {
         nSubsidy = 101.31 * COIN;
-    } else if (nHeight > 1140000) {
+    } else if (nHeight > 1140001) {
         nSubsidy = 1.31 * COIN;
     } else {
         nSubsidy = 515 * COIN;
