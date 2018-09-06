@@ -1759,8 +1759,7 @@ int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees)
 
     nSubsidy = nCoinAge * nRewardCoinYear / 365;
     return nSubsidy + nFees;
-	
-	
+
 }
 
 bool IsInitialBlockDownload()
@@ -7201,8 +7200,8 @@ bool TransactionGetCoinAge(CTransaction& transaction, uint64_t& nCoinAge)
         LogPrint("coinage", "%s: coin age nValueIn=%d nTimeDiff=%d bnCentSecond=%s\n", __func__, nValueIn, transaction.nTime - txPrev.nTime, bnCentSecond.ToString());
     }
 
-    //CBigNum bnCoinDay = ((bnCentSecond * CENT) / COIN) / (24 * 60 * 60);
-	CBigNum bnCoinDay = bnCentSecond * CENT / (24 * 60 * 60);
+    CBigNum bnCoinDay = ((bnCentSecond * CENT) / COIN) / (24 * 60 * 60);
+	// CBigNum bnCoinDay = bnCentSecond * CENT / (24 * 60 * 60);
     LogPrint("coinage", "%s: coin age bnCoinDay=%s\n", __func__, bnCoinDay.ToString());
     nCoinAge = bnCoinDay.getuint64();
 
