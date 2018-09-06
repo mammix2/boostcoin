@@ -174,6 +174,7 @@ public:
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 16 * 60; // 16 minutes
         consensus.nPowTargetSpacing = 60;
+        consensus.nPowTargetSpacing2 = 2 * 60;			
         consensus.nLastPOWBlock = 2000;
         consensus.nStakeMinAge = 15 * 60; // testnet min age is 15 mins
         consensus.nModifierInterval = 10 * 60;
