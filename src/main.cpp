@@ -2603,12 +2603,12 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
 
         if (nCalculatedStakeReward < 0) {
             if (fDebug) {
-                LogPrint("[DEBUG] Found negative stake value:  nCalculatedStakeReward=%d", nStakeReward, nCalculatedStakeReward);
+                LogPrintf("[DEBUG] Found negative stake value:  nCalculatedStakeReward=%d", nStakeReward, nCalculatedStakeReward);
             }
             nCalculatedStakeReward = 0;
         }
         if (fDebug) {
-            LogPrint("[DEBUG] nStakeReward=%d,  nCalculatedStakeReward=%d", nStakeReward, nCalculatedStakeReward);
+            LogPrintf("[DEBUG] nStakeReward=%d,  nCalculatedStakeReward=%d", nStakeReward, nCalculatedStakeReward);
         }
 
         if (nStakeReward > nCalculatedStakeReward)
