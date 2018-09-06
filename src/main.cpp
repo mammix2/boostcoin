@@ -1759,10 +1759,7 @@ int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees)
         LogPrint("[DEBUG] - nSubsidy = nCoinAge * nRewardCoinYear / 365 / COIN: nSubsidy=%d \n", nSubsidy);
     }
 
-    nSubsidy = nCoinAge * nRewardCoinYear / 365;
-    LogPrint("[DEBUG] - return nSubsidy + nFees; =%d \n", (nSubsidy + nFees));
     return nSubsidy + nFees;
-
 }
 
 bool IsInitialBlockDownload()
