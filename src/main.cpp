@@ -2605,6 +2605,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
         if (nCalculatedStakeReward < 0) {
             LogPrintf("[WARNING]: Found negative stake value, returned nCalculatedStakeReward=%d\n", nCalculatedStakeReward);
             nCalculatedStakeReward = nStakeReward;
+            LogPrintf("[WARNING]: Negative stake reward adjusted for legacy verification: nCalculatedStakeReward=%d\n", nCalculatedStakeReward);
         }
 
         if (fDebug) {
