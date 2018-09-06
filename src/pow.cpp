@@ -68,7 +68,7 @@ unsigned int static GetNextWorkRequired_legacy(const CBlockIndex* pindexLast)
  unsigned int GetNextWorkRequired_DGW(const CBlockIndex* pindexLast, bool fProofOfStake)
  {
     int64_t nTargetSpacing;
-        if(pindexLast->nHeight + 1 > 640450) {
+        if(pindexLast->nHeight > 640450) {
             nTargetSpacing = Params().GetConsensus().nPowTargetSpacing2;
         } else {
             nTargetSpacing = Params().GetConsensus().nPowTargetSpacing;
