@@ -1752,11 +1752,9 @@ int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees)
 	int64_t nSubsidy;
 // m2:
     if(pindexBestHeader->nHeight < 641250 ) {
-        nSubsidy = nCoinAge * nRewardCoinYear / 365 / COIN; // original PoS reward
-        LogPrint("[DEBUG] - nSubsidy = nCoinAge * nRewardCoinYear / 365 / COIN: nSubsidy=%d \n", nSubsidy);
+        nSubsidy = nCoinAge * nRewardCoinYear / 365 / COIN;
     } else {
-        nSubsidy = nCoinAge * nRewardCoinYear / 365; // PoS reward on V2 chain
-        LogPrint("[DEBUG] - nSubsidy = nCoinAge * nRewardCoinYear / 365 / COIN: nSubsidy=%d \n", nSubsidy);
+        nSubsidy = nCoinAge * nRewardCoinYear / 365;
     }
 
     return nSubsidy + nFees;
