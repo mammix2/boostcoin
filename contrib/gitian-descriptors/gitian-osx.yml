@@ -1,5 +1,5 @@
 ---
-name: "bitcoin-osx-0.13"
+name: "boost-osx-5.0.0"
 enable_cache: true
 suites:
 - "trusty"
@@ -29,7 +29,7 @@ packages:
 - "fonts-tuffy"
 remotes:
 - "url": "https://github.com/mammix2/boost.git"
-  "dir": "bitcoin"
+  "dir": "boost"
 files:
 - "MacOSX10.11.sdk.tar.gz"
 script: |

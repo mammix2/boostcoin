@@ -1,5 +1,5 @@
 ---
-name: "bitcoin-linux-0.13"
+name: "boost-linux-5.0.0"
 enable_cache: true
 suites:
 - "trusty"
@@ -29,7 +29,7 @@ packages:
 - "python"
 remotes:
 - "url": "https://github.com/mammix2/boost.git"
-  "dir": "bitcoin"
+  "dir": "boost"
 files: []
 script: |
 
