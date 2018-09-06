@@ -2602,14 +2602,12 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
         int64_t nCalculatedStakeReward = GetProofOfStakeReward(nCoinAge, nFees);
 
         if (nCalculatedStakeReward < 0) {
-            if (fDebug) {
-                LogPrintf("[DEBUG] Found negative stake value:  nCalculatedStakeReward=%d\n", nStakeReward, nCalculatedStakeReward);
-            }
+            LogPrintf("[WARNING]: Found negative stake value at nHeight=%d, returned nCalculatedStakeReward=%d\n", pindexBestHeader->nHeight, nCalculatedStakeReward);
             nCalculatedStakeReward = 0;
         }
+
         if (fDebug) {
-            LogPrintf("[DEBUG] nStakeReward=%d,  nCalculatedStakeReward=%d\n", nStakeReward, nCalculatedStakeReward);
-            LogPrintf("[DEBUG]");
+            LogPrintf("[DEBUG]: nStakeReward=%d,  nCalculatedStakeReward=%d\n", nStakeReward, nCalculatedStakeReward);
         }
 
         if (nStakeReward > nCalculatedStakeReward)
