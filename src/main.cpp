@@ -3685,7 +3685,7 @@ bool ContextualCheckBlockHeader(const CBlockHeader& block, CValidationState& sta
     if (block.GetBlockTime() > nAdjustedTime + FutureDrift(block.GetBlockTime()))
         return state.Invalid(false, REJECT_INVALID, "time-too-new", "block timestamp too far in the future");
 
-    //m2: override previous validations due to inconsistent block versions
+    //m2: override previous validations due to inconsistent block versions placed in the chain during PoW phase 1
     if (pindexPrev->nHeight + 1 > consensusParams.nBlockVersionCheckStart) {
 
         // Reject outdated version blocks when 95% (75% on testnet) of the network has upgraded:
