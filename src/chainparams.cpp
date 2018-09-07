@@ -69,10 +69,11 @@ public:
         consensus.nPowTargetSpacing2 = 2 * 60;		
         consensus.nLastPOWBlock = 10000000;
         consensus.nStakeMinAge = 24 * 60 * 60;
-		consensus.nBlockVersionCheckStart = 35000;
+		consensus.nBlockVersionCheckStart = 35000; //m2: blocks after this will be version checked.
         consensus.nModifierInterval = 10 * 60;
         consensus.nStakeSplitAge = 24 * 60 * 60;
-        consensus.timeLimitChange = 1455825600;
+		consensus.nTimeDriftCondition1 = 1457136000; // Sat, 05 Mar 2016 00:00:00 GMT
+		consensus.nTimeDriftCondition2 = 1461873600; // Thu, 28 Apr 2016 20:00:00 GMT
         consensus.nStakeCombineThreshold = 100 * COIN;
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;

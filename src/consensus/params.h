@@ -59,11 +59,12 @@ struct Params {
     int64_t nPowTargetTimespan;
     int nLastPOWBlock;
     int nBlockVersionCheckStart;
+	int nTimeDriftCondition1;
+	int nTimeDriftCondition2;
     int64_t DifficultyAdjustmentInterval() const { return nPowTargetTimespan / nPowTargetSpacing; }
     uint256 nMinimumChainWork;
     unsigned int nStakeMinAge;
     unsigned int nModifierInterval;
-    unsigned int timeLimitChange;
     unsigned int nStakeSplitAge;
     int64_t nStakeCombineThreshold;
 };

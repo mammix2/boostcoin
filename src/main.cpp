@@ -3685,9 +3685,9 @@ bool ContextualCheckBlockHeader(const CBlockHeader& block, CValidationState& sta
     if (block.GetBlockTime() > nAdjustedTime + FutureDrift(block.GetBlockTime()))
         return state.Invalid(false, REJECT_INVALID, "time-too-new", "block timestamp too far in the future");
 
+    //m2: override previous validations due to inconsistent block versions
+    if (pindexPrev->nHeight + 1 > consensusParams.nBlockVersionCheckStart) {
 
-
-    if (pindexPrev->nHeight + 1 > consensusParams.nBlockVersionCheckStart) { //m2: override previous validation due to inconsistent block versions
         // Reject outdated version blocks when 95% (75% on testnet) of the network has upgraded:
         for (int32_t version = 2; version < 5; ++version) // check for version 2, 3 and 4 upgrades
             if (block.nVersion < version && IsSuperMajority(version, pindexPrev, consensusParams.nMajorityRejectBlockOutdated, consensusParams))
@@ -7540,16 +7540,10 @@ bool CheckProofOfStake(const CTransaction& tx, unsigned int nBits, arith_uint256
     return true;
 }
 
-
-
-// m2: some dirty overrides here!
-int64_t nTimeDriftCondition1 = 1457136000; // Sat, 05 Mar 2016 00:00:00 GMT
-int64_t nTimeDriftCondition2 = 1461873600; // Thu, 28 Apr 2016 20:00:00 GMT
-
 int64_t PastDrift(int64_t nTime){
-    if (nTime >= nTimeDriftCondition1 && nTime < nTimeDriftCondition2){
+    if (nTime >= Params().GetConsensus().nTimeDriftCondition1 && nTime < Params().GetConsensus().nTimeDriftCondition2){
         return nTime - 10 * 60;
-    } else if (nTime >= nTimeDriftCondition2){
+    } else if (nTime >= Params().GetConsensus().nTimeDriftCondition2){
         return nTime - 2 * 60 * 60;
     } else {
         return nTime - 24 * 60 * 60;
@@ -7557,9 +7551,9 @@ int64_t PastDrift(int64_t nTime){
 }
 
 int64_t FutureDrift(int64_t nTime) {
-    if (nTime >= nTimeDriftCondition1 && nTime < nTimeDriftCondition2){
+    if (nTime >= Params().GetConsensus().nTimeDriftCondition1 && nTime < Params().GetConsensus().nTimeDriftCondition2){
         return nTime + 10 * 60;
-    } else if (nTime >= nTimeDriftCondition2){
+    } else if (nTime >= Params().GetConsensus().nTimeDriftCondition2){
         return nTime + 2 * 60 * 60;
     } else {
         return nTime + 24 * 60 * 60;
