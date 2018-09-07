@@ -173,7 +173,7 @@ CBlockTemplate* BlockAssembler::CreateNewBlock(const CScript& scriptPubKeyIn, bo
     nLastBlockWeight = nBlockWeight;
 
     // Create coinbase transaction.
-    CMutableTransaction coinbaseTx;
+    CMutableTransaction coinbaseTx(GetAdjustedTime());
     coinbaseTx.vin.resize(1);
     coinbaseTx.vin[0].prevout.SetNull();
     if (fProofOfStake)
