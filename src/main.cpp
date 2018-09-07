@@ -3687,7 +3687,7 @@ bool ContextualCheckBlockHeader(const CBlockHeader& block, CValidationState& sta
 
 
 
-    if (pindexPrev->nHeight + 1 >35000) { //m2: override previous validation due to inconsistent block versions
+    if (pindexPrev->nHeight + 1 > consensusParams.nBlockVersionCheckStart) { //m2: override previous validation due to inconsistent block versions
         // Reject outdated version blocks when 95% (75% on testnet) of the network has upgraded:
         for (int32_t version = 2; version < 5; ++version) // check for version 2, 3 and 4 upgrades
             if (block.nVersion < version && IsSuperMajority(version, pindexPrev, consensusParams.nMajorityRejectBlockOutdated, consensusParams))
