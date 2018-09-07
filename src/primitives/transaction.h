@@ -10,7 +10,6 @@
 #include "script/script.h"
 #include "serialize.h"
 #include "uint256.h"
-#include "timedata.h"
 
 static const int SERIALIZE_TRANSACTION_NO_WITNESS = 0x40000000;
 
@@ -461,7 +460,7 @@ struct CMutableTransaction
     CTxWitness wit;
     uint32_t nLockTime;
 
-    CMutableTransaction();
+    CMutableTransaction(int nTime = 0);
     CMutableTransaction(const CTransaction& tx);
 
     ADD_SERIALIZE_METHODS;

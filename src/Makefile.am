@@ -411,12 +411,7 @@ boostcoin_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
 # bitcoin-tx binary #
-boostcoin_tx_SOURCES = \
-	bitcoin-tx.cpp \
-	timedata.h \
-	timedata.cpp \
-	ui_interface.h \
-	ui_interface.cpp
+boostcoin_tx_SOURCES = bitcoin-tx.cpp
 boostcoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 boostcoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 boostcoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
