@@ -213,9 +213,9 @@ public:
         nDefaultPort = 19697;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1400512373, 1908795, 0x1f00ffff, 1);
+        genesis = CreateGenesisBlock(1400512373, 825214, 0x1f00ffff, 1);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x0000bfc0a4fd7d2215718380aae7e92f0821b0c4785a64039b173840ea1c36fb"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000ec4fc2a161ae8fc6090888b34f8f88a8f600270affb084c7004b980584c"));
         assert(genesis.hashMerkleRoot == uint256S("0x603add6547a4c67f12f5a5fb5100fb455e3515b05e58a44a29a4496f7fcaaaf7"));
 
         vFixedSeeds.clear();
@@ -286,18 +286,18 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 999999999999ULL;
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x00");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000100010");
 
-        pchMessageStart[0] = 0xf1;
-        pchMessageStart[1] = 0xb2;
-        pchMessageStart[2] = 0xb3;
-        pchMessageStart[3] = 0xd4;
+        pchMessageStart[0] = 0x41;
+        pchMessageStart[1] = 0x32;
+        pchMessageStart[2] = 0x23;
+        pchMessageStart[3] = 0x14;
         nDefaultPort = 29697;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1400512373, 1908795, 0x1f00ffff, 1);
+        genesis = CreateGenesisBlock(1400512373, 825214, 0x1f00ffff, 1);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x0000bfc0a4fd7d2215718380aae7e92f0821b0c4785a64039b173840ea1c36fb"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000ec4fc2a161ae8fc6090888b34f8f88a8f600270affb084c7004b980584c"));
         assert(genesis.hashMerkleRoot == uint256S("0x603add6547a4c67f12f5a5fb5100fb455e3515b05e58a44a29a4496f7fcaaaf7"));
 
 
