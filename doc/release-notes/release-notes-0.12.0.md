@@ -6,7 +6,7 @@ This is a new major version release, bringing new features and other improvement
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/mammix2/boost/issues>
+  <https://github.com/bitcoin/bitcoin/issues>
 
 Upgrading and downgrading
 =========================

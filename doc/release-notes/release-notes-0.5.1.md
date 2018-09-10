@@ -9,7 +9,7 @@ More translations are welcome; join the project at Transifex if you can help:
 https://www.transifex.net/projects/p/bitcoin/
 
 Please report bugs using the issue tracker at github:
-https://github.com/mammix2/boost/issues
+https://github.com/bitcoin/bitcoin/issues
 
 Project source code is hosted at github; we are no longer
 distributing .tar.gz files here, you can get them
