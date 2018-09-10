@@ -56,11 +56,13 @@ struct Params {
     bool fPowNoRetargeting;
     int64_t nPowTargetSpacing;
     int64_t nPowTargetSpacing2;
+	int64_t nPowTargetSpacing2_start;
     int64_t nPowTargetTimespan;
     int nLastPOWBlock;
     int nBlockVersionCheckStart;
 	int nTimeDriftCondition1;
 	int nTimeDriftCondition2;
+	int nBlockDGW_start;
     int64_t DifficultyAdjustmentInterval() const { return nPowTargetTimespan / nPowTargetSpacing; }
     uint256 nMinimumChainWork;
     unsigned int nStakeMinAge;

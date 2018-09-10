@@ -110,7 +110,7 @@ unsigned int static GetNextWorkRequired_legacy(const CBlockIndex* pindexLast)
 unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, bool fProofOfStake)
 {
 
-    if(pindexLast->nHeight + 1 > 250)  //M2: Fork to DGW retargeting
+    if(pindexLast->nHeight + 1 > Params().GetConsensus().nBlockDGW_start)
         return GetNextWorkRequired_DGW(pindexLast, fProofOfStake);
     else
         return GetNextWorkRequired_legacy(pindexLast);

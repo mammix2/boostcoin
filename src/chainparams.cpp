@@ -66,10 +66,12 @@ public:
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 16 * 60; // 16 minutes
         consensus.nPowTargetSpacing = 60;
-        consensus.nPowTargetSpacing2 = 2 * 60;		
+        consensus.nPowTargetSpacing2 = 2 * 60;
+		consensus.nPowTargetSpacing2_start = 640450;		
         consensus.nLastPOWBlock = 10000000;
         consensus.nStakeMinAge = 24 * 60 * 60;
 		consensus.nBlockVersionCheckStart = 43201; //m2: blocks after this will be version checked.
+		consensus.nBlockDGW_start = 250;
         consensus.nModifierInterval = 10 * 60;
         consensus.nStakeSplitAge = 24 * 60 * 60;
 		consensus.nTimeDriftCondition1 = 1457136000; // Sat, 05 Mar 2016 00:00:00 GMT
@@ -176,7 +178,8 @@ public:
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 16 * 60; // 16 minutes
         consensus.nPowTargetSpacing = 60;
-        consensus.nPowTargetSpacing2 = 2 * 60;			
+        consensus.nPowTargetSpacing2 = 2 * 60;	
+		consensus.nPowTargetSpacing2_start = 30;		
         consensus.nLastPOWBlock = 2000;
         consensus.nStakeMinAge = 15 * 60; // testnet min age is 15 mins
         consensus.nModifierInterval = 10 * 60;
@@ -184,6 +187,7 @@ public:
 		consensus.nTimeDriftCondition1 = 1457136000; // Sat, 05 Mar 2016 00:00:00 GMT
 		consensus.nTimeDriftCondition2 = 1461873600; // Thu, 28 Apr 2016 20:00:00 GMT
         consensus.nBlockVersionCheckStart = 100; //m2: blocks after this will be version checked.
+		consensus.nBlockDGW_start = 20;
         consensus.nStakeCombineThreshold = 100 * COIN;
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = false;
@@ -264,12 +268,14 @@ public:
         consensus.nPowTargetTimespan = 16 * 60; // 16 minutes
         consensus.nPowTargetSpacing = 60;
         consensus.nPowTargetSpacing2 = 2 * 60;
+		consensus.nPowTargetSpacing2_start = 30;
         consensus.nStakeMinAge = 24 * 60 * 60;
         consensus.nModifierInterval = 10 * 60;
         consensus.nStakeSplitAge = 24 * 60 * 60;
 		consensus.nTimeDriftCondition1 = 1457136000; // Sat, 05 Mar 2016 00:00:00 GMT
 		consensus.nTimeDriftCondition2 = 1461873600; // Thu, 28 Apr 2016 20:00:00 GMT
         consensus.nBlockVersionCheckStart = 100; //m2: blocks after this will be version checked.
+		consensus.nBlockDGW_start = 20;
         consensus.nStakeCombineThreshold = 100 * COIN;
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = true;
