@@ -544,7 +544,7 @@ bool TransactionGetCoinAge(CTransaction& transaction, uint64_t& nCoinAge);
 // Check kernel hash target and coinstake signature
 // Sets hashProofOfStake on success return
 bool CheckProofOfStake(const CTransaction& tx, unsigned int nBits, arith_uint256& hashProofOfStake, arith_uint256& targetProofOfStake, std::vector<CScriptCheck> *pvChecks, bool fCHeckSignature = false);
-bool CheckStakeKernelHash(unsigned int nBits, CBlockIndex& blockFrom, uint256 hashBlock, unsigned int nTxPrevOffset, const CTransaction& txPrev, const COutPoint& prevout, unsigned int nTimeTx, arith_uint256& hashProofOfStake, arith_uint256& targetProofOfStake);
+bool CheckStakeKernelHash(unsigned int nBits, CBlock& blockFrom, unsigned int nTxPrevOffset, const CTransaction& txPrev, const COutPoint& prevout, unsigned int nTimeTx, arith_uint256& hashProofOfStake, arith_uint256& targetProofOfStake);
 
 // Compute the hash modifier for proof-of-stake
 bool ComputeNextStakeModifier(const CBlockIndex* pindexPrev, uint64_t& nStakeModifier, bool& fGeneratedStakeModifier);

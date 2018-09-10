@@ -2416,9 +2416,12 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
                 //
                 // Note how the sequence number is set to max()-1 so that the
                 // nLockTime set above actually works.
-                BOOST_FOREACH(const PAIRTYPE(const CWalletTx*,unsigned int)& coin, setCoins)
+                BOOST_FOREACH(const PAIRTYPE(const CWalletTx*,unsigned int)& coin, setCoins) {
+                    if(coin.first->nTime > txNew.nTime)
+                        txNew.nTime = coin.first->nTime;
                     txNew.vin.push_back(CTxIn(coin.first->GetHash(),coin.second,CScript(),
                                               std::numeric_limits<unsigned int>::max()-1));
+                }
 
                 // Sign
                 int nIn = 0;
@@ -3757,6 +3760,12 @@ void CWallet::AvailableCoinsForStaking(vector<COutput>& vCoins, unsigned int nCo
             const CWalletTx* pcoin = &(*it).second;
             const uint256& wtxid = it->first;
 
+            if (pcoin->nTime + Params().GetConsensus().nStakeMinAge > nSpendTime)
+                continue;
+
+            if (pcoin->GetBlocksToMaturity() > 0)
+                continue;
+
             if (pcoin->isAbandoned())
                 continue;
 
@@ -3775,7 +3784,7 @@ void CWallet::AvailableCoinsForStaking(vector<COutput>& vCoins, unsigned int nCo
 bool CWallet::SelectCoinsForStaking(int64_t nTargetValue, unsigned int nSpendTime, int nMinConf, set<pair<const CWalletTx*,unsigned int> >& setCoinsRet, int64_t& nValueRet) const
 {
     vector<COutput> vCoins;
-    AvailableCoinsForStaking(vCoins, nMinConf);
+    AvailableCoinsForStaking(vCoins, nMinConf, nSpendTime);
 
     setCoinsRet.clear();
     nValueRet = 0;
@@ -3788,10 +3797,6 @@ bool CWallet::SelectCoinsForStaking(int64_t nTargetValue, unsigned int nSpendTim
         // Stop if we've chosen enough inputs
         if (nValueRet >= nTargetValue)
             break;
-
-        // Follow the timestamp rules
-        if (pcoin->nTime > nSpendTime)
-            continue;
 
         int64_t n = pcoin->vout[i].nValue;
 
@@ -3848,57 +3853,40 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
     CScript scriptPubKeyKernel;
     BOOST_FOREACH(PAIRTYPE(const CWalletTx*, unsigned int) pcoin, setCoins)
     {
+        CBlockIndex* pblockindex = mapBlockIndex[pcoin.first->hashBlock];
+
+        CBlock block;
+        if (!ReadBlockFromDisk(block, pblockindex, Params().GetConsensus()))
+            return error("%s: ReadBlockFromDisk failed at %d, hash=%s", __func__ , pblockindex->nHeight, pblockindex->GetBlockHash().ToString());
+
         static int nMaxStakeSearchInterval = 60;
+        if (block.GetBlockTime() + Params().GetConsensus().nStakeMinAge > txNew.nTime - nMaxStakeSearchInterval)
+            continue; // only count coins meeting min age requirement
+
+        // TX offset is the size serialised block plus the serialised size of all TXs until
+        // you get to the TX that generates this block
+        int nTxPos = ::GetSerializeSize(CBlock(), SER_DISK, CLIENT_VERSION) - (2 * GetSizeOfCompactSize(0)) + GetSizeOfCompactSize(block.vtx.size());
+        if (block.vtx.size() > 1) {
+            for (unsigned int i = 0; i < block.vtx.size(); i++) {
+                if (pcoin.first->GetHash() != block.vtx[i].GetHash())
+                    nTxPos += ::GetSerializeSize(block.vtx[i], SER_DISK, CLIENT_VERSION);
+                else
+                    break;
+            }
+        }
+
         bool fKernelFound = false;
         for (unsigned int n=0; n<min(nSearchInterval,(int64_t)nMaxStakeSearchInterval) && !fKernelFound && pindexPrev == pindexBestHeader; n++)
         {
             boost::this_thread::interruption_point();
             // Search backward in time from the given txNew timestamp
             // Search nSearchInterval seconds back up to nMaxStakeSearchInterval
+            arith_uint256 hashProofOfStake = arith_uint256(0), targetProofOfStake = arith_uint256(0);
             COutPoint prevoutStake = COutPoint(pcoin.first->GetHash(), pcoin.second);
-
-            CTransaction txPrev;
-            uint256 hashBlock = uint256();
-            if (!GetTransaction(prevoutStake.hash, txPrev, Params().GetConsensus(), hashBlock, true)) {
-                LogPrintf("%s: INFO: read txPrev failed %s", __func__, prevoutStake.hash.GetHex());  // previous transaction not in main chain, may occur during initial download
-                continue;
-            }
-
-            if (mapBlockIndex.count(hashBlock) == 0) {
-                LogPrintf("%s: Could not find block of previous transaction %s\n", __func__, hashBlock.ToString());
-                continue;
-            }
-
-            CBlockIndex* pblockindex = mapBlockIndex[hashBlock];
-
-            CDiskTxPos postx;
-            pblocktree->ReadTxIndex(prevoutStake.hash, postx);
-
-            if (pblockindex->GetBlockTime() + Params().GetConsensus().nStakeMinAge > txNew.nTime - n)
-                continue;
-
             if (!pwalletMain->mapWallet.count(prevoutStake.hash))
                 return error("%s: Couldn't get Tx Index", __func__);
 
-            arith_uint256 hashProofOfStake = arith_uint256(0), targetProofOfStake = arith_uint256(0);
-
-            CBlock prevBlock;
-            if (!ReadBlockFromDisk(prevBlock, pblockindex->GetBlockPos(), Params().GetConsensus()))
-                return error("%s: ReadBlockFromDisk failed at %d, hash=%s", __func__ , pblockindex->nHeight, pblockindex->GetBlockHash().ToString());
-
-            // TX offset is the size serialised block plus the serialised size of all TXs until
-            // you get to theTX that generates this block
-            int nTxPos = ::GetSerializeSize(CBlock(), SER_DISK, CLIENT_VERSION) - (2 * GetSizeOfCompactSize(0)) + GetSizeOfCompactSize(prevBlock.vtx.size());
-            if (prevBlock.vtx.size() > 1) {
-                for (unsigned int i = 0; i < prevBlock.vtx.size(); i++) {
-                    if (txPrev.GetHash() != prevBlock.vtx[i].GetHash())
-                        nTxPos += ::GetSerializeSize(prevBlock.vtx[i], SER_DISK, CLIENT_VERSION);
-                    else
-                        break;
-                }
-            }
-
-            if (CheckStakeKernelHash(nBits, *pblockindex, hashBlock, nTxPos, *pcoin.first, prevoutStake, txNew.nTime - n, hashProofOfStake, targetProofOfStake))
+            if (CheckStakeKernelHash(nBits, block, nTxPos, *pcoin.first, prevoutStake, txNew.nTime - n, hashProofOfStake, targetProofOfStake))
             {
                 // Found a kernel
                 LogPrint("coinstake", "%s: kernel found\n", __func__);
@@ -4044,3 +4032,4 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
     // Successfully generated coinstake
     return true;
 }
+
