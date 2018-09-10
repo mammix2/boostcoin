@@ -3749,7 +3749,7 @@ bool CMerkleTx::AcceptToMemoryPool(bool fLimitFree, CAmount nAbsurdFee, CValidat
     return ::AcceptToMemoryPool(mempool, state, *this, fLimitFree, NULL, false, nAbsurdFee);
 }
 
-void CWallet::AvailableCoinsForStaking(vector<COutput>& vCoins, unsigned int nConf) const
+void CWallet::AvailableCoinsForStaking(vector<COutput>& vCoins, int nConf, unsigned int nSpendTime) const
 {
     vCoins.clear();
 
