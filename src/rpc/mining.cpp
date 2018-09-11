@@ -160,7 +160,7 @@ UniValue generate(const UniValue& params, bool fHelp)
             "\nResult\n"
             "[ blockhashes ]     (array) hashes of blocks generated\n"
             "\nExamples:\n"
-            "\nGenerate 11 blocks <maxtries>\n"
+            "\nGenerate n blocks <maxtries>\n"
             + HelpExampleCli("generate", "11 99999")
         );
 
@@ -928,6 +928,26 @@ UniValue estimatesmartpriority(const UniValue& params, bool fHelp)
     return result;
 }
 
+UniValue staking(const UniValue& params, bool fHelp)
+{
+    if (fHelp || params.size() != 1)
+        throw runtime_error(
+            "staking bool\n"
+            "Turns staking on or off\n"
+            );
+
+    if (!params[0].isBool())
+        throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, argument 1 must be a boolean");
+
+    SetStaking(params[0].get_bool());
+
+    UniValue ret(UniValue::VBOOL);
+
+    ret = params[0].get_bool();
+
+    return ret;
+}
+
 static const CRPCCommand commands[] =
 { //  category              name                      actor (function)         okSafeMode
   //  --------------------- ------------------------  -----------------------  ----------
@@ -937,6 +957,7 @@ static const CRPCCommand commands[] =
     { "mining",             "getblocktemplate",       &getblocktemplate,       true  },
     { "mining",             "submitblock",            &submitblock,            true  },
 
+    { "generating",         "staking",                &staking,                true  },
     { "generating",         "generate",               &generate,               true  },
     { "generating",         "generatetoaddress",      &generatetoaddress,      true  },
 
