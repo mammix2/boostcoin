@@ -1346,9 +1346,11 @@ void BitcoinGUI::updateStakingStatus()
             nNetworkWeight /= COIN;
 
             walletFrame->setStakingStatus(text!=""?text:tr("You are staking"));
+        	labelStakingIcon->setPixmap(QIcon(":/icons/staking_on").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
         }
         else
         {
+        	labelStakingIcon->setPixmap(QIcon(":/icons/staking_off").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
             if (pwalletMain && pwalletMain->IsLocked())
                 walletFrame->setStakingStatus(tr("Not staking - Wallet locked"));
             else if (vNodes.empty())
