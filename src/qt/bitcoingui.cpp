@@ -1346,22 +1346,30 @@ void BitcoinGUI::updateStakingStatus()
             nNetworkWeight /= COIN;
 
             walletFrame->setStakingStatus(text!=""?text:tr("You are staking"));
-        	labelStakingIcon->setPixmap(QIcon(":/icons/staking_on").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-        	labelStakingIcon->setToolTip(tr("Staking.<br>Your weight is %1<br>Network weight is %2<br>Expected time to earn reward is %3").arg(nWeight).arg(nNetworkWeight).arg(text));
+            labelStakingIcon->setPixmap(QIcon(":/icons/staking_on").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
+            labelStakingIcon->setToolTip(tr("Staking.<br>Your weight is %1<br>Network weight is %2<br>Expected time to earn reward is %3").arg(nWeight).arg(nNetworkWeight).arg(text));
         }
         else
         {
-        	labelStakingIcon->setPixmap(QIcon(":/icons/staking_off").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-            if (pwalletMain && pwalletMain->IsLocked())
+            labelStakingIcon->setPixmap(QIcon(":/icons/staking_off").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
+
+
+            if (pwalletMain && pwalletMain->IsLocked()) {
                 walletFrame->setStakingStatus(tr("Not staking - Wallet locked"));
-            else if (vNodes.empty())
+                labelStakingIcon->setToolTip(tr("Not staking - Wallet locked"));
+            } else if (vNodes.empty()) {
                 walletFrame->setStakingStatus(tr("Not staking - Wallet offline"));
-            else if (IsInitialBlockDownload())
+                labelStakingIcon->setToolTip(tr("Not staking - Wallet offline"));
+            } else if (IsInitialBlockDownload()) {
                 walletFrame->setStakingStatus(tr("Not staking - Wallet syncing"));
-            else if (!nWeight)
+                labelStakingIcon->setToolTip(tr("Not staking - Wallet syncing"));
+            } else if (!nWeight) {
                 walletFrame->setStakingStatus(tr("Not staking - Immature coins"));
-            else
+                labelStakingIcon->setToolTip(tr("Not staking - Immature coins"));
+            } else {
                 walletFrame->setStakingStatus(tr("Not staking - Please wait"));
+                labelStakingIcon->setToolTip(tr("Not staking - Please wait"));
+            }
         }
     }
 }
