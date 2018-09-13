@@ -185,10 +185,10 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
     ui->labelImmature->setText(BitcoinUnits::formatWithUnit(unit, immatureBalance, false, BitcoinUnits::separatorAlways));
     ui->labelTotal->setText(BitcoinUnits::formatWithUnit(unit, balance + unconfirmedBalance + stakingBalance, false, BitcoinUnits::separatorAlways));
 
-    bool showStaking = stakingBalance != 0;
+//    bool showStaking = stakingBalance != 0;
 
-    ui->labelStaking->setVisible(showStaking);
-    ui->labelStakingText->setVisible(showStaking);
+    ui->labelStaking->setVisible(true);
+    ui->labelStakingText->setVisible(true);
 
     // only show immature (newly mined) balance if it's non-zero, so as not to complicate things
     // for the non-mining users
