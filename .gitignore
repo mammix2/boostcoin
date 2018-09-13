@@ -78,6 +78,13 @@ boostcoin-qt
 boostcoin-Qt.app
 *.user*
 
+#QT Creator
+BOOST-IMPORT.config
+BOOST-IMPORT.creator
+BOOST-IMPORT.files
+BOOST-IMPORT.includes
+
+
 # Unit-tests
 Makefile.test
 boostcoin-qt_test
