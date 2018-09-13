@@ -146,11 +146,11 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *n
 {
 	
 #ifdef Q_OS_MAC
-    GUIUtil::restoreWindowGeometry("nWindow", QSize(930, 650), this);
+    GUIUtil::restoreWindowGeometry("nWindow", QSize(880, 615), this);
 #elif _WIN32
-    GUIUtil::restoreWindowGeometry("nWindow", QSize(930, 650), this););
+    GUIUtil::restoreWindowGeometry("nWindow", QSize(880, 615), this);
 #else
-    GUIUtil::restoreWindowGeometry("nWindow", QSize(930, 650), this);
+    GUIUtil::restoreWindowGeometry("nWindow", QSize(880, 615), this);
 #endif
 
     QString windowTitle = tr(PACKAGE_NAME) + " - ";
