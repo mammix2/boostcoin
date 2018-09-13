@@ -139,7 +139,7 @@ OverviewPage::OverviewPage(const PlatformStyle *platformStyle, QWidget *parent) 
     ui->listTransactions->setAttribute(Qt::WA_MacShowFocusRect, false);
 
     connect(ui->listTransactions, SIGNAL(clicked(QModelIndex)), this, SLOT(handleTransactionClicked(QModelIndex)));
-    connect(ui->unlockStakingButton, SIGNAL(clicked()), this, SLOT(unlockWalletStaking()));
+//    connect(ui->unlockStakingButton, SIGNAL(clicked()), this, SLOT(unlockWalletStaking()));
 
     // start with displaying the "out of sync" warnings
     showOutOfSyncWarning(true);
@@ -154,7 +154,7 @@ void OverviewPage::handleTransactionClicked(const QModelIndex &index)
 
 void OverviewPage::showLockStaking(bool status)
 {
-    ui->unlockStakingButton->setVisible(status);
+//    ui->unlockStakingButton->setVisible(true);
 }
 
 OverviewPage::~OverviewPage()
