@@ -1288,7 +1288,7 @@ void BitcoinGUI::toggleStaking()
                    CClientUIInterface::MSG_INFORMATION);
 }
 
-//#ifdef ENABLE_WALLET
+#ifdef ENABLE_WALLET
 void BitcoinGUI::updateWeight()
 {
     if (!pwalletMain)
