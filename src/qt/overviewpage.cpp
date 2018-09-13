@@ -22,7 +22,7 @@
 #include <QPainter>
 
 #define DECORATION_SIZE 54
-#define NUM_ITEMS 5
+#define NUM_ITEMS 6
 
 class TxViewDelegate : public QAbstractItemDelegate
 {
@@ -196,8 +196,8 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
     bool showWatchOnlyImmature = watchImmatureBalance != 0;
 
     // for symmetry reasons also show immature label when the watch-only one is shown
-    ui->labelImmature->setVisible(false);
-    ui->labelImmatureText->setVisible(false);
+    ui->labelImmature->setVisible(showWatchOnlyImmature);
+    ui->labelImmatureText->setVisible(showWatchOnlyImmature);
 }
 
 // show/hide watch-only labels

@@ -1038,8 +1038,8 @@ void SetThemeQSS(QApplication& app)
 
         "QVBoxLayout            { background: rgb(255,255,255) ;}"
 
-        "QLabel#overviewpage_spendable_label, QLabel#overviewpage_stake_label, QLabel#overviewpage_unconfirmed_label, QLabel#overviewpage_immature_label {font-weight: bold; font-family: Arial,Gadget,sans-serif; font-size: 16px; color: rgb(51,47,202);}"
-        "QLabel#labelStaking, QLabel#labelBalance, QLabel#labelStake, QLabel#labelUnconfirmed, QLabel#labelImmature {font-weight: bold; font-family: Arial,Gadget,sans-serif; font-size: 16px; color: rgb(43,196,237);}"
+        "QLabel#lbl_Available_text, QLabel#lbl_Pending_Text, QLabel#labelStakingText, QLabel#labelImmatureText, QLabel#lbl_Total_Text, QLabel#lbl_24H_Text, QLabel#lbl_7D_Text, QLabel#lbl_30D_Text {font-weight: bold; font-family: Arial,Gadget,sans-serif; font-size: 16px; color: rgb(51,47,202);}"
+        "QLabel#labelStaking, QLabel#labelBalance, QLabel#labelStake, QLabel#labelUnconfirmed, QLabel#labelImmature, QLabel#label24hStakingStats, QLabel#label7dStakingStats, QLabel#label30dStakingStats  {font-weight: bold; font-family: Arial,Gadget,sans-serif; font-size: 16px; color: rgb(43,196,237);}"
         "QLabel#label_MyWallet, QLabel#StakingStatus_Heading {color: rgb(51,47,202) ;}"
         "QLabel#overviewpage_total_label, QLabel#labelTotal {font-weight: bold; font-family: Arial,Gadget,sans-serif; font-size: 20px; color: rgb(51,47,202) ;}"
         "QLabel#lblAmount, QLabel#lblLabel, QLabel#lblMessage {font-weight: bold; font-family: Arial,Gadget,sans-serif; color: rgb(51,47,202) ;}"
@@ -1135,8 +1135,8 @@ void SetThemeQSS(QApplication& app)
 
         "QVBoxLayout            { background: rgb(255,255,255) ;}"
 
-        "QLabel#overviewpage_spendable_label, QLabel#overviewpage_stake_label, QLabel#overviewpage_unconfirmed_label, QLabel#overviewpage_immature_label {font-weight: bold; font-family: Arial,Gadget,sans-serif; font-size: 16px; color: rgb(51,47,202);}"
-        "QLabel#labelStaking, QLabel#labelBalance, QLabel#labelStake, QLabel#labelUnconfirmed, QLabel#labelImmature {font-weight: bold; font-family: Arial,Gadget,sans-serif; font-size: 16px; color: rgb(43,196,237);}"
+        "QLabel#lbl_Available_text, QLabel#lbl_Pending_Text, QLabel#labelStakingText, QLabel#labelImmatureText, QLabel#lbl_Total_Text, QLabel#lbl_24H_Text, QLabel#lbl_7D_Text, QLabel#lbl_30D_Text {font-weight: bold; font-family: Arial,Gadget,sans-serif; font-size: 16px; color: rgb(51,47,202);}"
+        "QLabel#labelStaking, QLabel#labelBalance, QLabel#labelStake, QLabel#labelUnconfirmed, QLabel#labelImmature, QLabel#label24hStakingStats, QLabel#label7dStakingStats, QLabel#label30dStakingStats  {font-weight: bold; font-family: Arial,Gadget,sans-serif; font-size: 16px; color: rgb(43,196,237);}"
         "QLabel#label_MyWallet, QLabel#StakingStatus_Heading {color: rgb(51,47,202) ;}"
         "QLabel#overviewpage_total_label, QLabel#labelTotal {font-weight: bold; font-family: Arial,Gadget,sans-serif; font-size: 20px; color: rgb(51,47,202) ;}"
         "QLabel#lblAmount, QLabel#lblLabel, QLabel#lblMessage {font-weight: bold; font-family: Arial,Gadget,sans-serif; color: rgb(51,47,202) ;}"
@@ -1232,8 +1232,8 @@ void SetThemeQSS(QApplication& app)
 
         "QVBoxLayout            { background: rgb(255,255,255) ;}"
 
-        "QLabel#overviewpage_spendable_label, QLabel#overviewpage_stake_label, QLabel#overviewpage_unconfirmed_label, QLabel#overviewpage_immature_label {font-weight: bold; font-family: Arial,Gadget,sans-serif; font-size: 16px; color: rgb(51,47,202);}"
-        "QLabel#labelStaking, QLabel#labelBalance, QLabel#labelStake, QLabel#labelUnconfirmed, QLabel#labelImmature {font-weight: bold; font-family: Arial,Gadget,sans-serif; font-size: 16px; color: rgb(43,196,237);}"
+        "QLabel#lbl_Available_text, QLabel#lbl_Pending_Text, QLabel#labelStakingText, QLabel#labelImmatureText, QLabel#lbl_Total_Text, QLabel#lbl_24H_Text, QLabel#lbl_7D_Text, QLabel#lbl_30D_Text {font-weight: bold; font-family: Arial,Gadget,sans-serif; font-size: 16px; color: rgb(51,47,202);}"
+        "QLabel#labelStaking, QLabel#labelBalance, QLabel#labelStake, QLabel#labelUnconfirmed, QLabel#labelImmature, QLabel#label24hStakingStats, QLabel#label7dStakingStats, QLabel#label30dStakingStats {font-weight: bold; font-family: Arial,Gadget,sans-serif; font-size: 16px; color: rgb(43,196,237);}"
         "QLabel#label_MyWallet, QLabel#StakingStatus_Heading {color: rgb(51,47,202) ;}"
         "QLabel#overviewpage_total_label, QLabel#labelTotal {font-weight: bold; font-family: Arial,Gadget,sans-serif; font-size: 20px; color: rgb(51,47,202) ;}"
         "QLabel#lblAmount, QLabel#lblLabel, QLabel#lblMessage {font-weight: bold; font-family: Arial,Gadget,sans-serif; color: rgb(51,47,202) ;}"

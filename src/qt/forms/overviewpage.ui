@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>850</width>
-    <height>531</height>
+    <height>551</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -26,6 +26,9 @@
    <string>Form</string>
   </property>
   <layout class="QVBoxLayout" name="topLayout">
+   <property name="bottomMargin">
+    <number>9</number>
+   </property>
    <item>
     <widget class="QLabel" name="labelAlerts">
      <property name="enabled">
@@ -59,13 +62,13 @@
         <enum>QLayout::SetNoConstraint</enum>
        </property>
        <property name="leftMargin">
-        <number>16</number>
+        <number>15</number>
        </property>
        <property name="topMargin">
-        <number>4</number>
+        <number>0</number>
        </property>
        <property name="rightMargin">
-        <number>16</number>
+        <number>5</number>
        </property>
        <property name="bottomMargin">
         <number>16</number>
@@ -77,19 +80,28 @@
            <number>6</number>
           </property>
           <property name="leftMargin">
-           <number>9</number>
+           <number>10</number>
           </property>
           <property name="topMargin">
-           <number>0</number>
+           <number>8</number>
           </property>
           <property name="rightMargin">
-           <number>9</number>
+           <number>10</number>
           </property>
           <property name="bottomMargin">
-           <number>6</number>
+           <number>15</number>
           </property>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_9">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>10</number>
+            </property>
+            <property name="rightMargin">
+             <number>15</number>
+            </property>
             <item>
              <widget class="QLabel" name="label_MyWallet">
               <property name="enabled">
@@ -109,7 +121,9 @@
               </property>
               <property name="font">
                <font>
-                <pointsize>12</pointsize>
+                <pointsize>13</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
                </font>
               </property>
               <property name="layoutDirection">
@@ -122,7 +136,7 @@
                <string>My Wallet</string>
               </property>
               <property name="alignment">
-               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
               </property>
               <property name="margin">
                <number>-1</number>
@@ -147,20 +161,35 @@
             </item>
             <item>
              <widget class="QLabel" name="label">
+              <property name="maximumSize">
+               <size>
+                <width>70</width>
+                <height>55</height>
+               </size>
+              </property>
               <property name="text">
-               <string>Wallet-logo</string>
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap resource="../bitcoin.qrc">:/images/wallet_logo2</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
             <item>
-             <spacer name="horizontalSpacer_3">
+             <spacer name="horizontalSpacer">
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
               </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Preferred</enum>
+              </property>
               <property name="sizeHint" stdset="0">
                <size>
-                <width>40</width>
-                <height>20</height>
+                <width>27</width>
+                <height>22</height>
                </size>
               </property>
              </spacer>
@@ -169,11 +198,14 @@
           </item>
           <item>
            <layout class="QFormLayout" name="formLayout_3">
+            <property name="labelAlignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
             <property name="horizontalSpacing">
              <number>12</number>
             </property>
             <property name="verticalSpacing">
-             <number>7</number>
+             <number>4</number>
             </property>
             <property name="leftMargin">
              <number>50</number>
@@ -188,7 +220,7 @@
              <number>10</number>
             </property>
             <item row="0" column="0">
-             <widget class="QLabel" name="label_5">
+             <widget class="QLabel" name="lbl_Available_text">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                 <horstretch>0</horstretch>
@@ -242,7 +274,7 @@
              </widget>
             </item>
             <item row="1" column="0">
-             <widget class="QLabel" name="label_7">
+             <widget class="QLabel" name="lbl_Pending_Text">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                 <horstretch>0</horstretch>
@@ -404,7 +436,7 @@
              </widget>
             </item>
             <item row="4" column="0">
-             <widget class="QLabel" name="label_8">
+             <widget class="QLabel" name="overviewpage_total_label">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                 <horstretch>0</horstretch>
@@ -413,14 +445,14 @@
               </property>
               <property name="minimumSize">
                <size>
-                <width>100</width>
-                <height>17</height>
+                <width>0</width>
+                <height>0</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>100</width>
-                <height>17</height>
+                <width>16777215</width>
+                <height>16777215</height>
                </size>
               </property>
               <property name="font">
@@ -461,6 +493,12 @@
           </item>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <property name="topMargin">
+             <number>3</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
             <item>
              <widget class="QLabel" name="StakingStatus_Heading">
               <property name="minimumSize">
@@ -471,14 +509,16 @@
               </property>
               <property name="font">
                <font>
-                <pointsize>12</pointsize>
+                <pointsize>13</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
                </font>
               </property>
               <property name="lineWidth">
                <number>1</number>
               </property>
               <property name="text">
-               <string>Staking Status</string>
+               <string>Staking statistics</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -496,7 +536,7 @@
              <number>12</number>
             </property>
             <property name="verticalSpacing">
-             <number>7</number>
+             <number>4</number>
             </property>
             <property name="leftMargin">
              <number>50</number>
@@ -511,7 +551,7 @@
              <number>10</number>
             </property>
             <item row="1" column="0">
-             <widget class="QLabel" name="label_13">
+             <widget class="QLabel" name="lbl_7D_Text">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                 <horstretch>0</horstretch>
@@ -540,7 +580,7 @@
                </font>
               </property>
               <property name="text">
-               <string>7D</string>
+               <string>7D:</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -567,7 +607,7 @@
              </widget>
             </item>
             <item row="2" column="0">
-             <widget class="QLabel" name="label_14">
+             <widget class="QLabel" name="lbl_30D_Text">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                 <horstretch>0</horstretch>
@@ -596,7 +636,7 @@
                </font>
               </property>
               <property name="text">
-               <string>30D</string>
+               <string>30D:</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -623,7 +663,7 @@
              </widget>
             </item>
             <item row="0" column="0">
-             <widget class="QLabel" name="label_10">
+             <widget class="QLabel" name="lbl_24H_Text">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                 <horstretch>0</horstretch>
@@ -703,20 +743,13 @@
          <property name="pixmap">
           <pixmap resource="../bitcoin.qrc">:/icons/about</pixmap>
          </property>
+         <property name="scaledContents">
+          <bool>false</bool>
+         </property>
+         <property name="wordWrap">
+          <bool>false</bool>
+         </property>
         </widget>
-       </item>
-       <item>
-        <spacer name="verticalSpacer_4">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>5</height>
-          </size>
-         </property>
-        </spacer>
        </item>
        <item>
         <widget class="QLabel" name="stakingStatusLabel">
@@ -740,7 +773,10 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>12</pointsize>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+           <kerning>true</kerning>
           </font>
          </property>
          <property name="text">
@@ -760,19 +796,25 @@
       <widget class="QWidget" name="widget_2" native="true">
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <property name="leftMargin">
-         <number>16</number>
+         <number>10</number>
         </property>
         <property name="topMargin">
          <number>7</number>
         </property>
         <property name="rightMargin">
-         <number>16</number>
+         <number>5</number>
         </property>
         <property name="bottomMargin">
          <number>16</number>
         </property>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_4_4">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>15</number>
+          </property>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_5">
             <property name="sizeConstraint">
@@ -808,6 +850,8 @@
               <property name="font">
                <font>
                 <pointsize>12</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
                </font>
               </property>
               <property name="text">
@@ -816,22 +860,6 @@
              </widget>
             </item>
            </layout>
-          </item>
-          <item>
-           <spacer name="verticalSpacer_6">
-            <property name="orientation">
-             <enum>Qt::Vertical</enum>
-            </property>
-            <property name="sizeType">
-             <enum>QSizePolicy::Maximum</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>20</width>
-              <height>4</height>
-             </size>
-            </property>
-           </spacer>
           </item>
           <item>
            <widget class="ListView" name="listTransactions" native="true">
@@ -847,6 +875,9 @@
            <spacer name="verticalSpacer_2">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Expanding</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
@@ -887,14 +918,14 @@
               </property>
               <property name="maximumSize">
                <size>
-                <width>22</width>
-                <height>22</height>
+                <width>40</width>
+                <height>40</height>
                </size>
               </property>
               <property name="baseSize">
                <size>
-                <width>22</width>
-                <height>22</height>
+                <width>40</width>
+                <height>40</height>
                </size>
               </property>
               <property name="text">
