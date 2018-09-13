@@ -144,7 +144,14 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *n
     toggleStakingAction(0),
     platformStyle(platformStyle)
 {
+	
+#ifdef Q_OS_MAC
     GUIUtil::restoreWindowGeometry("nWindow", QSize(930, 650), this);
+#elif _WIN32
+    GUIUtil::restoreWindowGeometry("nWindow", QSize(930, 650), this););
+#else
+    GUIUtil::restoreWindowGeometry("nWindow", QSize(930, 650), this);
+#endif
 
     QString windowTitle = tr(PACKAGE_NAME) + " - ";
 #ifdef ENABLE_WALLET
