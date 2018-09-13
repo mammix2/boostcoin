@@ -191,6 +191,10 @@ CBlockTemplate* BlockAssembler::CreateNewBlock(const CScript& scriptPubKeyIn, bo
     } else {
         coinbaseTx.vout[0].scriptPubKey = scriptPubKeyIn;
         coinbaseTx.vout[0].nValue = nFees + GetBlockSubsidy(nHeight, chainparams.GetConsensus());
+        /*
+        txNew.vout[0].scriptPubKey.SetDestination(reservekey.GetReservedKey().GetID());
+        txNew.vout[1].scriptPubKey.SetDestination(address.Get());
+        */
     }
     coinbaseTx.vin[0].scriptSig = CScript() << nHeight << OP_0;
     pblock->vtx[0] = coinbaseTx;
