@@ -1062,8 +1062,9 @@ void SetThemeQSS(QApplication& app)
         "QFrame#SendCoinsEntry  { background-color: rgba(0,0,0,0); color: rgb(44,45,128) ;}"
         "QMenu                  { font-family: Arial,Gadget,sans-serif ;}"
 
+        "QWidget#RPCConsole     { background-color: rgb(44,45,128) ;}"
         "QWidget#widget         { border-image: url(:images/widget-bg1) 0 0 0 0 stretch stretch;   background-color: rgb(44,45,128); background-position: center; background-repeat: none; }"
-        "QWidget#widget_2         { padding: 2px; margin: 3px; border: 2px solid rgb(43,196,237); border-radius: 8px; padding: 4px ;}"
+        "QWidget#widget_2       { padding: 2px; margin: 3px; border: 2px solid rgb(43,196,237); border-radius: 8px; padding: 4px ;}"
 
         "QPushButton            { font-weight: bold; font-family: Arial,Gadget,sans-serif; background: rgb(51,47,202); color: rgb(255,255,252); border: 2px solid rgb(51,47,202); border-radius: 4px; padding: 3px;  margin: 6px; margin-left: 12px; margin-right: 12px ;}"
         "QPushButton:hover      { font-weight: bold; font-family: Arial,Gadget,sans-serif; background: rgb(51,47,202); color: rgb(255,255,252); border: 2px solid rgb(43,196,237); border-radius: 4px; padding: 3px;  margin: 6px; margin-left: 12px; margin-right: 12px ;}"
@@ -1117,7 +1118,7 @@ void SetThemeQSS(QApplication& app)
         "QTreeView::item        { background: rgb(51,47,202); color: rgb(255,255,255) ;}"
         "QTreeView::item:selected { background-color: rgba(0,0,0,0) ;}"
 
-        "QTableView             { font-family: Arial,Gadget,sans-serif; background-color: transparent; color: rgb(255,255,255); selection-background-color: rgb(90,47,202) ;}"
+        "QTableView             { font-family: Arial,Gadget,sans-serif; alternate-background-color: rgb(51,47,202) ; color: rgb(255,255,255); selection-background-color: rgb(90,47,202) ;}"
 
         "QScrollArea#scrollArea { background-color: rgba(0,0,0,0) ;}"
 
