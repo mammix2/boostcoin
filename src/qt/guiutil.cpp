@@ -1103,9 +1103,9 @@ void SetThemeQSS(QApplication& app)
 
         "QScrollBar             { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
 
-        "QCheckBox              { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
+        "QCheckBox              { font-family: Arial,Gadget,sans-serif; padding: 2px; border-radius: 3px;  color: rgb(255,255,255); background: rgb(51,47,202) ;}"
 
-        "QRadioButton           { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
+        "QRadioButton           { font-family: Arial,Gadget,sans-serif; padding: 2px; border-radius: 3px;  color: rgb(255,255,255); background: rgb(51,47,202) ;}"
 
         "QTabWidget::tab-bar    { border-radius: 2px ;}"
         "QTabWidget::pane       { border: 2px solid rgb(43,196,237); border-radius: 4px ;}"
@@ -1129,9 +1129,9 @@ void SetThemeQSS(QApplication& app)
 
         "QDialog#EditAddressDialog, QDialog#SignVerifyMessageDialog, QDialog#AskPassphraseDialog, QDialog#CoinControlDialog, QDialog#TransactionDescDialog, QDialog#AboutDialog, QDialog#OptionsDialog, QDialog#QRCodeDialog, QDialog#RPCConsole, QMessageBox  {color: rgb(44,45,128) ;}"
 
-        "QSpinBox               { font-family: Arial,Gadget,sans-serif;  border-radius: 2px; color: rgb(255,255,255); background: rgb(51,47,202) ;}"
-        "QComboBox              { font-family: Arial,Gadget,sans-serif;  border-radius: 2px; color: rgb(255,255,255); background: rgb(51,47,202) ;}"
-        "QComboBox QAbstractItemView  {font-family: Arial,Gadget,sans-serif;   border-radius: 2px; color: rgb(255,255,255); background: rgb(51,47,202) ;}"
+        "QSpinBox               { font-family: Arial,Gadget,sans-serif;  padding: 2px; border-radius: 3px; color: rgb(255,255,255); background: rgb(51,47,202) ;}"
+        "QComboBox              { font-family: Arial,Gadget,sans-serif;  padding: 2px; border-radius: 3px; color: rgb(255,255,255); background: rgb(51,47,202) ;}"
+        "QAbstractItemView, QAbstractSpinBox {font-family: Arial,Gadget,sans-serif; padding: 2px; border-radius: 3px;  color: rgb(255,255,255); background: rgb(51,47,202) ;}"
 
         "QVBoxLayout            { background: rgb(255,255,255) ;}"
 

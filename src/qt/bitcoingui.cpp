@@ -312,14 +312,14 @@ void BitcoinGUI::createActions()
 {
     QActionGroup *tabGroup = new QActionGroup(this);
 
-    overviewAction = new QAction(platformStyle->SingleColorIcon(":/icons/overview"), tr("&OVERVIEW"), this);
+    overviewAction = new QAction(tr("&OVERVIEW"), this);
     overviewAction->setStatusTip(tr("Show general overview of wallet"));
     overviewAction->setToolTip(overviewAction->statusTip());
     overviewAction->setCheckable(true);
     overviewAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_1));
     tabGroup->addAction(overviewAction);
 
-    sendCoinsAction = new QAction(platformStyle->SingleColorIcon(":/icons/send"), tr("&SEND COINS"), this);
+    sendCoinsAction = new QAction(tr("&SEND COINS"), this);
     sendCoinsAction->setStatusTip(tr("Send coins to a boostcoin address"));
     sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
     sendCoinsAction->setCheckable(true);
@@ -330,7 +330,7 @@ void BitcoinGUI::createActions()
     sendCoinsMenuAction->setStatusTip(sendCoinsAction->statusTip());
     sendCoinsMenuAction->setToolTip(sendCoinsMenuAction->statusTip());
 
-    receiveCoinsAction = new QAction(platformStyle->SingleColorIcon(":/icons/receiving_addresses"), tr("&RECEIVE COINS"), this);
+    receiveCoinsAction = new QAction(tr("&RECEIVE COINS"), this);
     receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and boostcoin: URIs)"));
     receiveCoinsAction->setToolTip(receiveCoinsAction->statusTip());
     receiveCoinsAction->setCheckable(true);
@@ -344,7 +344,7 @@ void BitcoinGUI::createActions()
     toggleStakingAction = new QAction(tr("Toggle &Staking"), this);
     toggleStakingAction->setStatusTip(tr("Toggle Staking"));
 
-    historyAction = new QAction(platformStyle->SingleColorIcon(":/icons/history"), tr("&TRANSACTIONS"), this);
+    historyAction = new QAction(tr("&TRANSACTIONS"), this);
     historyAction->setStatusTip(tr("Browse transaction history"));
     historyAction->setToolTip(historyAction->statusTip());
     historyAction->setCheckable(true);
