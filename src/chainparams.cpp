@@ -77,6 +77,7 @@ public:
 		consensus.nTimeDriftCondition1 = 1457136000; // Sat, 05 Mar 2016 00:00:00 GMT
 		consensus.nTimeDriftCondition2 = 1461873600; // Thu, 28 Apr 2016 20:00:00 GMT
         consensus.nStakeCombineThreshold = 100 * COIN;
+        consensus.checkpointPubKey = "04b7640b474644ccc5f5ca40ae97f06261e4650ef2f59f38e03cc48e02f16a1b0ce6bb45798e335c84311919c934d0f7866594a249a83be71405e63783ad9d1b12";
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 15120; // 95% of 2016
@@ -189,6 +190,7 @@ public:
         consensus.nBlockVersionCheckStart = 5; //m2: blocks after this will be version checked.
 		consensus.nBlockDGW_start = 5;
         consensus.nStakeCombineThreshold = 100 * COIN;
+        consensus.checkpointPubKey = "04f80fc7adbebe2dd223f0ad811dee52ffd4edfdeff1a1b08ccdbbbba82eda6c2917c0bdecc3c5e855652111b5b220c679b061c9bcf330e9534e7bc006bd45673e";
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 1512; // 75% for testchains
@@ -277,6 +279,7 @@ public:
         consensus.nBlockVersionCheckStart = 100; //m2: blocks after this will be version checked.
 		consensus.nBlockDGW_start = 20;
         consensus.nStakeCombineThreshold = 100 * COIN;
+        consensus.checkpointPubKey = "04911c06093afaa119c95209c5f993dd855169f1972a73e08ffd3947826488bd42b9155ff7353016f1a2e4d5fe4e78c3d25310eea86e1132c7bbcd9b072c380428";
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = true;
         consensus.nRuleChangeActivationThreshold = 108; // 75% for testchains
