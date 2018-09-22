@@ -6,7 +6,7 @@ src/boostcoind
 src/boostcoin-cli
 src/boostcoin-tx
 src/test/test_bitcoin
-src/qt/test/test_boostcoin-qt
+src/qt/test/test_bitcoin-qt
 
 # autoreconf
 Makefile.in
