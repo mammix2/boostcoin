@@ -862,12 +862,15 @@
            </layout>
           </item>
           <item>
-           <widget class="ListView" name="listTransactions" native="true">
+           <widget class="QListView" name="listTransactions">
             <property name="minimumSize">
              <size>
               <width>0</width>
               <height>250</height>
              </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QListView { background: transparent; }</string>
             </property>
            </widget>
           </item>
@@ -986,12 +989,6 @@
    </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>ListView</class>
-   <extends>QWidget</extends>
-  </customwidget>
- </customwidgets>
  <resources>
   <include location="../bitcoin.qrc"/>
  </resources>
