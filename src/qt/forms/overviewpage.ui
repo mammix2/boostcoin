@@ -990,7 +990,7 @@
   <customwidget>
    <class>ListView</class>
    <extends>QWidget</extends>
-   <header>listview.h</header>
+   <header>qt/listview.h</header>
   </customwidget>
  </customwidgets>
  <resources>
