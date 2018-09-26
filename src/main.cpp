@@ -1714,6 +1714,23 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
     return nSubsidy;	
 }
 
+CAmount GetDevBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
+{
+	
+    CAmount nDevSubsidy;
+    if (nHeight <= 43201){
+        nDevSubsidy = 15 * COIN;
+    } else if (nHeight > 43201 && nHeight <= 640399){
+        nDevSubsidy = 0 * COIN;
+    } else if (nHeight > 640399){
+        nDevSubsidy = 1.3 * COIN;
+    } 
+    
+	return nDevSubsidy;	
+
+	
+}
+
 // staker's coin stake reward based on coin age spent (coin-days)
 int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees)
 {
@@ -2561,6 +2578,14 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
                              error("ConnectBlock(): coinbase pays too much (actual=%d vs limit=%d in height=%d)",
                                    block.vtx[0].GetValueOut(), blockReward, pindex->nHeight),
                                    REJECT_INVALID, "bad-cb-amount");
+
+        CAmount DevblockReward = nFees + GetDevBlockSubsidy(pindex->nHeight, chainparams.GetConsensus());
+        if (block.vtx[1].GetValueOut() > DevblockReward)
+            return state.DoS(100,
+                             error("ConnectBlock(): coinbase pays too much to the Dev subsidy (actual=%d vs limit=%d in height=%d)",
+                                   block.vtx[1].GetValueOut(), DevblockReward, pindex->nHeight),
+                                   REJECT_INVALID, "bad-cb-amount");
+
     }
 
     if (block.IsProofOfStake())
