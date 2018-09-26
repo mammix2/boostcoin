@@ -2579,7 +2579,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
                                    block.vtx[0].GetValueOut(), blockReward, pindex->nHeight),
                                    REJECT_INVALID, "bad-cb-amount");
 
-        CAmount DevblockReward = nFees + GetDevBlockSubsidy(pindex->nHeight, chainparams.GetConsensus());
+        CAmount DevblockReward = GetDevBlockSubsidy(pindex->nHeight, chainparams.GetConsensus());
         if (block.vtx[1].GetValueOut() > DevblockReward)
             return state.DoS(100,
                              error("ConnectBlock(): coinbase pays too much to the Dev subsidy (actual=%d vs limit=%d in height=%d)",
