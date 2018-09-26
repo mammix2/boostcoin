@@ -7154,7 +7154,7 @@ bool TransactionGetCoinAge(CTransaction& transaction, uint64_t& nCoinAge)
         LogPrint("coinage", "%s: coin age nValueIn=%d nTimeDiff=%d bnCentSecond=%s\n", __func__, nValueIn, transaction.nTime - txPrev.nTime, bnCentSecond.ToString());
     }
 
-    CBigNum bnCoinDay = bnCentSecond * CENT / (24 * 60 * 60);
+    CBigNum bnCoinDay = ((bnCentSecond * CENT) / COIN) / (24 * 60 * 60); //m2:
     LogPrint("coinage", "%s: coin age bnCoinDay=%s\n", __func__, bnCoinDay.ToString());
     nCoinAge = bnCoinDay.getuint64();
 
@@ -7373,6 +7373,7 @@ bool CheckStakeKernelHash(unsigned int nBits, CBlock& blockFrom, unsigned int nT
     uint256 hashBlock = blockFrom.GetHash();
 
     CBigNum bnCoinDayWeight = CBigNum(nValueIn) * GetWeight((int64_t)txPrev.nTime, (int64_t)nTimeTx) / COIN / (24 * 60 * 60);
+
     targetProofOfStake = UintToArith256((bnCoinDayWeight * bnTargetPerCoinDay).getuint256());
 
     // Calculate hash
