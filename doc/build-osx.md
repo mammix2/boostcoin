@@ -25,7 +25,7 @@ Build Bitcoin Core
 
 1. Clone the bitcoin source code and cd into `bitcoin`
 
-        git clone https://github.com/mammix2/boost
+        git clone https://github.com/mammix2/boostcoin
         cd bitcoin
 
 2.  Build bitcoin-core:

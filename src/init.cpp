@@ -487,8 +487,8 @@ std::string HelpMessage(HelpMessageMode mode)
 
 std::string LicenseInfo()
 {
-    const std::string URL_SOURCE_CODE = "<https://github.com/mammix2/boost>";
-    const std::string URL_WEBSITE = "<https://www.boostcoin.org/>";
+    const std::string URL_SOURCE_CODE = "<https://github.com/mammix2/boostcoin>";
+    const std::string URL_WEBSITE = "<https://www.myboost.io/>";
     // todo: remove urls from translations on next change
     return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2014, COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +

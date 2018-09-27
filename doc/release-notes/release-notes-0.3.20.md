@@ -1,6 +1,6 @@
 Please checkout the git integration branch from:
 
-https://github.com/mammix2/boost
+https://github.com/mammix2/boostcoin
 
 ... and help test.  The new features that need testing are:
 
