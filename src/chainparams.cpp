@@ -5,10 +5,12 @@
 
 #include "chainparams.h"
 #include "consensus/merkle.h"
+#include "consensus/consensus.h"
 
 #include "tinyformat.h"
 #include "util.h"
 #include "utilstrencodings.h"
+#include "base58.h"
 
 #include <assert.h>
 
@@ -370,4 +372,17 @@ void UpdateRegtestBIP9Parameters(Consensus::DeploymentPos d, int64_t nStartTime,
 {
     regTestParams.UpdateBIP9Parameters(d, nStartTime, nTimeout);
 }
- 
+
+CScript CChainParams::GetRewardScript() const {
+
+    CBitcoinAddress address;
+    if (Params().NetworkIDString() == CBaseChainParams::MAIN)
+        address = CBitcoinAddress("BKqAh5ojyS7bkjaDHJEWXxMwKNUvUsNZak");
+    else if (Params().NetworkIDString() == CBaseChainParams::TESTNET)
+        address = CBitcoinAddress("miiWpmBt9bMknbcoe4beokur4xAetJ9Nmz");
+    else if (Params().NetworkIDString() == CBaseChainParams::REGTEST)
+        address = CBitcoinAddress("qKn4qdApT3ARHf2s6NhDyeSy9569Xb3GyS");
+
+    assert(address.IsValid());
+    return GetScriptForDestination(address.Get());
+}

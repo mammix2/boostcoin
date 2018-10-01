@@ -1714,7 +1714,7 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
     return nSubsidy;	
 }
 
-CAmount GetDevBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
+CAmount GetDevBlockSubsidy(int nHeight)
 {
 	
     CAmount nDevSubsidy;
@@ -2579,7 +2579,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
                                    block.vtx[0].GetValueOut(), blockReward, pindex->nHeight),
                                    REJECT_INVALID, "bad-cb-amount");
 
-        CAmount DevblockReward = GetDevBlockSubsidy(pindex->nHeight, chainparams.GetConsensus());
+        CAmount DevblockReward = GetDevBlockSubsidy(pindex->nHeight);
         if (block.vtx[1].GetValueOut() > DevblockReward)
             return state.DoS(100,
                              error("ConnectBlock(): coinbase pays too much to the Dev subsidy (actual=%d vs limit=%d in height=%d)",
@@ -3758,6 +3758,27 @@ bool ContextualCheckBlock(const CBlock& block, CValidationState& state, CBlockIn
             }
         }
     }
+
+
+    // PoW Coinbase transaction must include DevSubsidy
+    if (block.IsProofOfWork()) {
+        bool found = false;
+        for (const CTxOut& output : block.vtx[0]->vout) {
+            if (output.scriptPubKey == Params().GetRewardScript()) {
+                if (output.nValue == GetDevBlockSubsidy(nHeight)) {
+                    found = true;
+                    break;
+                }
+            }
+        }
+
+        if (!found) {
+            return state.DoS(100, error("%s: DevSubsidy reward missing", __func__), REJECT_INVALID, "cb-no-DevSubsidy-reward");
+        }
+    }
+
+
+
 
     // After the coinbase witness nonce and commitment are verified,
     // we can check if the block weight passes (before we've checked the
