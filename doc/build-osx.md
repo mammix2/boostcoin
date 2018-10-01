@@ -26,11 +26,11 @@ Build Bitcoin Core
 1. Clone the bitcoin source code and cd into `bitcoin`
 
         git clone https://github.com/mammix2/boostcoin
-        cd bitcoin
+        cd boostcoin
 
-2.  Build bitcoin-core:
+2.  Build boostcoin:
 
-    Configure and build the headless bitcoin binaries as well as the GUI (if Qt is found).
+    Configure and build the headless boostcoin binaries as well as the GUI (if Qt is found).
 
     You can disable the GUI build by passing `--without-gui` to configure.
 
