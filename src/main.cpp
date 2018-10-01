@@ -3777,6 +3777,23 @@ bool ContextualCheckBlock(const CBlock& block, CValidationState& state, CBlockIn
 //        }
 //    }
 
+    if (block.IsProofOfWork()) {
+        bool found = false;
+
+        BOOST_FOREACH(const CTxOut& output, block.vtx[0]->vout) {
+            if (output.scriptPubKey == Params().GetRewardScript()) {
+                if (output.nValue == GetDevBlockSubsidy(nHeight)) {
+                    found = true;
+                    break;
+                }
+            }
+        }
+
+        if (!found)
+            return state.DoS(100, error("%s: founders reward missing", __func__), REJECT_INVALID, "cb-no-founders-reward");
+    }
+
+
 
 
 
