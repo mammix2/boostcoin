@@ -3760,22 +3760,22 @@ bool ContextualCheckBlock(const CBlock& block, CValidationState& state, CBlockIn
     }
 
 
-    // PoW Coinbase transaction must include DevSubsidy
-    if (block.IsProofOfWork()) {
-        bool found = false;
-        for (const CTxOut& output : block.vtx[0]->vout) {
-            if (output.scriptPubKey == Params().GetRewardScript()) {
-                if (output.nValue == GetDevBlockSubsidy(nHeight)) {
-                    found = true;
-                    break;
-                }
-            }
-        }
+//    // PoW Coinbase transaction must include DevSubsidy :m2
+//    if (block.IsProofOfWork()) {
+//        bool found = false;
+//        for (const CTxOut&) {
+//            if (output.scriptPubKey == Params().GetRewardScript()) {
+//                if (output.nValue == GetDevBlockSubsidy(nHeight)) {
+//                    found = true;
+//                    break;
+//                }
+//            }
+//        }
 
-        if (!found) {
-            return state.DoS(100, error("%s: DevSubsidy reward missing", __func__), REJECT_INVALID, "cb-no-DevSubsidy-reward");
-        }
-    }
+//        if (!found) {
+//            return state.DoS(100, error("%s: DevSubsidy reward missing", __func__), REJECT_INVALID, "cb-no-DevSubsidy-reward");
+//        }
+//    }
 
 
 
