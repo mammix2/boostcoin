@@ -3676,38 +3676,45 @@ bool ContextualCheckBlock(const CBlock& block, CValidationState& state, CBlockIn
 {
     const int nHeight = pindexPrev == NULL ? 0 : pindexPrev->nHeight + 1;
     const Consensus::Params& consensusParams = Params().GetConsensus();
-    bool found = false;
-    int64_t val = GetDevBlockSubsidy(nHeight) / COIN;
+    bool foundBlockSubsidy = false;
+    bool foundDevBlockSubsidy = false;
+    int64_t BlockSubsidy = GetBlockSubsidy(nHeight, Params().GetConsensus()) / COIN;
+    int64_t DevBlockSubsidy = GetDevBlockSubsidy(nHeight) / COIN;
 
     if (block.IsProofOfWork()) {
         if (nHeight > consensusParams.nLastPOWBlock) {
             return state.DoS(100, false, REJECT_INVALID, "pow-ended", true, "reject proof-of-work at height");
         }
+    }
+
+    if (block.IsProofOfWork()) {
+        BOOST_FOREACH(const CTxOut& output, block.vtx[0].vout) {
+            if (fDebug) { cout << "DEBUG: Verifying Subsidy outputs\n";}
+            if (output.nValue == GetBlockSubsidy(nHeight, Params().GetConsensus())); { // check the Subsidy amount
+                if (fDebug) { cout << "DEBUG: output.nValue == GetBlockSubsidy(nHeight) is True. Expected amount = " << BlockSubsidy << " BOST, at height" << nHeight << " \n"; }
+                foundBlockSubsidy = true;
+                break;
+            }
+        }
 
         BOOST_FOREACH(const CTxOut& output, block.vtx[0].vout) {
-            if (fDebug) {
-                cout << "DEBUG: checking PoW block.vtx[0].vout outputs. " << output;
-                cout << "\n";
-            }
-            if (output.scriptPubKey == Params().GetRewardScript()) {
-                if (fDebug) {
-                    cout << "DEBUG: checking output.scriptPubKey == Params().GetRewardScript() " << output.scriptPubKey;
-                    cout << "\n";
-                }
-                if (output.nValue == GetDevBlockSubsidy(nHeight)) {
-                    if (fDebug) {
-                        cout << "DEBUG: output.nValue == GetDevBlockSubsidy(nHeight) " << val;
-                        cout << "\n";
-                    }
-                    found = true;
+            if (fDebug) { cout << "DEBUG: Verifying DevSubsidy outputs\n";}
+            if (output.scriptPubKey == Params().GetRewardScript()) { // check the DevSubsidy address
+                if (fDebug) { cout << "DEBUG: output.scriptPubKey == Params().GetRewardScript()) is True. Address verified \n";}
+                if (output.nValue == GetDevBlockSubsidy(nHeight)) { // check the DevSubsidy amount
+                    if (fDebug) { cout << "DEBUG: output.nValue == GetDevBlockSubsidy(nHeight) is True. Expected amount = " << DevBlockSubsidy << " BOST, at height" << nHeight << " \n";}
+                    foundDevBlockSubsidy = true;
                     break;
                 }
             }
         }
-        if (!found) {
-            return state.DoS(100, error("%s: founders reward missing", __func__), REJECT_INVALID, "cb-no-founders-reward");
-        }
+    }
 
+    if (!foundBlockSubsidy) {
+        return state.DoS(100, error("%s: block reward missing", __func__), REJECT_INVALID, "cb-no-BlockSubsidy-reward");
+    }
+    if (!foundDevBlockSubsidy) {
+        return state.DoS(100, error("%s: devsubsidy reward missing", __func__), REJECT_INVALID, "cb-no-DevBlockSubsidy-reward");
     }
 
 
