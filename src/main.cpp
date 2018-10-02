@@ -2570,23 +2570,15 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     int64_t nTime3 = GetTimeMicros(); nTimeConnect += nTime3 - nTime2;
     LogPrint("bench", "      - Connect %u transactions: %.2fms (%.3fms/tx, %.3fms/txin) [%.2fs]\n", (unsigned)block.vtx.size(), 0.001 * (nTime3 - nTime2), 0.001 * (nTime3 - nTime2) / block.vtx.size(), nInputs <= 1 ? 0 : 0.001 * (nTime3 - nTime2) / (nInputs-1), nTimeConnect * 0.000001);
 
-    if (block.IsProofOfWork())
-    {
-        CAmount blockReward = nFees + GetBlockSubsidy(pindex->nHeight, chainparams.GetConsensus());
-        if (block.vtx[0].GetValueOut() > blockReward)
-            return state.DoS(100,
-                             error("ConnectBlock(): coinbase pays too much (actual=%d vs limit=%d in height=%d)",
-                                   block.vtx[0].GetValueOut(), blockReward, pindex->nHeight),
-                                   REJECT_INVALID, "bad-cb-amount");
 
-        CAmount DevblockReward = GetDevBlockSubsidy(pindex->nHeight);
-        if (block.vtx[1].GetValueOut() > DevblockReward)
-            return state.DoS(100,
-                             error("ConnectBlock(): coinbase pays too much to the Dev subsidy (actual=%d vs limit=%d in height=%d)",
-                                   block.vtx[1].GetValueOut(), DevblockReward, pindex->nHeight),
-                                   REJECT_INVALID, "bad-cb-amount");
+    CAmount blockReward = nFees + GetBlockSubsidy(pindex->nHeight, chainparams.GetConsensus());
+    if (block.vtx[0].GetValueOut() > blockReward)
+        return state.DoS(100,
+                         error("ConnectBlock(): coinbase pays too much (actual=%d vs limit=%d in height=%d)",
+                               block.vtx[0].GetValueOut(), blockReward, pindex->nHeight),
+                               REJECT_INVALID, "bad-cb-amount");
 
-    }
+
 
     if (block.IsProofOfStake())
     {
@@ -3680,7 +3672,7 @@ bool ContextualCheckBlockHeader(const CBlockHeader& block, CValidationState& sta
     return true;
 }
 
-bool ContextualCheckBlock(const CBlock& block, CValidationState& state, CBlockIndex * const pindexPrev)
+bool ContextualCheckBlock(const CTransaction& tx, const CBlock& block, CValidationState& state, CBlockIndex * const pindexPrev)
 {
     const int nHeight = pindexPrev == NULL ? 0 : pindexPrev->nHeight + 1;
     const Consensus::Params& consensusParams = Params().GetConsensus();
@@ -3760,27 +3752,10 @@ bool ContextualCheckBlock(const CBlock& block, CValidationState& state, CBlockIn
     }
 
 
-//    // PoW Coinbase transaction must include DevSubsidy :m2
-//    if (block.IsProofOfWork()) {
-//        bool found = false;
-//        for (const CTxOut&) {
-//            if (output.scriptPubKey == Params().GetRewardScript()) {
-//                if (output.nValue == GetDevBlockSubsidy(nHeight)) {
-//                    found = true;
-//                    break;
-//                }
-//            }
-//        }
-
-//        if (!found) {
-//            return state.DoS(100, error("%s: DevSubsidy reward missing", __func__), REJECT_INVALID, "cb-no-DevSubsidy-reward");
-//        }
-//    }
-
     if (block.IsProofOfWork()) {
         bool found = false;
 
-        BOOST_FOREACH(const CTxOut& output, block.vtx[0].vout) {
+        BOOST_FOREACH(const CTxOut& output, tx.vout) {
             if (output.scriptPubKey == Params().GetRewardScript()) {
                 if (output.nValue == GetDevBlockSubsidy(nHeight)) {
                     found = true;
@@ -3885,7 +3860,7 @@ static bool AcceptBlock(const CBlock& block, CValidationState& state, const CCha
     }
     if (fNewBlock) *fNewBlock = true;
 
-    if ((!CheckBlock(block, state, chainparams.GetConsensus(), GetAdjustedTime())) || !ContextualCheckBlock(block, state, pindex->pprev)) {
+    if ((!CheckBlock(block, state, chainparams.GetConsensus(), GetAdjustedTime())) || !ContextualCheckBlock(tx, block, state, pindex->pprev)) {
         if (state.IsInvalid() && !state.CorruptionPossible()) {
             pindex->nStatus |= BLOCK_FAILED_VALID;
             setDirtyBlockIndex.insert(pindex);
@@ -3988,7 +3963,7 @@ bool TestBlockValidity(CValidationState& state, const CChainParams& chainparams,
         return error("%s: Consensus::ContextualCheckBlockHeader: %s", __func__, FormatStateMessage(state));
     if (!CheckBlock(block, state, chainparams.GetConsensus(), fCheckPOW, fCheckMerkleRoot, fCheckSig))
         return error("%s: Consensus::CheckBlock: %s", __func__, FormatStateMessage(state));
-    if (!ContextualCheckBlock(block, state, pindexPrev))
+    if (!ContextualCheckBlock(tx, block, state, pindexPrev))
         return error("%s: Consensus::ContextualCheckBlock: %s", __func__, FormatStateMessage(state));
     if (!ConnectBlock(block, state, &indexDummy, viewNew, chainparams, true))
         return false;
