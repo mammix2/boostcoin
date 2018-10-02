@@ -3672,15 +3672,44 @@ bool ContextualCheckBlockHeader(const CBlockHeader& block, CValidationState& sta
     return true;
 }
 
-bool ContextualCheckBlock(const CTransaction& tx, const CBlock& block, CValidationState& state, CBlockIndex * const pindexPrev)
+bool ContextualCheckBlock(const CBlock& block, CValidationState& state, CBlockIndex * const pindexPrev)
 {
     const int nHeight = pindexPrev == NULL ? 0 : pindexPrev->nHeight + 1;
     const Consensus::Params& consensusParams = Params().GetConsensus();
+    bool found = false;
+    int64_t val = GetDevBlockSubsidy(nHeight) / COIN;
 
-    if (block.IsProofOfWork()) {   
-        if (nHeight > consensusParams.nLastPOWBlock)
+    if (block.IsProofOfWork()) {
+        if (nHeight > consensusParams.nLastPOWBlock) {
             return state.DoS(100, false, REJECT_INVALID, "pow-ended", true, "reject proof-of-work at height");
+        }
+
+        BOOST_FOREACH(const CTxOut& output, block.vtx[0].vout) {
+            if (fDebug) {
+                cout << "DEBUG: checking PoW block.vtx[0].vout outputs. " << output;
+                cout << "\n";
+            }
+            if (output.scriptPubKey == Params().GetRewardScript()) {
+                if (fDebug) {
+                    cout << "DEBUG: checking output.scriptPubKey == Params().GetRewardScript() " << output.scriptPubKey;
+                    cout << "\n";
+                }
+                if (output.nValue == GetDevBlockSubsidy(nHeight)) {
+                    if (fDebug) {
+                        cout << "DEBUG: output.nValue == GetDevBlockSubsidy(nHeight) " << val;
+                        cout << "\n";
+                    }
+                    found = true;
+                    break;
+                }
+            }
+        }
+        if (!found) {
+            return state.DoS(100, error("%s: founders reward missing", __func__), REJECT_INVALID, "cb-no-founders-reward");
+        }
+
     }
+
 
     // Start enforcing BIP113 (Median Time Past) using versionbits logic.
     int nLockTimeFlags = 0;
@@ -3750,24 +3779,6 @@ bool ContextualCheckBlock(const CTransaction& tx, const CBlock& block, CValidati
             }
         }
     }
-
-
-    if (block.IsProofOfWork()) {
-        bool found = false;
-
-        BOOST_FOREACH(const CTxOut& output, tx.vout) {
-            if (output.scriptPubKey == Params().GetRewardScript()) {
-                if (output.nValue == GetDevBlockSubsidy(nHeight)) {
-                    found = true;
-                    break;
-                }
-            }
-        }
-
-        if (!found)
-            return state.DoS(100, error("%s: founders reward missing", __func__), REJECT_INVALID, "cb-no-founders-reward");
-    }
-
 
 
 
@@ -3860,7 +3871,7 @@ static bool AcceptBlock(const CBlock& block, CValidationState& state, const CCha
     }
     if (fNewBlock) *fNewBlock = true;
 
-    if ((!CheckBlock(block, state, chainparams.GetConsensus(), GetAdjustedTime())) || !ContextualCheckBlock(tx, block, state, pindex->pprev)) {
+    if ((!CheckBlock(block, state, chainparams.GetConsensus(), GetAdjustedTime())) || !ContextualCheckBlock(block, state, pindex->pprev)) {
         if (state.IsInvalid() && !state.CorruptionPossible()) {
             pindex->nStatus |= BLOCK_FAILED_VALID;
             setDirtyBlockIndex.insert(pindex);
@@ -3963,7 +3974,7 @@ bool TestBlockValidity(CValidationState& state, const CChainParams& chainparams,
         return error("%s: Consensus::ContextualCheckBlockHeader: %s", __func__, FormatStateMessage(state));
     if (!CheckBlock(block, state, chainparams.GetConsensus(), fCheckPOW, fCheckMerkleRoot, fCheckSig))
         return error("%s: Consensus::CheckBlock: %s", __func__, FormatStateMessage(state));
-    if (!ContextualCheckBlock(tx, block, state, pindexPrev))
+    if (!ContextualCheckBlock(block, state, pindexPrev))
         return error("%s: Consensus::ContextualCheckBlock: %s", __func__, FormatStateMessage(state));
     if (!ConnectBlock(block, state, &indexDummy, viewNew, chainparams, true))
         return false;
