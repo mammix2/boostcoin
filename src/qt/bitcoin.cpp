@@ -666,9 +666,7 @@ int main(int argc, char *argv[])
 
     try
     {
-//#ifdef ENABLE_WALLET
-//        GUIUtil::SetThemeQSS(app);
-//#endif
+        GUIUtil::SetThemeQSS(app);
         app.createWindow(networkStyle.data());
         app.requestInitialize();
 #if defined(Q_OS_WIN) && QT_VERSION >= 0x050000

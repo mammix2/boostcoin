@@ -4,7 +4,29 @@
 
 TEMPLATE = app
 TARGET = boost
-INCLUDEPATH += .
+#INCLUDEPATH += .
+INCLUDEPATH += /home/mammix2/Desktop/repo/boostcoin/boostcoin-win/depends/x86_64-w64-mingw32/include
+#INCLUDEPATH += src \
+#    src/bench \
+#    src/compat \
+#    src/consensus \
+#    src/crypto \
+#    src/leveldb \
+#    src/policy \
+#    src/primitives \
+#    src/qt \
+#    src/rpc \
+#    src/script \
+#    src/secp256k1 \
+#    src/support \
+#    src/test \
+#    src/univalue \
+#    src/wallet \
+#    src/zmq
+
+
+
+LIBS += /home/mammix2/Desktop/repo/boostcoin/boostcoin-win/depends/x86_64-w64-mingw32/lib
 
 # Input
 HEADERS += src/addrman.h \

@@ -988,7 +988,7 @@ void SetThemeQSS(QApplication& app)
     "QLineEdit              { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
 
     "QTextEdit              { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
-    "QTextEdit#messagesWidget      { padding: 2px; border-radius: 3px; background: rgb(44,45,128); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
+    "QTextEdit#messagesWidget      { padding: 2px; border-radius: 3px; background: rgb(0,0,0); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
 
     "QPlainTextEdit         { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
 
@@ -1086,7 +1086,7 @@ void SetThemeQSS(QApplication& app)
         "QLineEdit              { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
 
         "QTextEdit              { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
-        "QTextEdit#messagesWidget      { padding: 2px; border-radius: 3px; background: rgb(44,45,128); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
+        "QTextEdit#messagesWidget      { padding: 2px; border-radius: 3px; background: rgb(0,0,0); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
 
         "QPlainTextEdit         { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
 
@@ -1184,7 +1184,7 @@ void SetThemeQSS(QApplication& app)
                 "QLineEdit              { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
 
                 "QTextEdit              { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
-                "QTextEdit#messagesWidget      { padding: 2px; border-radius: 3px; background: rgb(44,45,128); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
+                "QTextEdit#messagesWidget      { padding: 2px; border-radius: 3px; background: rgb(0,0,0); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
 
                 "QPlainTextEdit         { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
 
