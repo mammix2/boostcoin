@@ -2572,11 +2572,16 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
 
 
     CAmount blockReward = nFees + GetBlockSubsidy(pindex->nHeight, chainparams.GetConsensus());
-    if (block.vtx[0].GetValueOut() > blockReward)
-        return state.DoS(100,
-                         error("ConnectBlock(): coinbase pays too much (actual=%d vs limit=%d in height=%d)",
+    if (fDebug) {
+        cout << "DEBUG: ConnectBlock: block.vtx[0].GetValueOut() = " ;
+        cout << block.vtx[0].GetValueOut() / COIN;
+        cout << "\n";
+    }
+    if (block.vtx[0].GetValueOut() > blockReward) {
+        return state.DoS(100, error("ConnectBlock(): coinbase pays too much (actual=%d vs limit=%d in height=%d)",
                                block.vtx[0].GetValueOut(), blockReward, pindex->nHeight),
                                REJECT_INVALID, "bad-cb-amount");
+    }
 
 
 
