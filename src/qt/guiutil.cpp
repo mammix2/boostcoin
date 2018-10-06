@@ -986,6 +986,7 @@ void SetThemeQSS(QApplication& app)
     "QDoubleSpinBox         { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
 
     "QLineEdit              { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
+    "QLineEdit#lineEdit     { padding: 2px; border-radius: 3px; background: rgb(0,0,0); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
 
     "QTextEdit              { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
     "QTextEdit#messagesWidget      { padding: 2px; border-radius: 3px; background: rgb(0,0,0); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
@@ -1084,6 +1085,7 @@ void SetThemeQSS(QApplication& app)
         "QDoubleSpinBox         { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
 
         "QLineEdit              { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
+        "QLineEdit#lineEdit     { padding: 2px; border-radius: 3px; background: rgb(0,0,0); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
 
         "QTextEdit              { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
         "QTextEdit#messagesWidget      { padding: 2px; border-radius: 3px; background: rgb(0,0,0); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
@@ -1178,10 +1180,12 @@ void SetThemeQSS(QApplication& app)
                 "QToolButton:pressed    { font-weight: bold; font-family: Arial,Gadget,sans-serif; background: rgb(43,196,237); color: rgb(255,255,252); border: 3px solid rgb(43,196,237); border-radius: 20px; padding: 8px;  margin: 8px; margin-left: 12px; margin-right: 12px ;}"
                 "QToolButton:checked    { font-weight: bold; font-family: Arial,Gadget,sans-serif; background: rgb(51,47,202); color: rgb(255,255,252); border: 3px solid rgb(43,196,237); border-radius: 20px; padding: 8px;  margin: 8px; margin-left: 12px; margin-right: 12px ;}"
                 "QToolButton:disabled   { color: rgb(150,150,150) ;}"
+                "QToolButton#addressBookButton, QToolButton#deleteButton, QToolButton#pasteButton { font-size: 8px; font-weight: bold; font-family: Arial,Gadget,sans-serif; background: rgb(51,47,202); color: rgb(255,255,252); border: 3px solid rgb(51,47,202); border-radius: 2px; padding: 2px;  margin: 3px; margin-left: 2px; margin-right: 2px ;}"
 
                 "QDoubleSpinBox         { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
 
                 "QLineEdit              { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
+                "QLineEdit#lineEdit     { padding: 2px; border-radius: 3px; background: rgb(0,0,0); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
 
                 "QTextEdit              { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
                 "QTextEdit#messagesWidget      { padding: 2px; border-radius: 3px; background: rgb(0,0,0); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
