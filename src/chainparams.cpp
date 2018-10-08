@@ -379,7 +379,7 @@ CScript CChainParams::GetRewardScript() const {
     if (Params().NetworkIDString() == CBaseChainParams::MAIN)
         address = CBitcoinAddress("BKqAh5ojyS7bkjaDHJEWXxMwKNUvUsNZak");
     else if (Params().NetworkIDString() == CBaseChainParams::TESTNET)
-        address = CBitcoinAddress("mvkfkygoTNPZs18L9hASFr17r8fJajVzZP");
+        address = CBitcoinAddress("mvkfkygoTNPZs18L9hASFr17r8fJajVzZP"); //keep this testnet address mvkfkygoTNPZs18L9hASFr17r8fJajVzZP
     else if (Params().NetworkIDString() == CBaseChainParams::REGTEST)
         address = CBitcoinAddress("qKn4qdApT3ARHf2s6NhDyeSy9569Xb3GyS");
 

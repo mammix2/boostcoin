@@ -53,7 +53,7 @@
 using namespace std;
 
 #if defined(NDEBUG)
-# error "Bitcoin cannot be compiled without assertions."
+# error "Boostcoin cannot be compiled without assertions."
 #endif
 
 /**
@@ -3679,10 +3679,11 @@ bool ContextualCheckBlockHeader(const CBlockHeader& block, CValidationState& sta
 
 bool ContextualCheckBlock(const CBlock& block, CValidationState& state, CBlockIndex * const pindexPrev)
 {
-    const int nHeight = pindexPrev == NULL ? 0 : pindexPrev->nHeight + 1;
+    const int nHeight = pindexPrev == nullptr ? 0 : pindexPrev->nHeight + 1;
     const Consensus::Params& consensusParams = Params().GetConsensus();
     bool foundBlockSubsidy = false;
     bool foundDevBlockSubsidy = false;
+    bool foundDevAddress = false;
     int64_t BlockSubsidy = GetBlockSubsidy(nHeight, Params().GetConsensus()) / COIN;
     int64_t DevBlockSubsidy = GetDevBlockSubsidy(nHeight) / COIN;
 
@@ -3695,32 +3696,46 @@ bool ContextualCheckBlock(const CBlock& block, CValidationState& state, CBlockIn
     if (block.IsProofOfWork()) {
         BOOST_FOREACH(const CTxOut& output, block.vtx[0].vout) {
             if (fDebug) { cout << "DEBUG: Verifying Subsidy outputs\n";}
-            if (output.nValue == GetBlockSubsidy(nHeight, Params().GetConsensus())); { // check the Subsidy amount
+            if (output.nValue == BlockSubsidy); { // check the Subsidy amount
                 if (fDebug) { cout << "DEBUG: output.nValue == GetBlockSubsidy(nHeight) is True. Expected amount = " << BlockSubsidy << " BOST, at height" << nHeight << " \n"; }
                 foundBlockSubsidy = true;
                 break;
             }
         }
-
+        if (!foundBlockSubsidy) {
+            return state.DoS(100, error("%s: block reward missing", __func__), REJECT_INVALID, "cb-no-BlockSubsidy-reward");
+        }
+    }
+    if (block.IsProofOfWork()) {
         BOOST_FOREACH(const CTxOut& output, block.vtx[0].vout) {
             if (fDebug) { cout << "DEBUG: Verifying DevSubsidy outputs\n";}
             if (output.scriptPubKey == Params().GetRewardScript()) { // check the DevSubsidy address
                 if (fDebug) { cout << "DEBUG: output.scriptPubKey == Params().GetRewardScript()) is True. Address verified \n";}
-                if (output.nValue == GetDevBlockSubsidy(nHeight)) { // check the DevSubsidy amount
-                    if (fDebug) { cout << "DEBUG: output.nValue == GetDevBlockSubsidy(nHeight) is True. Expected amount = " << DevBlockSubsidy << " BOST, at height" << nHeight << " \n";}
-                    foundDevBlockSubsidy = true;
-                    break;
-                }
+                if (fDebug) { cout << "\n";}
+                foundDevAddress = true;
+                break;
             }
+        }
+        if (!foundDevAddress) {
+            return state.DoS(100, error("%s: devsubsidy address is invalid", __func__), REJECT_INVALID, "cb-no-Valid-DevAddress");
         }
     }
 
-    if (!foundBlockSubsidy) {
-        return state.DoS(100, error("%s: block reward missing", __func__), REJECT_INVALID, "cb-no-BlockSubsidy-reward");
-    }
-    if (!foundDevBlockSubsidy) {
-        return state.DoS(100, error("%s: devsubsidy reward missing", __func__), REJECT_INVALID, "cb-no-DevBlockSubsidy-reward");
-    }
+//    if (block.IsProofOfWork()) {
+//        BOOST_FOREACH(const CTxOut& output, block.vtx[0].vout) {
+//            if (fDebug) { cout << "DEBUG: Verifying DevSubsidy outputs\n";}
+//            if (output.nValue == DevBlockSubsidy); { // check the Subsidy amount
+//                if (fDebug) { cout << "DEBUG: output.nValue == GetBDevlockSubsidy(nHeight) is True. Expected amount = " << DevBlockSubsidy << " BOST, at height" << nHeight << " \n"; }
+//                foundDevBlockSubsidy = true;
+//                break;
+//            }
+//        }
+//        if (!foundDevBlockSubsidy) {
+//            return state.DoS(100, error("%s: devsubsidy reward missing", __func__), REJECT_INVALID, "cb-no-DevBlockSubsidy-reward");
+//        }
+
+//    }
+
 
 
     // Start enforcing BIP113 (Median Time Past) using versionbits logic.
