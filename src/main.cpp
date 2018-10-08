@@ -1732,14 +1732,15 @@ CAmount GetDevBlockSubsidy(int nHeight)
 }
 
 // staker's coin stake reward based on coin age spent (coin-days)
-int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees)
+// int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees)
+int64_t GetProofOfStakeReward(int nHeight, int64_t nCoinAge, int64_t nFees, CBlockIndex* pindexPrev)
 {
 
     int64_t nRewardCoinYear;
     nRewardCoinYear = MAX_MINT_PROOF_OF_STAKE;
 	int64_t nSubsidy;
 // m2:
-    if(pindexBestHeader->nHeight < 641250 ) {
+    if(nHeight < 641250 ) {
         nSubsidy = nCoinAge * nRewardCoinYear / 365 / COIN;
     } else {
         nSubsidy = nCoinAge * nRewardCoinYear / 365;
@@ -2575,8 +2576,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     int64_t nTime3 = GetTimeMicros(); nTimeConnect += nTime3 - nTime2;
     LogPrint("bench", "      - Connect %u transactions: %.2fms (%.3fms/tx, %.3fms/txin) [%.2fs]\n", (unsigned)block.vtx.size(), 0.001 * (nTime3 - nTime2), 0.001 * (nTime3 - nTime2) / block.vtx.size(), nInputs <= 1 ? 0 : 0.001 * (nTime3 - nTime2) / (nInputs-1), nTimeConnect * 0.000001);
 
-    if (block.IsProofOfWork())
-    {
+    if (block.IsProofOfWork()){
 	    CAmount blockReward = nFees + GetBlockSubsidy(pindex->nHeight, chainparams.GetConsensus());
 	    if (fDebug) {
 	        cout << "DEBUG: ConnectBlock: block.vtx[0].GetValueOut() = " ;
@@ -2596,10 +2596,11 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     {
         // Coin stake tx earns reward instead of paying fee
         uint64_t nCoinAge;
-        if (!TransactionGetCoinAge(const_cast<CTransaction&>(block.vtx[1]), nCoinAge))
+        if (!TransactionGetCoinAge(const_cast<CTransaction&>(block.vtx[1]), nCoinAge)){
             return error("ConnectBlock() : %s unable to get coin age for coinstake", block.vtx[1].GetHash().ToString());
+        }
 
-        int64_t nCalculatedStakeReward = GetProofOfStakeReward(nCoinAge, nFees);
+        int64_t nCalculatedStakeReward = GetProofOfStakeReward(pindex->nHeight, nCoinAge, nFees, pindex->pprev);
 
         // m2: do not allow negative stake values
         if (nCalculatedStakeReward < 0) {
@@ -2612,12 +2613,17 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
             LogPrintf("[DEBUG]: nStakeReward=%d,  nCalculatedStakeReward=%d\n", nStakeReward, nCalculatedStakeReward);
         }
 
-        if (nStakeReward > nCalculatedStakeReward)
+        if (nStakeReward > nCalculatedStakeReward){
             return state.DoS(100, error("ConnectBlock() : coinstake pays too much(actual=%d vs calculated=%d)", nStakeReward, nCalculatedStakeReward));
+        }
+
+
+
     }
 
-    if (!control.Wait())
+    if (!control.Wait()) {
         return state.DoS(100, false);
+    }
     int64_t nTime4 = GetTimeMicros(); nTimeVerify += nTime4 - nTime2;
     LogPrint("bench", "    - Verify %u txins: %.2fms (%.3fms/txin) [%.2fs]\n", nInputs - 1, 0.001 * (nTime4 - nTime2), nInputs <= 1 ? 0 : 0.001 * (nTime4 - nTime2) / (nInputs-1), nTimeVerify * 0.000001);
 
@@ -7213,7 +7219,10 @@ bool TransactionGetCoinAge(CTransaction& transaction, uint64_t& nCoinAge)
         LogPrint("coinage", "%s: coin age nValueIn=%d nTimeDiff=%d bnCentSecond=%s\n", __func__, nValueIn, transaction.nTime - txPrev.nTime, bnCentSecond.ToString());
     }
 
-    CBigNum bnCoinDay = ((bnCentSecond * CENT) / COIN) / (24 * 60 * 60); //m2:
+    CBigNum bnCoinDay;
+    bnCoinDay = bnCentSecond * CENT / (24 * 60 * 60); //m2:
+
+
     LogPrint("coinage", "%s: coin age bnCoinDay=%s\n", __func__, bnCoinDay.ToString());
     nCoinAge = bnCoinDay.getuint64();
 

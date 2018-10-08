@@ -267,7 +267,8 @@ bool GetTransaction(const uint256 &hash, CTransaction &tx, const Consensus::Para
 bool ActivateBestChain(CValidationState& state, const CChainParams& chainparams, const CBlock* pblock = NULL);
 CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams);
 CAmount GetDevBlockSubsidy(int nHeight);
-int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees);
+//int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees);
+int64_t GetProofOfStakeReward(int nHeight, int64_t nCoinAge, int64_t nFees, CBlockIndex* pindexPrev);
 
 /**
  * Prune block and undo files (blk???.dat and undo???.dat) so that the disk space used is less than a user-defined target.
@@ -537,7 +538,7 @@ static const unsigned int REJECT_CONFLICT = 0x102;
 // Ratio of group interval length between the last group and the first group
 static const int MODIFIER_INTERVAL_RATIO = 3;
 
-static const int64_t MAX_MINT_PROOF_OF_STAKE = 0.10 * COIN;	// 20% annual interest
+static const int64_t MAX_MINT_PROOF_OF_STAKE = 0.1 * COIN;	// 10% annual interest
 
 const CBlockIndex* GetLastBlockIndex(const CBlockIndex* pindex, bool fProofOfStake);
 bool TransactionGetCoinAge(CTransaction& transaction, uint64_t& nCoinAge);
