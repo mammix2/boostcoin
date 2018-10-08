@@ -2488,6 +2488,8 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     std::vector<uint256> vOrphanErase;
     std::vector<int> prevheights;
     CAmount nFees = 0;
+    CAmount nValueIn = 0;
+    CAmount nValueOut = 0;
     int nInputs = 0;
     int64_t nSigOpsCost = 0;
     CDiskTxPos pos(pindex->GetBlockPos(), GetSizeOfCompactSize(block.vtx.size()));
@@ -2570,18 +2572,20 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     int64_t nTime3 = GetTimeMicros(); nTimeConnect += nTime3 - nTime2;
     LogPrint("bench", "      - Connect %u transactions: %.2fms (%.3fms/tx, %.3fms/txin) [%.2fs]\n", (unsigned)block.vtx.size(), 0.001 * (nTime3 - nTime2), 0.001 * (nTime3 - nTime2) / block.vtx.size(), nInputs <= 1 ? 0 : 0.001 * (nTime3 - nTime2) / (nInputs-1), nTimeConnect * 0.000001);
 
-
-    CAmount blockReward = nFees + GetBlockSubsidy(pindex->nHeight, chainparams.GetConsensus());
-    if (fDebug) {
-        cout << "DEBUG: ConnectBlock: block.vtx[0].GetValueOut() = " ;
-        cout << block.vtx[0].GetValueOut() / COIN;
-        cout << "\n";
-    }
-    if (block.vtx[0].GetValueOut() > blockReward) {
-        return state.DoS(100, error("ConnectBlock(): coinbase pays too much (actual=%d vs limit=%d in height=%d)",
-                               block.vtx[0].GetValueOut(), blockReward, pindex->nHeight),
-                               REJECT_INVALID, "bad-cb-amount");
-    }
+    if (block.IsProofOfWork())
+    {
+	    CAmount blockReward = nFees + GetBlockSubsidy(pindex->nHeight, chainparams.GetConsensus());
+	    if (fDebug) {
+	        cout << "DEBUG: ConnectBlock: block.vtx[0].GetValueOut() = " ;
+	        cout << block.vtx[0].GetValueOut() / COIN;
+	        cout << "\n";
+	    }
+	    if (block.vtx[0].GetValueOut() > blockReward) {
+	        return state.DoS(100, error("ConnectBlock(): coinbase pays too much (actual=%d vs limit=%d in height=%d)",
+	                               block.vtx[0].GetValueOut(), blockReward, pindex->nHeight),
+	                               REJECT_INVALID, "bad-cb-amount");
+	    }
+	}
 
 
 
@@ -2606,13 +2610,17 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
         }
 
         if (nStakeReward > nCalculatedStakeReward)
-            return state.DoS(100, error("ConnectBlock() : coinstake pays too much(actual nStakeReward=%d vs nCalculatedStakeReward=%d)", nStakeReward, nCalculatedStakeReward));
+            return state.DoS(100, error("ConnectBlock() : coinstake pays too much(actual=%d vs calculated=%d)", nStakeReward, nCalculatedStakeReward));
     }
 
     if (!control.Wait())
         return state.DoS(100, false);
     int64_t nTime4 = GetTimeMicros(); nTimeVerify += nTime4 - nTime2;
     LogPrint("bench", "    - Verify %u txins: %.2fms (%.3fms/txin) [%.2fs]\n", nInputs - 1, 0.001 * (nTime4 - nTime2), nInputs <= 1 ? 0 : 0.001 * (nTime4 - nTime2) / (nInputs-1), nTimeVerify * 0.000001);
+
+    // Track money supply and mint amount info
+    pindex->nMint = nValueOut - nValueIn + nFees;
+    pindex->nMoneySupply = (pindex->pprev ? pindex->pprev->nMoneySupply : 0) + nValueOut - nValueIn;
 
     if (fJustCheck)
         return true;
@@ -3783,7 +3791,7 @@ bool ContextualCheckBlock(const CBlock& block, CValidationState& state, CBlockIn
         int commitpos = GetWitnessCommitmentIndex(block);
         if (commitpos != -1) {
             bool malleated = false;
-            uint256 hashWitness = BlockWitnessMerkleRoot(block, &malleated);
+            uint256 hashWitness = BlockWitnessMerkleRoot(block, &malleated, true);
             // The malleation check is ignored; as the transaction tree itself
             // already does not permit it, it is impossible to trigger in the
             // witness tree.
@@ -3806,9 +3814,6 @@ bool ContextualCheckBlock(const CBlock& block, CValidationState& state, CBlockIn
             }
         }
     }
-
-
-
 
     // After the coinbase witness nonce and commitment are verified,
     // we can check if the block weight passes (before we've checked the
