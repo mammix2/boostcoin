@@ -1000,10 +1000,6 @@ void SetThemeQSS(QApplication& app)
     "QMenuBar::item         { background: rgb(255,255,255); color: rgb(51,47,202) ;}"
     "QMenuBar::item:selected { background: rgb(43,196,237) ;}"
 
-    "QLabel                 { font-family: Arial,Gadget,sans-serif; color: rgb(255,255,255) ;}"
-    "QLabel::header         { border-color: rgb(51,47,202) ;}"
-    "QLabel::progressBarLabel { color: rgb(255,255,255) ;}"
-
     "QScrollBar             { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
 
     "QCheckBox              { font-family: Arial,Gadget,sans-serif; padding: 2px; border-radius: 3px;  color: rgb(255,255,255); background: rgb(51,47,202) ;}"
@@ -1036,8 +1032,12 @@ void SetThemeQSS(QApplication& app)
     "QComboBox              { font-family: Arial,Gadget,sans-serif;  padding: 2px; border-radius: 3px; color: rgb(255,255,255); background: rgb(51,47,202) ;}"
     "QAbstractItemView, QAbstractSpinBox {font-family: Arial,Gadget,sans-serif; padding: 2px; border-radius: 3px;  color: rgb(255,255,255); background: rgb(51,47,202) ;}"
 
-    "QVBoxLayout            { background: rgb(255,255,255) ;}"
+    "QVBoxLayout            { background: rgb(51,47,202);}"
+    "QVBoxLayout::QLabel    { color: rgb(51,47,202);}"
 
+    "QLabel                 { font-family: Arial,Gadget,sans-serif; color: rgb(255,255,255) ;}"
+    "QLabel::header         { border-color: rgb(51,47,202) ;}"
+    "QLabel::progressBarLabel { color: rgb(255,255,255) ;}"
     "QLabel#lbl_Available_text, QLabel#lbl_Pending_Text, QLabel#labelStakingText, QLabel#labelImmatureText, QLabel#lbl_Total_Text, QLabel#lbl_24H_Text, QLabel#lbl_7D_Text, QLabel#lbl_30D_Text {font-weight: bold; font-family: Arial,Gadget,sans-serif; font-size: 16px; color: rgb(51,47,202);}"
     "QLabel#labelStaking, QLabel#labelBalance, QLabel#labelStake, QLabel#labelUnconfirmed, QLabel#labelImmature, QLabel#label24hStakingStats, QLabel#label7dStakingStats, QLabel#label30dStakingStats  {font-weight: bold; font-family: Arial,Gadget,sans-serif; font-size: 16px; color: rgb(43,196,237);}"
     "QLabel#label_MyWallet, QLabel#StakingStatus_Heading {color: rgb(51,47,202) ;}"
@@ -1099,10 +1099,6 @@ void SetThemeQSS(QApplication& app)
         "QMenuBar::item         { background: rgb(255,255,255); color: rgb(51,47,202) ;}"
         "QMenuBar::item:selected { background: rgb(43,196,237) ;}"
 
-        "QLabel                 { font-family: Arial,Gadget,sans-serif; color: rgb(255,255,255) ;}"
-        "QLabel::header         { border-color: rgb(51,47,202) ;}"
-        "QLabel::progressBarLabel { color: rgb(255,255,255) ;}"
-
         "QScrollBar             { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
 
         "QCheckBox              { font-family: Arial,Gadget,sans-serif; padding: 2px; border-radius: 3px;  color: rgb(255,255,255); background: rgb(51,47,202) ;}"
@@ -1135,8 +1131,12 @@ void SetThemeQSS(QApplication& app)
         "QComboBox              { font-family: Arial,Gadget,sans-serif;  padding: 2px; border-radius: 3px; color: rgb(255,255,255); background: rgb(51,47,202) ;}"
         "QAbstractItemView, QAbstractSpinBox {font-family: Arial,Gadget,sans-serif; padding: 2px; border-radius: 3px;  color: rgb(255,255,255); background: rgb(51,47,202) ;}"
 
-        "QVBoxLayout            { background: rgb(255,255,255) ;}"
+        "QVBoxLayout            { background: rgb(51,47,202);}"
+        "QVBoxLayout::QLabel    { color: rgb(51,47,202);}"
 
+        "QLabel                 { font-family: Arial,Gadget,sans-serif; color: rgb(255,255,255) ;}"
+        "QLabel::header         { border-color: rgb(51,47,202) ;}"
+        "QLabel::progressBarLabel { color: rgb(255,255,255) ;}"
         "QLabel#lbl_Available_text, QLabel#lbl_Pending_Text, QLabel#labelStakingText, QLabel#labelImmatureText, QLabel#lbl_Total_Text, QLabel#lbl_24H_Text, QLabel#lbl_7D_Text, QLabel#lbl_30D_Text {font-weight: bold; font-family: Arial,Gadget,sans-serif; font-size: 16px; color: rgb(51,47,202);}"
         "QLabel#labelStaking, QLabel#labelBalance, QLabel#labelStake, QLabel#labelUnconfirmed, QLabel#labelImmature, QLabel#label24hStakingStats, QLabel#label7dStakingStats, QLabel#label30dStakingStats  {font-weight: bold; font-family: Arial,Gadget,sans-serif; font-size: 16px; color: rgb(43,196,237);}"
         "QLabel#label_MyWallet, QLabel#StakingStatus_Heading {color: rgb(51,47,202) ;}"
@@ -1199,10 +1199,6 @@ void SetThemeQSS(QApplication& app)
                 "QMenuBar::item         { background: rgb(255,255,255); color: rgb(51,47,202) ;}"
                 "QMenuBar::item:selected { background: rgb(43,196,237) ;}"
 
-                "QLabel                 { font-family: Arial,Gadget,sans-serif; color: rgb(255,255,255) ;}"
-                "QLabel::header         { border-color: rgb(51,47,202) ;}"
-                "QLabel::progressBarLabel { color: rgb(255,255,255) ;}"
-
                 "QScrollBar             { padding: 2px; border-radius: 3px; background: rgb(51,47,202); color: rgb(208,224,239); border-color: rgb(255,255,253) ;}"
 
                 "QCheckBox              { font-family: Arial,Gadget,sans-serif; padding: 2px; border-radius: 3px;  color: rgb(255,255,255); background: rgb(51,47,202) ;}"
@@ -1235,8 +1231,12 @@ void SetThemeQSS(QApplication& app)
                 "QComboBox              { font-family: Arial,Gadget,sans-serif;  padding: 2px; border-radius: 3px; color: rgb(255,255,255); background: rgb(51,47,202) ;}"
                 "QAbstractItemView, QAbstractSpinBox {font-family: Arial,Gadget,sans-serif; padding: 2px; border-radius: 3px;  color: rgb(255,255,255); background: rgb(51,47,202) ;}"
 
-                "QVBoxLayout            { background: rgb(255,255,255) ;}"
+                "QVBoxLayout            { background: rgb(51,47,202) ;}"
+                "QVBoxLayout::QLabel    { color: rgb(51,47,202);}"
 
+                "QLabel                 { font-family: Arial,Gadget,sans-serif; color: rgb(255,255,255) ;}"
+                "QLabel::header         { border-color: rgb(51,47,202) ;}"
+                "QLabel::progressBarLabel { color: rgb(255,255,255) ;}"
                 "QLabel#lbl_Available_text, QLabel#lbl_Pending_Text, QLabel#labelStakingText, QLabel#labelImmatureText, QLabel#lbl_Total_Text, QLabel#lbl_24H_Text, QLabel#lbl_7D_Text, QLabel#lbl_30D_Text {font-weight: bold; font-family: Arial,Gadget,sans-serif; font-size: 16px; color: rgb(51,47,202);}"
                 "QLabel#labelStaking, QLabel#labelBalance, QLabel#labelStake, QLabel#labelUnconfirmed, QLabel#labelImmature, QLabel#label24hStakingStats, QLabel#label7dStakingStats, QLabel#label30dStakingStats  {font-weight: bold; font-family: Arial,Gadget,sans-serif; font-size: 16px; color: rgb(43,196,237);}"
                 "QLabel#label_MyWallet, QLabel#StakingStatus_Heading {color: rgb(51,47,202) ;}"

@@ -3699,10 +3699,8 @@ bool ContextualCheckBlock(const CBlock& block, CValidationState& state, CBlockIn
     const int nHeight = pindexPrev == nullptr ? 0 : pindexPrev->nHeight + 1;
     const Consensus::Params& consensusParams = Params().GetConsensus();
     bool foundBlockSubsidy = false;
-    bool foundDevBlockSubsidy = false;
     bool foundDevAddress = false;
     int64_t BlockSubsidy = GetBlockSubsidy(nHeight, Params().GetConsensus()) / COIN;
-    int64_t DevBlockSubsidy = GetDevBlockSubsidy(nHeight) / COIN;
 
     if (block.IsProofOfWork()) {
         if (nHeight > consensusParams.nLastPOWBlock) {
@@ -3738,20 +3736,6 @@ bool ContextualCheckBlock(const CBlock& block, CValidationState& state, CBlockIn
         }
     }
 
-//    if (block.IsProofOfWork()) {
-//        BOOST_FOREACH(const CTxOut& output, block.vtx[0].vout) {
-//            if (fDebug) { cout << "DEBUG: Verifying DevSubsidy outputs\n";}
-//            if (output.nValue == DevBlockSubsidy); { // check the Subsidy amount
-//                if (fDebug) { cout << "DEBUG: output.nValue == GetBDevlockSubsidy(nHeight) is True. Expected amount = " << DevBlockSubsidy << " BOST, at height" << nHeight << " \n"; }
-//                foundDevBlockSubsidy = true;
-//                break;
-//            }
-//        }
-//        if (!foundDevBlockSubsidy) {
-//            return state.DoS(100, error("%s: devsubsidy reward missing", __func__), REJECT_INVALID, "cb-no-DevBlockSubsidy-reward");
-//        }
-
-//    }
 
 
 
