@@ -2,7 +2,7 @@
 name: "boostcoin-win-5.0.0.0"
 enable_cache: true
 suites:
-- "bionic"
+- "trusty"
 architectures:
 - "amd64"
 packages:
