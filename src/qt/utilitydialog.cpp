@@ -179,6 +179,7 @@ QWidget *ShutdownWindow::showShutdownWindow(BitcoinGUI *window)
     // Show a simple window indicating shutdown status
     QWidget *shutdownWindow = new ShutdownWindow();
     shutdownWindow->setWindowTitle(window->windowTitle());
+    shutdownWindow->setStyleSheet("QLabel { font-family: Arial,Gadget,sans-serif; color: rgb(0,0,0) ;}");
 
     // Center shutdown window at where main window was
     const QPoint global = window->mapToGlobal(window->rect().center());
