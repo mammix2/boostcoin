@@ -119,9 +119,8 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0x603add6547a4c67f12f5a5fb5100fb455e3515b05e58a44a29a4496f7fcaaaf7"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-        vSeeds.push_back(CDNSSeedData("bnode01.cloudapp.net", "bnode01.cloudapp.net", false));
-		vSeeds.push_back(CDNSSeedData("bnode02.cloudapp.net", "bnode02.cloudapp.net", false));
-		vSeeds.push_back(CDNSSeedData("bnode03.cloudapp.net", "bnode03.cloudapp.net", false));
+		vSeeds.push_back(CDNSSeedData("ns1.bost.link", "myboost001.bost.link", false));
+		vSeeds.push_back(CDNSSeedData("ns2.bost.link", "myboost002.bost.link", false));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,25);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,85);
