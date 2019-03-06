@@ -181,7 +181,7 @@ public:
         consensus.nPowTargetTimespan = 16 * 60; // 16 minutes
         consensus.nPowTargetSpacing = 60;
         consensus.nPowTargetSpacing2 = 2 * 60;	
-		consensus.nPowTargetSpacing2_start = 10;		
+		consensus.nPowTargetSpacing2_start = 100;		
         consensus.nLastPOWBlock = 2000;
         consensus.nStakeMinAge = 15 * 60; // testnet min age is 15 mins
         consensus.nModifierInterval = 60;
@@ -189,7 +189,7 @@ public:
 		consensus.nTimeDriftCondition1 = 1457136000; // Sat, 05 Mar 2016 00:00:00 GMT
 		consensus.nTimeDriftCondition2 = 1461873600; // Thu, 28 Apr 2016 20:00:00 GMT
         consensus.nBlockVersionCheckStart = 5; //m2: blocks after this will be version checked.
-		consensus.nBlockDGW_start = 5;
+		consensus.nBlockDGW_start = 20;
         consensus.nStakeCombineThreshold = 100 * COIN;
         consensus.checkpointPubKey = "04f80fc7adbebe2dd223f0ad811dee52ffd4edfdeff1a1b08ccdbbbba82eda6c2917c0bdecc3c5e855652111b5b220c679b061c9bcf330e9534e7bc006bd45673e";
         consensus.fPowAllowMinDifficultyBlocks = true;
@@ -378,7 +378,7 @@ CScript CChainParams::GetRewardScript() const {
     if (Params().NetworkIDString() == CBaseChainParams::MAIN)
         address = CBitcoinAddress("BKqAh5ojyS7bkjaDHJEWXxMwKNUvUsNZak"); //keep this mainnet address BKqAh5ojyS7bkjaDHJEWXxMwKNUvUsNZak
     else if (Params().NetworkIDString() == CBaseChainParams::TESTNET)
-        address = CBitcoinAddress("mvkfkygoTNPZs18L9hASFr17r8fJajVzZP"); //keep this testnet address mvkfkygoTNPZs18L9hASFr17r8fJajVzZP
+        address = CBitcoinAddress("miiWpmBt9bMknbcoe4beokur4xAetJ9Nmz"); 
     else if (Params().NetworkIDString() == CBaseChainParams::REGTEST)
         address = CBitcoinAddress("qKn4qdApT3ARHf2s6NhDyeSy9569Xb3GyS");
 
