@@ -220,9 +220,9 @@ public:
         nDefaultPort = 19697;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1400512373, 1908795, 0x1f00ffff, 1);
+        genesis = CreateGenesisBlock(1400512373, 5726282, 0x1e0fffff, 1);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x0000bfc0a4fd7d2215718380aae7e92f0821b0c4785a64039b173840ea1c36fb"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000e81cae8e8cbbf9679d53ff1df5e23062dc667a332fd121f86e68f5d25e3"));
         assert(genesis.hashMerkleRoot == uint256S("0x603add6547a4c67f12f5a5fb5100fb455e3515b05e58a44a29a4496f7fcaaaf7"));
 
         vFixedSeeds.clear();
@@ -247,7 +247,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            ( 0, uint256S("0x0000bfc0a4fd7d2215718380aae7e92f0821b0c4785a64039b173840ea1c36fb")),
+            ( 0, uint256S("0x00000e81cae8e8cbbf9679d53ff1df5e23062dc667a332fd121f86e68f5d25e3")),
             1400512373,  //m2 needs verifying
             1,
             720  //m2 needs verifying
