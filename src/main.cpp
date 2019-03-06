@@ -3703,7 +3703,7 @@ bool ContextualCheckBlockHeader(const CBlockHeader& block, CValidationState& sta
 
 bool ContextualCheckBlock(const CBlock& block, CValidationState& state, CBlockIndex * const pindexPrev)
 {
-    const int nHeight = pindexPrev == nullptr ? 0 : pindexPrev->nHeight + 1;
+    const int64_t nHeight = pindexPrev == nullptr ? 0 : pindexPrev->nHeight + 1;
     const Consensus::Params& consensusParams = Params().GetConsensus();
     bool foundBlockSubsidy = false;
     bool foundDevAddress = false;
@@ -3714,32 +3714,33 @@ bool ContextualCheckBlock(const CBlock& block, CValidationState& state, CBlockIn
             return state.DoS(100, false, REJECT_INVALID, "pow-ended", true, "reject proof-of-work at height");
         }
     }
-
-    if (block.IsProofOfWork()) {
-        BOOST_FOREACH(const CTxOut& output, block.vtx[0].vout) {
-            if (fDebug) { cout << "DEBUG: Verifying Subsidy outputs\n";}
-            if (output.nValue == BlockSubsidy); { // check the Subsidy amount
-                if (fDebug) { cout << "DEBUG: output.nValue == GetBlockSubsidy(nHeight) is True. Expected amount = " << BlockSubsidy << " BOST, at height" << nHeight << " \n"; }
-                foundBlockSubsidy = true;
-                break;
+    if (nHeight > 1) {
+        if (block.IsProofOfWork()) {
+            BOOST_FOREACH(const CTxOut& output, block.vtx[0].vout) {
+                if (fDebug) { cout << "DEBUG: Verifying Subsidy outputs\n";}
+                if (output.nValue == BlockSubsidy); { // check the Subsidy amount
+                    if (fDebug) { cout << "DEBUG: output.nValue == GetBlockSubsidy(nHeight) is True. Expected amount = " << BlockSubsidy << " BOST, at height" << nHeight << " \n"; }
+                    foundBlockSubsidy = true;
+                    break;
+                }
+            }
+            if (!foundBlockSubsidy) {
+                return state.DoS(100, error("%s: block reward missing", __func__), REJECT_INVALID, "cb-no-BlockSubsidy-reward");
             }
         }
-        if (!foundBlockSubsidy) {
-            return state.DoS(100, error("%s: block reward missing", __func__), REJECT_INVALID, "cb-no-BlockSubsidy-reward");
-        }
-    }
-    if (block.IsProofOfWork()) {
-        BOOST_FOREACH(const CTxOut& output, block.vtx[0].vout) {
-            if (fDebug) { cout << "DEBUG: Verifying DevSubsidy outputs\n";}
-            if (output.scriptPubKey == Params().GetRewardScript()) { // check the DevSubsidy address
-                if (fDebug) { cout << "DEBUG: output.scriptPubKey == Params().GetRewardScript()) is True. Address verified \n";}
-                if (fDebug) { cout << "\n";}
-                foundDevAddress = true;
-                break;
+        if (block.IsProofOfWork()) {
+            BOOST_FOREACH(const CTxOut& output, block.vtx[0].vout) {
+                if (fDebug) { cout << "DEBUG: Verifying DevSubsidy outputs\n";}
+                if (output.scriptPubKey == Params().GetRewardScript()) { // check the DevSubsidy address
+                    if (fDebug) { cout << "DEBUG: output.scriptPubKey == Params().GetRewardScript()) is True. Address verified \n";}
+                    if (fDebug) { cout << "\n";}
+                    foundDevAddress = true;
+                    break;
+                }
             }
-        }
-        if (!foundDevAddress) {
-            return state.DoS(100, error("%s: devsubsidy address is invalid", __func__), REJECT_INVALID, "cb-no-Valid-DevAddress");
+            if (!foundDevAddress) {
+                return state.DoS(100, error("%s: devsubsidy address is invalid", __func__), REJECT_INVALID, "cb-no-Valid-DevAddress");
+            }
         }
     }
 
