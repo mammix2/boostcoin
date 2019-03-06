@@ -184,7 +184,7 @@ public:
 		consensus.nPowTargetSpacing2_start = 10;		
         consensus.nLastPOWBlock = 2000;
         consensus.nStakeMinAge = 15 * 60; // testnet min age is 15 mins
-        consensus.nModifierInterval = 10 * 60;
+        consensus.nModifierInterval = 60;
         consensus.nStakeSplitAge = 24 * 60 * 60;
 		consensus.nTimeDriftCondition1 = 1457136000; // Sat, 05 Mar 2016 00:00:00 GMT
 		consensus.nTimeDriftCondition2 = 1461873600; // Thu, 28 Apr 2016 20:00:00 GMT
@@ -220,9 +220,9 @@ public:
         nDefaultPort = 19697;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1400512373, 825214, 0x1e0fffff, 1);
+        genesis = CreateGenesisBlock(1400512373, 1908795, 0x1f00ffff, 1);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00000ec4fc2a161ae8fc6090888b34f8f88a8f600270affb084c7004b980584c"));
+        assert(consensus.hashGenesisBlock == uint256S("0x0000bfc0a4fd7d2215718380aae7e92f0821b0c4785a64039b173840ea1c36fb"));
         assert(genesis.hashMerkleRoot == uint256S("0x603add6547a4c67f12f5a5fb5100fb455e3515b05e58a44a29a4496f7fcaaaf7"));
 
         vFixedSeeds.clear();
@@ -247,7 +247,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            ( 0, uint256S("0x00000ec4fc2a161ae8fc6090888b34f8f88a8f600270affb084c7004b980584c")),
+            ( 0, uint256S("0x0000bfc0a4fd7d2215718380aae7e92f0821b0c4785a64039b173840ea1c36fb")),
             1400512373,  //m2 needs verifying
             1,
             720  //m2 needs verifying
