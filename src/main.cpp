@@ -1732,8 +1732,8 @@ CAmount GetDevBlockSubsidy(int nHeight)
 }
 
 // staker's coin stake reward based on coin age spent (coin-days)
-// int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees)
-int64_t GetProofOfStakeReward(int nHeight, int64_t nCoinAge, int64_t nFees, CBlockIndex* pindexPrev)
+int64_t GetProofOfStakeReward(int nHeight, int64_t nCoinAge, int64_t nFees)
+// int64_t GetProofOfStakeReward(int nHeight, int64_t nCoinAge, int64_t nFees, CBlockIndex* pindexPrev)
 {
 
     int64_t nRewardCoinYear;
@@ -2609,7 +2609,8 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
             return error("ConnectBlock() : %s unable to get coin age for coinstake", block.vtx[1].GetHash().ToString());
         }
 
-        int64_t nCalculatedStakeReward = GetProofOfStakeReward(pindex->nHeight, nCoinAge, nFees, pindex->pprev);
+//        int64_t nCalculatedStakeReward = GetProofOfStakeReward(pindex->nHeight, nCoinAge, nFees, pindex->pprev);
+        int64_t nCalculatedStakeReward = GetProofOfStakeReward(pindex->nHeight, nCoinAge, nFees);
 
         // m2: do not allow negative stake values
         if (nCalculatedStakeReward < 0) {
