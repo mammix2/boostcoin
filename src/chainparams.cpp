@@ -228,8 +228,8 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.push_back(CDNSSeedData("ns1.bost.link", "test-myboost001.bost.link", false));
-		vSeeds.push_back(CDNSSeedData("ns2.bost.link", "test-myboost002.bost.link", false));
+        vSeeds.push_back(CDNSSeedData("test-myboost001.bost.link", "test-myboost001.bost.link", false));
+		vSeeds.push_back(CDNSSeedData("test-myboost002.bost.link", "test-myboost002.bost.link", false));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);

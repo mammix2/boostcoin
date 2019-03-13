@@ -89,7 +89,7 @@
            <number>10</number>
           </property>
           <property name="bottomMargin">
-           <number>15</number>
+           <number>25</number>
           </property>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_9">
@@ -136,7 +136,7 @@
                <string>My Wallet</string>
               </property>
               <property name="alignment">
-               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+               <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
               </property>
               <property name="margin">
                <number>-1</number>
@@ -188,7 +188,7 @@
               </property>
               <property name="sizeHint" stdset="0">
                <size>
-                <width>27</width>
+                <width>20</width>
                 <height>22</height>
                </size>
               </property>
@@ -822,6 +822,9 @@
            <layout class="QHBoxLayout" name="horizontalLayout_5">
             <property name="sizeConstraint">
              <enum>QLayout::SetDefaultConstraint</enum>
+            </property>
+            <property name="topMargin">
+             <number>8</number>
             </property>
             <item>
              <spacer name="horizontalSpacer_12">

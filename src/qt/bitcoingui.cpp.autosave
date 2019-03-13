@@ -1322,6 +1322,7 @@ void BitcoinGUI::updateStakingStatus()
         {
             walletFrame->setStakingStatus(tr("Staking is turned off."));
             walletFrame->showLockStaking(false);
+            
         }
         else if (nLastCoinStakeSearchInterval && nWeight)
         {
