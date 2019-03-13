@@ -1,0 +1,17 @@
+# This is a sample build configuration for C++ – Make.
+# Check our guides at https://confluence.atlassian.com/x/5Q4SMw for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: gcc:7.3.0
+
+pipelines:
+  default:
+    - step:
+        script: # Modify the commands below to build your repository.
+          - cd depends
+          - make -j2 HOST=x86_64-pc-linux-gnu 
+          - cd ..
+          - ./autogen.sh
+          - CONFIG_SITE=$PWD/depends/x86_64-pc-linux-gnu/share/config.site ./configure --prefix=/ --enable-tests=no
+          - make -j2
