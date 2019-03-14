@@ -1,7 +1,7 @@
 Boostcoin integration/staging tree
 =====================================
 
-[![Build Status](https://travis-ci.org/mammix2/boostcoin.svg?branch=master)](https://travis-ci.org/mammix2/boostcoin)
+[![Build Status](https://travis-ci.com/mammix2/boostcoin.svg?branch=master)](https://travis-ci.com/mammix2/boostcoin)
 
 https://myboost.io
 
