@@ -2,8 +2,8 @@ sudo: required
 dist: trusty
 
 #workaround for https://github.com/travis-ci/travis-ci/issues/5227
-addons:
-  hostname: boostcoin-tester
+#addons:
+#  hostname: boostcoin-tester
 
 os: linux
 language: generic
@@ -39,10 +39,11 @@ env:
 # No wallet
     - HOST=x86_64-unknown-linux-gnu PACKAGES=" libdb5.3++-dev openjdk-7-jre-headless python3" DEP_OPTS="NO_WALLET=1" RUN_TESTS=false GOAL="install" BITCOIN_CONFIG="--enable-glibc-back-compat --enable-reduce-exports"
 # Cross-Mac
-    - HOST=x86_64-apple-darwin14 PACKAGES="cmake imagemagick libcap-dev librsvg2-bin libz-dev libbz2-dev libtiff-tools python-dev python3-setuptools-git" BITCOIN_CONFIG="--enable-reduce-exports" OSX_SDK=10.11 GOAL="deploy"
+    - HOST=x86_64-apple-darwin11 PACKAGES="cmake imagemagick libcap-dev librsvg2-bin libz-dev libbz2-dev libtiff-tools python-dev python3-setuptools-git" BITCOIN_CONFIG="--enable-gui --enable-reduce-exports" OSX_SDK=10.11 GOAL="deploy"
 
 before_install:
     - export PATH=$(echo $PATH | tr ':' "\n" | sed '/\/opt\/python/d' | tr "\n" ":" | sed "s|::|:|g")
+    - export PATH=$(echo $PATH | tr ':' "\n" | sed '/\/opt\/pyenv/d' | tr "\n" ":" | sed "s|::|:|g")
 install:
     - if [ -n "$PPA" ]; then travis_retry sudo add-apt-repository "$PPA" -y; fi
     - if [ -n "$DPKG_ADD_ARCH" ]; then sudo dpkg --add-architecture "$DPKG_ADD_ARCH" ; fi
