@@ -957,6 +957,8 @@ void SetThemeQSS(QApplication& app)
 {
 
 #ifdef Q_OS_MAC
+    // Mac OS styles here
+    app.setStyleSheet(
     "QMainWindow            { background-color: rgb(44,45,128) ;}"
     "QDialog                { background-color: rgb(44,45,128) ;}"
     "QFrame                 { border: none ;}"
