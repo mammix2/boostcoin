@@ -75,14 +75,14 @@ src/qt/test/moc*.cpp
 *.qm
 #Makefile
 boostcoin-qt
-boostcoin-Qt.app
+Boostcoin-Qt.app
 *.user*
 
 #QT Creator
-BOOST-IMPORT.config
-BOOST-IMPORT.creator
-BOOST-IMPORT.files
-BOOST-IMPORT.includes
+*.config
+*.creator
+*.files
+*.includes
 
 
 # Unit-tests
