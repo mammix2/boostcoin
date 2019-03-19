@@ -68,3 +68,6 @@ script:
 after_script:
     - echo $TRAVIS_COMMIT_RANGE
     - echo $TRAVIS_COMMIT_LOG
+    
+notifications:
+    slack: boostcoin:FE7mHzfNGruS03oOBNixeWxM
