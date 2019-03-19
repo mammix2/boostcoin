@@ -6,7 +6,7 @@ Boost wallet integration/staging tree
 https://myboost.io
 
 The Boost project is a fork of the Bitcoin core project. It contains its own set of parameters,
-such as block times and extra features such 20% Proof-of-Stake, protection against 51% attacks
+such as block times and extra features such 10% Proof-of-Stake rewards, protection against 51% attacks
 SegWit integration and the X13 hashing algorithm for Proof of Work blocks.
 
 Boost is a fully open source project. Updates to the code can be suggested or pushed by the community
