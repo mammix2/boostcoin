@@ -11,7 +11,6 @@ SegWit integration and the X13 hashing algorithm for Proof of Work blocks.
 
 Boost is a fully open source project. Updates to the code can be suggested or pushed by the community
 for further developments.
-----------------
 
 What is the Boost wallet?
 ----------------
