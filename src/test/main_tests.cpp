@@ -13,13 +13,6 @@
 BOOST_FIXTURE_TEST_SUITE(main_tests, TestingSetup)
 
 
-BOOST_AUTO_TEST_CASE(block_subsidy_test)
-{
-    TestBlockSubsidyHalvings(Params(CBaseChainParams::MAIN).GetConsensus()); // As in main
-    TestBlockSubsidyHalvings(150); // As in regtest
-    TestBlockSubsidyHalvings(1000); // Just another interval
-}
-
 BOOST_AUTO_TEST_CASE(subsidy_limit_test)
 {
     const Consensus::Params& consensusParams = Params(CBaseChainParams::MAIN).GetConsensus();
