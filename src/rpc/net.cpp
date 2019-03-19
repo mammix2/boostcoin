@@ -1,4 +1,4 @@
-// Copyright (c) 2009-2015 The Bitcoin Core developers
+// Copyright (c) 2009-2019 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -597,7 +597,7 @@ double GetPoSKernelPS()
 
     return nStakesTime ? dStakeKernelsTriedAvg / nStakesTime : 0;
 }
-
+#ifdef ENABLE_WALLET
 UniValue getstakinginfo(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 0)
@@ -657,13 +657,15 @@ UniValue getstakesubsidy(const UniValue& params, bool fHelp)
     return (uint64_t)GetProofOfStakeReward(pindexBestHeader->nHeight, nCoinAge, 0);
 	//return (uint64_t)GetProofOfStakeReward(pindexBestHeader->nHeight, nCoinAge, 0, pindexBestHeader);
 }
-
+#endif
 static const CRPCCommand commands[] =
 { //  category              name                      actor (function)         okSafeMode
   //  --------------------- ------------------------  -----------------------  ----------
     { "network",            "getconnectioncount",     &getconnectioncount,     true  },
+#ifdef ENABLE_WALLET	
     { "network",            "getstakesubsidy",        &getstakesubsidy,        true  },
     { "network",            "getstakinginfo",         &getstakinginfo,         true  },
+#endif	
     { "network",            "ping",                   &ping,                   true  },
     { "network",            "getpeerinfo",            &getpeerinfo,            true  },
     { "network",            "addnode",                &addnode,                true  },

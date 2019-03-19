@@ -1,4 +1,4 @@
-// Copyright (c) 2015 The Bitcoin Core developers
+// Copyright (c) 2015-2019 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -35,7 +35,7 @@ void InterruptHTTPServer();
 void StopHTTPServer();
 
 /** Handler for requests to a certain HTTP path */
-typedef boost::function<bool(HTTPRequest* req, const std::string &)> HTTPRequestHandler;
+typedef boost::function<void(HTTPRequest* req, const std::string &)> HTTPRequestHandler;
 /** Register handler for prefix.
  * If multiple handlers match a prefix, the first-registered one will
  * be invoked.

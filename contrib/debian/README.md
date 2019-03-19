@@ -1,8 +1,8 @@
 
 Debian
 ====================
-This directory contains files used to package bitcoind/boostcoin-qt
-for Debian-based Linux systems. If you compile bitcoind/boostcoin-qt yourself, there are some useful files here.
+This directory contains files used to package boostcoind/boostcoin-qt
+for Debian-based Linux systems. If you compile boostcoind/boostcoin-qt yourself, there are some useful files here.
 
 ## bitcoin: URI support ##
 

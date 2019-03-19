@@ -1,7 +1,7 @@
 Bitcoin version 0.7.0 is now available for download at:
   http://sourceforge.net/projects/bitcoin/files/Bitcoin/bitcoin-0.7.0/
 
-We recommend that everybody running prior versions of bitcoind/Boostcoin-Qt
+We recommend that everybody running prior versions of boostcoind/boostcoin-qt
 upgrade to this release, except for users running Mac OSX 10.5.
 
 Please report bugs using the issue tracker at github:
@@ -30,7 +30,7 @@ Code:
 /Applications/Boostcoin-Qt
 (on Mac) or
 Code:
-bitcoind/boostcoin-qt
+boostcoind/boostcoin-qt
 (on Linux).
 
 If you were running on Linux with a version that might have been compiled

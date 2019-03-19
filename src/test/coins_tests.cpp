@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2015 The Bitcoin Core developers
+// Copyright (c) 2014-2019 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -232,6 +232,8 @@ BOOST_AUTO_TEST_CASE(updatecoins_simulation_test)
     std::set<uint256> alltxids;
     std::set<uint256> duplicateids;
 
+    int nBlockTime;
+
     for (unsigned int i = 0; i < NUM_SIMULATION_ITERATIONS; i++) {
         {
             CMutableTransaction tx;
@@ -295,9 +297,9 @@ BOOST_AUTO_TEST_CASE(updatecoins_simulation_test)
 
             // Update the expected result to know about the new output coins
             CCoins &coins = result[tx.GetHash()];
-            coins.FromTx(tx, height);
+            coins.FromTx(tx, height, nBlockTime);
 
-            UpdateCoins(tx, *(stack.back()), height);
+            UpdateCoins(tx, *(stack.back()), height, nBlockTime);
         }
 
         // Once every 1000 iterations and at the end, verify the full cache.
