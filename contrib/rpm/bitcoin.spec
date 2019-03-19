@@ -27,10 +27,10 @@ Source1:	http://download.oracle.com/berkeley-db/db-%{bdbv}.NC.tar.gz
 Source10:	https://raw.githubusercontent.com/bitcoin/bitcoin/v%{version}/contrib/debian/examples/bitcoin.conf
 
 #man pages
-Source20:	https://raw.githubusercontent.com/bitcoin/bitcoin/v%{version}/contrib/debian/manpages/bitcoind.1
-Source21:	https://raw.githubusercontent.com/bitcoin/bitcoin/v%{version}/contrib/debian/manpages/bitcoin-cli.1
+Source20:	https://raw.githubusercontent.com/bitcoin/bitcoin/v%{version}/contrib/debian/manpages/boostcoind.1
+Source21:	https://raw.githubusercontent.com/bitcoin/bitcoin/v%{version}/contrib/debian/manpages/boostcoin-cli.1
 Source22:	https://raw.githubusercontent.com/bitcoin/bitcoin/v%{version}/contrib/debian/manpages/boostcoin-qt.1
-Source23:	https://raw.githubusercontent.com/bitcoin/bitcoin/v%{version}/contrib/debian/manpages/bitcoin.conf.5
+Source23:	https://raw.githubusercontent.com/bitcoin/bitcoin/v%{version}/contrib/debian/manpages/boostcoin.conf.5
 
 #selinux
 Source30:	https://raw.githubusercontent.com/bitcoin/bitcoin/v%{version}/contrib/rpm/bitcoin.te

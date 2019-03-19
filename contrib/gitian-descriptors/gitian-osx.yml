@@ -1,5 +1,5 @@
 ---
-name: "boostcoin-osx-5.0.0.0"
+name: "boostcoin-osx-5.0"
 enable_cache: true
 suites:
 - "trusty"
