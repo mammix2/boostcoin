@@ -163,15 +163,15 @@ am__append_19 = \
   wallet/test/rpc_wallet_tests.cpp
 
 am__append_20 = $(LIBBITCOIN_WALLET)
-#am__append_21 = $(ZMQ_LIBS)
+am__append_21 = $(ZMQ_LIBS)
 am__append_22 = $(CLEAN_BITCOIN_TEST)
 
 # This file is problematic for out-of-tree builds if it exists.
 am__append_23 = test/buildenv.pyc
-#am__append_24 = bench/bench_bitcoin
-##am__append_25 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
-#am__append_26 = $(LIBBITCOIN_WALLET)
-#am__append_27 = $(CLEAN_BITCOIN_BENCH)
+am__append_24 = bench/bench_bitcoin
+am__append_25 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+am__append_26 = $(LIBBITCOIN_WALLET)
+am__append_27 = $(CLEAN_BITCOIN_BENCH)
 am__append_28 = qt/boostcoin-qt
 am__append_29 = qt/libbitcoinqt.a
 #am__append_30 = $(BITCOIN_QT_WINDOWS_CPP)
@@ -179,7 +179,7 @@ am__append_31 = $(BITCOIN_QT_WALLET_CPP)
 #am__append_32 = $(BITCOIN_MM)
 #am__append_33 = $(BITCOIN_RC)
 am__append_34 = $(LIBBITCOIN_WALLET)
-#am__append_35 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+am__append_35 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 am__append_36 = $(CLEAN_QT)
 am__append_37 = qt/test/test_bitcoin-qt
 am__append_38 = qt/test/test_bitcoin-qt
@@ -188,7 +188,7 @@ am__append_40 = \
   qt/test/paymentservertests.cpp
 
 am__append_41 = $(LIBBITCOIN_WALLET)
-#am__append_42 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+am__append_42 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 am__append_43 = $(CLEAN_BITCOIN_QT_TEST)
 subdir = src
 SUBDIRS =
@@ -501,9 +501,9 @@ libbitcoin_zmq_a_AR = $(AR) $(ARFLAGS)
 libbitcoin_zmq_a_LIBADD =
 am__libbitcoin_zmq_a_SOURCES_DIST = zmq/zmqabstractnotifier.cpp \
 	zmq/zmqnotificationinterface.cpp zmq/zmqpublishnotifier.cpp
-#am_libbitcoin_zmq_a_OBJECTS = zmq/libbitcoin_zmq_a-zmqabstractnotifier.$(OBJEXT) \
-#	zmq/libbitcoin_zmq_a-zmqnotificationinterface.$(OBJEXT) \
-#	zmq/libbitcoin_zmq_a-zmqpublishnotifier.$(OBJEXT)
+am_libbitcoin_zmq_a_OBJECTS = zmq/libbitcoin_zmq_a-zmqabstractnotifier.$(OBJEXT) \
+	zmq/libbitcoin_zmq_a-zmqnotificationinterface.$(OBJEXT) \
+	zmq/libbitcoin_zmq_a-zmqpublishnotifier.$(OBJEXT)
 libbitcoin_zmq_a_OBJECTS = $(am_libbitcoin_zmq_a_OBJECTS)
 qt_libbitcoinqt_a_AR = $(AR) $(ARFLAGS)
 qt_libbitcoinqt_a_LIBADD =
@@ -849,38 +849,38 @@ am__EXEEXT_1 = boostcoind$(EXEEXT)
 am__EXEEXT_2 = boostcoin-cli$(EXEEXT) \
 	boostcoin-tx$(EXEEXT)
 am__EXEEXT_3 = test/test_bitcoin$(EXEEXT)
-#am__EXEEXT_4 = bench/bench_bitcoin$(EXEEXT)
+am__EXEEXT_4 = bench/bench_bitcoin$(EXEEXT)
 am__EXEEXT_5 = qt/boostcoin-qt$(EXEEXT)
 am__EXEEXT_6 = qt/test/test_bitcoin-qt$(EXEEXT)
 PROGRAMS = $(bin_PROGRAMS)
 am__bench_bench_bitcoin_SOURCES_DIST = bench/bench_bitcoin.cpp \
 	bench/bench.cpp bench/bench.h bench/Examples.cpp \
 	bench/rollingbloom.cpp bench/crypto_hash.cpp bench/base58.cpp
-#am_bench_bench_bitcoin_OBJECTS = bench/bench_bench_bitcoin-bench_bitcoin.$(OBJEXT) \
-#	bench/bench_bench_bitcoin-bench.$(OBJEXT) \
-#	bench/bench_bench_bitcoin-Examples.$(OBJEXT) \
-#	bench/bench_bench_bitcoin-rollingbloom.$(OBJEXT) \
-#	bench/bench_bench_bitcoin-crypto_hash.$(OBJEXT) \
-#	bench/bench_bench_bitcoin-base58.$(OBJEXT)
+am_bench_bench_bitcoin_OBJECTS = bench/bench_bench_bitcoin-bench_bitcoin.$(OBJEXT) \
+	bench/bench_bench_bitcoin-bench.$(OBJEXT) \
+	bench/bench_bench_bitcoin-Examples.$(OBJEXT) \
+	bench/bench_bench_bitcoin-rollingbloom.$(OBJEXT) \
+	bench/bench_bench_bitcoin-crypto_hash.$(OBJEXT) \
+	bench/bench_bench_bitcoin-base58.$(OBJEXT)
 bench_bench_bitcoin_OBJECTS = $(am_bench_bench_bitcoin_OBJECTS)
 am__DEPENDENCIES_1 = $(am__append_9)
 am__DEPENDENCIES_2 = $(am__append_10)
 am__DEPENDENCIES_3 =
 #am__DEPENDENCIES_4 = $(am__DEPENDENCIES_3)
 am__DEPENDENCIES_4 = univalue/libunivalue.la
-##am__DEPENDENCIES_5 =  \
-##	$(LIBBITCOIN_ZMQ) \
-##	$(am__DEPENDENCIES_3)
-#bench_bench_bitcoin_DEPENDENCIES =  \
-#	$(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
-#	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CONSENSUS) \
-#	$(LIBBITCOIN_CRYPTO) $(am__DEPENDENCIES_1) \
-#	$(am__DEPENDENCIES_2) $(LIBSECP256K1) \
-#	$(am__DEPENDENCIES_4) $(am__DEPENDENCIES_5) \
-#	$(am__append_26) $(am__DEPENDENCIES_3) \
-#	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_3) \
-#	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_3) \
-#	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_3)
+am__DEPENDENCIES_5 =  \
+	$(LIBBITCOIN_ZMQ) \
+	$(am__DEPENDENCIES_3)
+bench_bench_bitcoin_DEPENDENCIES =  \
+	$(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
+	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CONSENSUS) \
+	$(LIBBITCOIN_CRYPTO) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_2) $(LIBSECP256K1) \
+	$(am__DEPENDENCIES_4) $(am__DEPENDENCIES_5) \
+	$(am__append_26) $(am__DEPENDENCIES_3) \
+	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_3) \
+	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_3) \
+	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_3)
 bench_bench_bitcoin_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
 	$(bench_bench_bitcoin_CXXFLAGS) $(CXXFLAGS) \
@@ -940,9 +940,9 @@ am_qt_boostcoin_qt_OBJECTS =  \
 	qt/qt_boostcoin_qt-bitcoin.$(OBJEXT) \
 	$(am__objects_22) $(am__objects_24)
 qt_boostcoin_qt_OBJECTS = $(am_qt_boostcoin_qt_OBJECTS)
-#am__DEPENDENCIES_6 =  \
-#	$(LIBBITCOIN_ZMQ) \
-#	$(am__DEPENDENCIES_3)
+am__DEPENDENCIES_6 =  \
+	$(LIBBITCOIN_ZMQ) \
+	$(am__DEPENDENCIES_3)
 qt_boostcoin_qt_DEPENDENCIES = qt/libbitcoinqt.a \
 	$(LIBBITCOIN_SERVER) $(am__append_34) \
 	$(am__DEPENDENCIES_6) $(LIBBITCOIN_CLI) \
@@ -979,9 +979,9 @@ nodist_qt_test_test_bitcoin_qt_OBJECTS =  \
 qt_test_test_bitcoin_qt_OBJECTS =  \
 	$(am_qt_test_test_bitcoin_qt_OBJECTS) \
 	$(nodist_qt_test_test_bitcoin_qt_OBJECTS)
-#am__DEPENDENCIES_7 =  \
-#	$(LIBBITCOIN_ZMQ) \
-#	$(am__DEPENDENCIES_3)
+am__DEPENDENCIES_7 =  \
+	$(LIBBITCOIN_ZMQ) \
+	$(am__DEPENDENCIES_3)
 qt_test_test_bitcoin_qt_DEPENDENCIES =  \
 	$(LIBBITCOINQT) $(LIBBITCOIN_SERVER) \
 	$(am__append_41) $(am__DEPENDENCIES_7) \
@@ -1107,8 +1107,8 @@ nodist_test_test_bitcoin_OBJECTS =  \
 	$(am__objects_30)
 test_test_bitcoin_OBJECTS = $(am_test_test_bitcoin_OBJECTS) \
 	$(nodist_test_test_bitcoin_OBJECTS)
-#am__DEPENDENCIES_8 =  \
-#	$(am__DEPENDENCIES_3)
+am__DEPENDENCIES_8 =  \
+	$(am__DEPENDENCIES_3)
 test_test_bitcoin_DEPENDENCIES =  \
 	$(LIBBITCOIN_SERVER) $(LIBBITCOIN_CLI) \
 	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
@@ -1666,8 +1666,8 @@ WINDRES =
 X11XCB_CFLAGS = -I/home/mammix2/Desktop/repo/boostcoin/boostcoin-linux/depends/x86_64-pc-linux-gnu/include -I/home/mammix2/Desktop/repo/boostcoin/boostcoin-linux/depends/x86_64-pc-linux-gnu/include/xcb-shared -I/home/mammix2/Desktop/repo/boostcoin/boostcoin-linux/depends/x86_64-pc-linux-gnu/include
 X11XCB_LIBS = -L/home/mammix2/Desktop/repo/boostcoin/boostcoin-linux/depends/x86_64-pc-linux-gnu/lib -lX11-xcb -lX11 -lpthread -lxcb -lXau
 XGETTEXT = /usr/bin/xgettext
-ZMQ_CFLAGS = 
-ZMQ_LIBS = 
+ZMQ_CFLAGS = -I/home/mammix2/Desktop/repo/boostcoin/boostcoin-linux/depends/x86_64-pc-linux-gnu/include
+ZMQ_LIBS = -L/home/mammix2/Desktop/repo/boostcoin/boostcoin-linux/depends/x86_64-pc-linux-gnu/lib -lzmq
 abs_builddir = /home/mammix2/Desktop/repo/boostcoin/boostcoin-linux/src
 abs_srcdir = /home/mammix2/Desktop/repo/boostcoin/boostcoin-linux/src
 abs_top_builddir = /home/mammix2/Desktop/repo/boostcoin/boostcoin-linux
@@ -1750,7 +1750,7 @@ LIBBITCOIN_UTIL = libbitcoin_util.a
 LIBBITCOIN_CRYPTO = crypto/libbitcoin_crypto.a
 LIBBITCOINQT = qt/libbitcoinqt.a
 LIBSECP256K1 = secp256k1/libsecp256k1.la
-#LIBBITCOIN_ZMQ = libbitcoin_zmq.a
+LIBBITCOIN_ZMQ = libbitcoin_zmq.a
 LIBBITCOINCONSENSUS = libbitcoinconsensus.la
 LIBBITCOIN_WALLET = libbitcoin_wallet.a
 lib_LTLIBRARIES = $(LIBBITCOINCONSENSUS)
@@ -1879,12 +1879,12 @@ libbitcoin_server_a_SOURCES = \
   versionbits.cpp \
   $(BITCOIN_CORE_H)
 
-#libbitcoin_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
-#libbitcoin_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-#libbitcoin_zmq_a_SOURCES = \
-#  zmq/zmqabstractnotifier.cpp \
-#  zmq/zmqnotificationinterface.cpp \
-#  zmq/zmqpublishnotifier.cpp
+libbitcoin_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
+libbitcoin_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libbitcoin_zmq_a_SOURCES = \
+  zmq/zmqabstractnotifier.cpp \
+  zmq/zmqnotificationinterface.cpp \
+  zmq/zmqpublishnotifier.cpp
 
 
 # wallet: shared between bitcoind and bitcoin-qt, but only linked
@@ -2267,30 +2267,30 @@ test_test_bitcoin_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 test_test_bitcoin_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) -static
 nodist_test_test_bitcoin_SOURCES = $(GENERATED_TEST_FILES)
 CLEAN_BITCOIN_TEST = test/*.gcda test/*.gcno $(GENERATED_TEST_FILES)
-#BENCH_SRCDIR = bench
-#BENCH_BINARY = bench/bench_bitcoin$(EXEEXT)
-#bench_bench_bitcoin_SOURCES = \
-#  bench/bench_bitcoin.cpp \
-#  bench/bench.cpp \
-#  bench/bench.h \
-#  bench/Examples.cpp \
-#  bench/rollingbloom.cpp \
-#  bench/crypto_hash.cpp \
-#  bench/base58.cpp
+BENCH_SRCDIR = bench
+BENCH_BINARY = bench/bench_bitcoin$(EXEEXT)
+bench_bench_bitcoin_SOURCES = \
+  bench/bench_bitcoin.cpp \
+  bench/bench.cpp \
+  bench/bench.h \
+  bench/Examples.cpp \
+  bench/rollingbloom.cpp \
+  bench/crypto_hash.cpp \
+  bench/base58.cpp
 
-#bench_bench_bitcoin_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CLFAGS) $(EVENT_PTHREADS_CFLAGS) -I$(builddir)/bench/
-#bench_bench_bitcoin_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-#bench_bench_bitcoin_LDADD = $(LIBBITCOIN_SERVER) \
-#	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
-#	$(LIBBITCOIN_CONSENSUS) \
-#	$(LIBBITCOIN_CRYPTO) $(LIBLEVELDB) \
-#	$(LIBMEMENV) $(LIBSECP256K1) $(LIBUNIVALUE) \
-#	$(am__append_25) $(am__append_26) \
-#	$(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) \
-#	$(CRYPTO_LIBS) $(MINIUPNPC_LIBS) \
-#	$(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
-#bench_bench_bitcoin_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-#CLEAN_BITCOIN_BENCH = bench/*.gcda bench/*.gcno
+bench_bench_bitcoin_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CLFAGS) $(EVENT_PTHREADS_CFLAGS) -I$(builddir)/bench/
+bench_bench_bitcoin_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+bench_bench_bitcoin_LDADD = $(LIBBITCOIN_SERVER) \
+	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
+	$(LIBBITCOIN_CONSENSUS) \
+	$(LIBBITCOIN_CRYPTO) $(LIBLEVELDB) \
+	$(LIBMEMENV) $(LIBSECP256K1) $(LIBUNIVALUE) \
+	$(am__append_25) $(am__append_26) \
+	$(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) \
+	$(CRYPTO_LIBS) $(MINIUPNPC_LIBS) \
+	$(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
+bench_bench_bitcoin_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+CLEAN_BITCOIN_BENCH = bench/*.gcda bench/*.gcno
 
 # bitcoin qt core #
 QT_TS = \
@@ -9466,13 +9466,13 @@ check-local:
 	@echo "};};" >> $@
 	@echo "Generated $@"
 
-#bitcoin_bench: $(BENCH_BINARY)
+bitcoin_bench: $(BENCH_BINARY)
 
-#bench: $(BENCH_BINARY) FORCE
-#	$(BENCH_BINARY)
+bench: $(BENCH_BINARY) FORCE
+	$(BENCH_BINARY)
 
-#bitcoin_bench_clean : FORCE
-#	rm -f $(CLEAN_BITCOIN_BENCH) $(bench_bench_bitcoin_OBJECTS) $(BENCH_BINARY)
+bitcoin_bench_clean : FORCE
+	rm -f $(CLEAN_BITCOIN_BENCH) $(bench_bench_bitcoin_OBJECTS) $(BENCH_BINARY)
 
 # Most files will depend on the forms and moc files as includes. Generate them
 # before anything else.
