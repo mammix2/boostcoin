@@ -232,6 +232,8 @@ BOOST_AUTO_TEST_CASE(updatecoins_simulation_test)
     std::set<uint256> alltxids;
     std::set<uint256> duplicateids;
 
+    int nBlockTime;
+
     for (unsigned int i = 0; i < NUM_SIMULATION_ITERATIONS; i++) {
         {
             CMutableTransaction tx;
@@ -295,9 +297,9 @@ BOOST_AUTO_TEST_CASE(updatecoins_simulation_test)
 
             // Update the expected result to know about the new output coins
             CCoins &coins = result[tx.GetHash()];
-            coins.FromTx(tx, height);
+            coins.FromTx(tx, height, nBlockTime);
 
-            UpdateCoins(tx, *(stack.back()), height);
+            UpdateCoins(tx, *(stack.back()), height, nBlockTime);
         }
 
         // Once every 1000 iterations and at the end, verify the full cache.
