@@ -623,6 +623,7 @@ void IncrementExtraNonce(CBlock* pblock, const CBlockIndex* pindexPrev, unsigned
 /**
 // Internal Staker
 */
+#ifdef ENABLE_WALLET
 
 extern unsigned int nMinerSleep;
 
@@ -812,3 +813,4 @@ void SetStaking(bool mode) {
 bool GetStaking() {
     return fStaking;
 }
+#endif
