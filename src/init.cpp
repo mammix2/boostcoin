@@ -481,6 +481,9 @@ std::string HelpMessage(HelpMessageMode mode)
         strUsage += HelpMessageOpt("-rpcworkqueue=<n>", strprintf("Set the depth of the work queue to service RPC calls (default: %d)", DEFAULT_HTTP_WORKQUEUE));
         strUsage += HelpMessageOpt("-rpcservertimeout=<n>", strprintf("Timeout during HTTP requests (default: %d)", DEFAULT_HTTP_SERVER_TIMEOUT));
     }
+    strUsage += HelpMessageGroup(_("Checkpoint options:"));
+    strUsage += HelpMessageOpt("-checkpointkey", _("Private key for broadcasting checkpoint data"));
+    strUsage += HelpMessageOpt("-checkpointdepth", _("Broadcast checkpoint data every <n> blocks"));
 
     return strUsage;
 }
