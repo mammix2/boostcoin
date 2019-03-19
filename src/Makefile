@@ -163,13 +163,13 @@ am__append_19 = \
   wallet/test/rpc_wallet_tests.cpp
 
 am__append_20 = $(LIBBITCOIN_WALLET)
-am__append_21 = $(ZMQ_LIBS)
+#am__append_21 = $(ZMQ_LIBS)
 am__append_22 = $(CLEAN_BITCOIN_TEST)
 
 # This file is problematic for out-of-tree builds if it exists.
 am__append_23 = test/buildenv.pyc
 am__append_24 = bench/bench_bitcoin
-am__append_25 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+#am__append_25 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 am__append_26 = $(LIBBITCOIN_WALLET)
 am__append_27 = $(CLEAN_BITCOIN_BENCH)
 am__append_28 = qt/boostcoin-qt
@@ -179,7 +179,7 @@ am__append_31 = $(BITCOIN_QT_WALLET_CPP)
 #am__append_32 = $(BITCOIN_MM)
 #am__append_33 = $(BITCOIN_RC)
 am__append_34 = $(LIBBITCOIN_WALLET)
-am__append_35 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+#am__append_35 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 am__append_36 = $(CLEAN_QT)
 am__append_37 = qt/test/test_bitcoin-qt
 am__append_38 = qt/test/test_bitcoin-qt
@@ -188,7 +188,7 @@ am__append_40 = \
   qt/test/paymentservertests.cpp
 
 am__append_41 = $(LIBBITCOIN_WALLET)
-am__append_42 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+#am__append_42 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 am__append_43 = $(CLEAN_BITCOIN_QT_TEST)
 subdir = src
 SUBDIRS =
@@ -501,9 +501,9 @@ libbitcoin_zmq_a_AR = $(AR) $(ARFLAGS)
 libbitcoin_zmq_a_LIBADD =
 am__libbitcoin_zmq_a_SOURCES_DIST = zmq/zmqabstractnotifier.cpp \
 	zmq/zmqnotificationinterface.cpp zmq/zmqpublishnotifier.cpp
-am_libbitcoin_zmq_a_OBJECTS = zmq/libbitcoin_zmq_a-zmqabstractnotifier.$(OBJEXT) \
-	zmq/libbitcoin_zmq_a-zmqnotificationinterface.$(OBJEXT) \
-	zmq/libbitcoin_zmq_a-zmqpublishnotifier.$(OBJEXT)
+#am_libbitcoin_zmq_a_OBJECTS = zmq/libbitcoin_zmq_a-zmqabstractnotifier.$(OBJEXT) \
+#	zmq/libbitcoin_zmq_a-zmqnotificationinterface.$(OBJEXT) \
+#	zmq/libbitcoin_zmq_a-zmqpublishnotifier.$(OBJEXT)
 libbitcoin_zmq_a_OBJECTS = $(am_libbitcoin_zmq_a_OBJECTS)
 qt_libbitcoinqt_a_AR = $(AR) $(ARFLAGS)
 qt_libbitcoinqt_a_LIBADD =
@@ -868,9 +868,9 @@ am__DEPENDENCIES_2 = $(am__append_10)
 am__DEPENDENCIES_3 =
 #am__DEPENDENCIES_4 = $(am__DEPENDENCIES_3)
 am__DEPENDENCIES_4 = univalue/libunivalue.la
-am__DEPENDENCIES_5 =  \
-	$(LIBBITCOIN_ZMQ) \
-	$(am__DEPENDENCIES_3)
+#am__DEPENDENCIES_5 =  \
+#	$(LIBBITCOIN_ZMQ) \
+#	$(am__DEPENDENCIES_3)
 bench_bench_bitcoin_DEPENDENCIES =  \
 	$(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
 	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CONSENSUS) \
@@ -940,9 +940,9 @@ am_qt_boostcoin_qt_OBJECTS =  \
 	qt/qt_boostcoin_qt-bitcoin.$(OBJEXT) \
 	$(am__objects_22) $(am__objects_24)
 qt_boostcoin_qt_OBJECTS = $(am_qt_boostcoin_qt_OBJECTS)
-am__DEPENDENCIES_6 =  \
-	$(LIBBITCOIN_ZMQ) \
-	$(am__DEPENDENCIES_3)
+#am__DEPENDENCIES_6 =  \
+#	$(LIBBITCOIN_ZMQ) \
+#	$(am__DEPENDENCIES_3)
 qt_boostcoin_qt_DEPENDENCIES = qt/libbitcoinqt.a \
 	$(LIBBITCOIN_SERVER) $(am__append_34) \
 	$(am__DEPENDENCIES_6) $(LIBBITCOIN_CLI) \
@@ -979,9 +979,9 @@ nodist_qt_test_test_bitcoin_qt_OBJECTS =  \
 qt_test_test_bitcoin_qt_OBJECTS =  \
 	$(am_qt_test_test_bitcoin_qt_OBJECTS) \
 	$(nodist_qt_test_test_bitcoin_qt_OBJECTS)
-am__DEPENDENCIES_7 =  \
-	$(LIBBITCOIN_ZMQ) \
-	$(am__DEPENDENCIES_3)
+#am__DEPENDENCIES_7 =  \
+#	$(LIBBITCOIN_ZMQ) \
+#	$(am__DEPENDENCIES_3)
 qt_test_test_bitcoin_qt_DEPENDENCIES =  \
 	$(LIBBITCOINQT) $(LIBBITCOIN_SERVER) \
 	$(am__append_41) $(am__DEPENDENCIES_7) \
@@ -1107,8 +1107,8 @@ nodist_test_test_bitcoin_OBJECTS =  \
 	$(am__objects_30)
 test_test_bitcoin_OBJECTS = $(am_test_test_bitcoin_OBJECTS) \
 	$(nodist_test_test_bitcoin_OBJECTS)
-am__DEPENDENCIES_8 =  \
-	$(am__DEPENDENCIES_3)
+#am__DEPENDENCIES_8 =  \
+#	$(am__DEPENDENCIES_3)
 test_test_bitcoin_DEPENDENCIES =  \
 	$(LIBBITCOIN_SERVER) $(LIBBITCOIN_CLI) \
 	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
@@ -1666,8 +1666,8 @@ WINDRES =
 X11XCB_CFLAGS = -I/home/mammix2/Desktop/repo/boostcoin/boostcoin-linux/depends/x86_64-pc-linux-gnu/include -I/home/mammix2/Desktop/repo/boostcoin/boostcoin-linux/depends/x86_64-pc-linux-gnu/include/xcb-shared -I/home/mammix2/Desktop/repo/boostcoin/boostcoin-linux/depends/x86_64-pc-linux-gnu/include
 X11XCB_LIBS = -L/home/mammix2/Desktop/repo/boostcoin/boostcoin-linux/depends/x86_64-pc-linux-gnu/lib -lX11-xcb -lX11 -lpthread -lxcb -lXau
 XGETTEXT = /usr/bin/xgettext
-ZMQ_CFLAGS = -I/home/mammix2/Desktop/repo/boostcoin/boostcoin-linux/depends/x86_64-pc-linux-gnu/include
-ZMQ_LIBS = -L/home/mammix2/Desktop/repo/boostcoin/boostcoin-linux/depends/x86_64-pc-linux-gnu/lib -lzmq
+ZMQ_CFLAGS = 
+ZMQ_LIBS = 
 abs_builddir = /home/mammix2/Desktop/repo/boostcoin/boostcoin-linux/src
 abs_srcdir = /home/mammix2/Desktop/repo/boostcoin/boostcoin-linux/src
 abs_top_builddir = /home/mammix2/Desktop/repo/boostcoin/boostcoin-linux
@@ -1750,7 +1750,7 @@ LIBBITCOIN_UTIL = libbitcoin_util.a
 LIBBITCOIN_CRYPTO = crypto/libbitcoin_crypto.a
 LIBBITCOINQT = qt/libbitcoinqt.a
 LIBSECP256K1 = secp256k1/libsecp256k1.la
-LIBBITCOIN_ZMQ = libbitcoin_zmq.a
+#LIBBITCOIN_ZMQ = libbitcoin_zmq.a
 LIBBITCOINCONSENSUS = libbitcoinconsensus.la
 LIBBITCOIN_WALLET = libbitcoin_wallet.a
 lib_LTLIBRARIES = $(LIBBITCOINCONSENSUS)
@@ -1879,12 +1879,12 @@ libbitcoin_server_a_SOURCES = \
   versionbits.cpp \
   $(BITCOIN_CORE_H)
 
-libbitcoin_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
-libbitcoin_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoin_zmq_a_SOURCES = \
-  zmq/zmqabstractnotifier.cpp \
-  zmq/zmqnotificationinterface.cpp \
-  zmq/zmqpublishnotifier.cpp
+#libbitcoin_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
+#libbitcoin_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+#libbitcoin_zmq_a_SOURCES = \
+#  zmq/zmqabstractnotifier.cpp \
+#  zmq/zmqnotificationinterface.cpp \
+#  zmq/zmqpublishnotifier.cpp
 
 
 # wallet: shared between bitcoind and bitcoin-qt, but only linked
