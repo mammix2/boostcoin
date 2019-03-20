@@ -1338,15 +1338,15 @@ void BitcoinGUI::updateStakingStatus()
             {
                 if (nEstimateTime < 60*60)
                 {
-                    text = tr("Expected time to earn stake reward is %n minute(s)", "", nEstimateTime/60);
+                    text = tr("Expected time to start staking is ~ %n minute(s)", "", nEstimateTime/60);
                 }
                 else if (nEstimateTime < 24*60*60)
                 {
-                    text = tr("Expected time to earn stake reward is %n hour(s)", "", nEstimateTime/(60*60));
+                    text = tr("Expected time to start staking is ~ %n hour(s)", "", nEstimateTime/(60*60));
                 }
                 else
                 {
-                    text = tr("Expected time to earn stake reward is %n day(s)", "", nEstimateTime/(60*60*24));
+                    text = tr("Expected time to start staking is ~ %n day(s)", "", nEstimateTime/(60*60*24));
                 }
             }
 
