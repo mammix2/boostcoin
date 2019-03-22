@@ -1736,15 +1736,12 @@ CAmount GetDevBlockSubsidy(int nHeight)
 int64_t GetProofOfStakeReward(int nHeight, int64_t nCoinAge, int64_t nFees)
 // int64_t GetProofOfStakeReward(int nHeight, int64_t nCoinAge, int64_t nFees, CBlockIndex* pindexPrev)
 {
-
-    int64_t nRewardCoinYear;
-    nRewardCoinYear = MAX_MINT_PROOF_OF_STAKE;
 	int64_t nSubsidy;
 // m2:
     if(nHeight < 641250 ) {
-        nSubsidy = nCoinAge * nRewardCoinYear / 365 / COIN;
+        nSubsidy = nCoinAge * MAX_MINT_PROOF_OF_STAKE / 365 / COIN;
     } else {
-        nSubsidy = nCoinAge * nRewardCoinYear / 365;
+        nSubsidy = nCoinAge * MAX_MINT_PROOF_OF_STAKE / 365;
     }
 
     return nSubsidy + nFees;
@@ -2611,7 +2608,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
         }
 
 //        int64_t nCalculatedStakeReward = GetProofOfStakeReward(pindex->nHeight, nCoinAge, nFees, pindex->pprev);
-        int64_t nCalculatedStakeReward = GetProofOfStakeReward(pindex->nHeight, nCoinAge, nFees);
+        uint64_t nCalculatedStakeReward = GetProofOfStakeReward(pindex->nHeight, nCoinAge, nFees);
 
         // m2: do not allow negative stake values
         if (nCalculatedStakeReward < 0) {
