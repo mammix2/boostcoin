@@ -2384,7 +2384,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     }
 
     int64_t nTimeStart = GetTimeMicros();
-    int64_t nStakeReward = 0;
+    uint64_t nStakeReward = 0;
 
     // Check it again in case a previous version let a bad block in
     if (!CheckBlock(block, state, chainparams.GetConsensus(), !fJustCheck, !fJustCheck, !fJustCheck))
