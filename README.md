@@ -1,9 +1,12 @@
 Boost wallet integration/staging tree
 ======================================
 
-[![Build Status](https://travis-ci.com/mammix2/boostcoin.svg?branch=master)](https://travis-ci.com/mammix2/boostcoin)
 
-https://myboost.io
+#### (Master) branch CI build status
+
+[![Build Status](https://travis-ci.org/mammix2/boostcoin.svg?branch=master)](https://travis-ci.org/mammix2/boostcoin)
+
+======================================
 
 
 The Boost project is a fork of the Bitcoin core project. The project contains its own set of parameters,
