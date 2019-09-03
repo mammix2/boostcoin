@@ -1,3 +1,16 @@
+#.gitignore
+*.sublime-project
+*.sublime-workspace
+todo.txt
+reset-files.bash
+config.log
+config.status
+src/.deps/*
+src/qt/.deps/*
+src/zmq/.deps/*
+
+push_all_repos.sh
+push_all_repos_tag.sh
 *.tar.gz
 
 *.exe
@@ -34,6 +47,7 @@ src/config/bitcoin-config.h.in
 src/config/stamp-h1
 share/setup.nsi
 share/qt/Info.plist
+contrib/devtools/split-debug.sh
 
 src/univalue/gen
 
@@ -83,6 +97,7 @@ Boostcoin-Qt.app
 #QT Creator
 *.config
 *.creator
+*.creator.user
 *.files
 *.includes
 
