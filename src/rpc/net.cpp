@@ -654,8 +654,9 @@ UniValue getstakesubsidy(const UniValue& params, bool fHelp)
     if (!TransactionGetCoinAge(tx, nCoinAge))
         throw JSONRPCError(RPC_MISC_ERROR, "GetCoinAge failed");
 
-    return (uint64_t)GetProofOfStakeReward(pindexBestHeader->nHeight, nCoinAge, 0);
+    //return (uint64_t)GetProofOfStakeReward(pindexBestHeader->nHeight, nCoinAge, 0);
 	//return (uint64_t)GetProofOfStakeReward(pindexBestHeader->nHeight, nCoinAge, 0, pindexBestHeader);
+    return (uint64_t)GetProofOfStakeReward(nCoinAge, 0);	
 }
 #endif
 static const CRPCCommand commands[] =

@@ -2,7 +2,7 @@ Boost wallet integration/staging tree
 ======================================
 
 
-#### (Master) branch CI build status
+#### (Master) branch CI build status.
 
 [![Build Status](https://travis-ci.org/mammix2/boostcoin.svg?branch=master)](https://travis-ci.org/mammix2/boostcoin)
 
