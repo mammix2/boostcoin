@@ -1,4 +1,4 @@
-Boost wallet integration/staging tree
+Boost UI wallet integration/staging tree
 ======================================
 
 
