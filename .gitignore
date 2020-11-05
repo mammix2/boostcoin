@@ -100,7 +100,9 @@ Boostcoin-Qt.app
 *.creator.user
 *.files
 *.includes
-
+*.cxxflags
+*.cflags
+*.autosave
 
 # Unit-tests
 Makefile.test
