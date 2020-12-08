@@ -2386,7 +2386,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     }
 
     int64_t nTimeStart = GetTimeMicros();
-    uint64_t nStakeReward = 0;
+    int64_t nStakeReward = 0;
 
     // Check it again in case a previous version let a bad block in
     if (!CheckBlock(block, state, chainparams.GetConsensus(), !fJustCheck, !fJustCheck, !fJustCheck))
@@ -2587,11 +2587,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
 
     if (block.IsProofOfWork()){
 	    CAmount blockReward = nFees + GetBlockSubsidy(pindex->nHeight, chainparams.GetConsensus());
-	    if (fDebug) {
-	        cout << "DEBUG: ConnectBlock: block.vtx[0].GetValueOut() = " ;
-	        cout << block.vtx[0].GetValueOut() / COIN;
-	        cout << "\n";
-	    }
+
 	    if (block.vtx[0].GetValueOut() > blockReward) {
 	        return state.DoS(100, error("ConnectBlock(): coinbase pays too much (actual=%d vs limit=%d in height=%d)",
 	                               block.vtx[0].GetValueOut(), blockReward, pindex->nHeight),
