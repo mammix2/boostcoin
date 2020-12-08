@@ -5152,7 +5152,9 @@ string setSubVerString(int version, string subVer) {
 		case 85003:
             return "/boostcoin:5.0.3/";	
 		case 85004:
-            return "/boostcoin:5.0.4/";					
+            return "/boostcoin:5.0.4/";	
+		case 85100:
+            return "/boostcoin:5.1.0/";				
         default:
             return SanitizeString(subVer);
     }
