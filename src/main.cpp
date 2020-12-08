@@ -1738,13 +1738,13 @@ CAmount GetDevBlockSubsidy(int nHeight)
 // int64_t GetProofOfStakeReward(int nHeight, int64_t nCoinAge, int64_t nFees, CBlockIndex* pindexPrev)
 int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees)
 {
-	int64_t nSubsidy;
-// m2:
-   // if(pindexbest->nHeight < 641250 ) {
-    //    nSubsidy = nCoinAge * MAX_MINT_PROOF_OF_STAKE / 365 / COIN;
-   // } else {
-        nSubsidy = nCoinAge * MAX_MINT_PROOF_OF_STAKE / 365;
-   // }
+
+    int64_t nRewardCoinYear;
+
+    nRewardCoinYear = MAX_MINT_PROOF_OF_STAKE;
+
+    int64_t nSubsidy = nCoinAge * nRewardCoinYear / 365 / COIN;
+
 
     return nSubsidy + nFees;
 }
