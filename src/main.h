@@ -178,6 +178,9 @@ extern CAmount maxTxFee;
 extern int64_t nMaxTipAge;
 extern bool fEnableReplacement;
 
+/** Block hash whose ancestors we will assume to have valid scripts without checking them. */
+extern uint256 hashAssumeValid;
+
 /** Best header we've seen so far (used for getheaders queries' starting points). */
 extern CBlockIndex *pindexBestHeader;
 
@@ -195,6 +198,7 @@ extern uint64_t nPruneTarget;
 static const unsigned int MIN_BLOCKS_TO_KEEP = 288;
 
 static const signed int DEFAULT_CHECKBLOCKS = 6 * 10;
+static const int DEFAULT_AUTOCHECKPOINT = 5;
 static const unsigned int DEFAULT_CHECKLEVEL = 3;
 
 // Require that user allocate at least 550MB for block & undo files (blk???.dat and rev???.dat)
@@ -292,6 +296,10 @@ void FindFilesToPrune(std::set<int>& setFilesToPrune, uint64_t nPruneAfterHeight
  *  Actually unlink the specified files
  */
 void UnlinkPrunedFiles(std::set<int>& setFilesToPrune);
+
+/** Find the last common ancestor two blocks have.
+ *  Both pa and pb must be non-NULL. */
+CBlockIndex* LastCommonAncestor(CBlockIndex* pa, CBlockIndex* pb);
 
 /** Create a new block index entry for a given block hash */
 CBlockIndex * InsertBlockIndex(uint256 hash);
