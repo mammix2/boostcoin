@@ -67,6 +67,7 @@ struct Params {
 	int nBlockDGW_start;
     int64_t DifficultyAdjustmentInterval() const { return nPowTargetTimespan / nPowTargetSpacing; }
     uint256 nMinimumChainWork;
+    uint256 defaultAssumeValid;
     unsigned int nStakeMinAge;
     unsigned int nModifierInterval;
     unsigned int nStakeSplitAge;
