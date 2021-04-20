@@ -102,6 +102,9 @@ public:
         // The best chain should have at least this much work.
         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000100010");
 
+        // By default assume that the signatures in ancestors of this block are valid.
+        consensus.defaultAssumeValid = uint256S("0x00");
+
         /**
          * The message start string is designed to be unlikely to occur in normal data.
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
@@ -182,7 +185,7 @@ public:
         consensus.nPowTargetTimespan = 16 * 60; // 16 minutes
         consensus.nPowTargetSpacing = 60;
         consensus.nPowTargetSpacing2 = 2 * 60;	
-		consensus.nPowTargetSpacing2_start = 100;		
+		consensus.nPowTargetSpacing2_start = 100;
         consensus.nLastPOWBlock = 150000;
         consensus.nRejectPoSbelow = 0;
         consensus.nStakeMinAge = 15 * 60; // testnet min age is 15 mins
@@ -215,6 +218,8 @@ public:
         // The best chain should have at least this much work.
         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000100010");
 
+        // By default assume that the signatures in ancestors of this block are valid.
+        consensus.defaultAssumeValid = uint256S("0x00");
         pchMessageStart[0] = 0x70;
         pchMessageStart[1] = 0x35;
         pchMessageStart[2] = 0x22;
@@ -273,6 +278,7 @@ public:
         consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 16 * 60; // 16 minutes
         consensus.nPowTargetSpacing = 60;
+        consensus.nLastPOWBlock = 4000000;
         consensus.nPowTargetSpacing2 = 2 * 60;
 		consensus.nPowTargetSpacing2_start = 30;
         consensus.nStakeMinAge = 24 * 60 * 60;
@@ -299,7 +305,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 999999999999ULL;
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000100010");
+        consensus.nMinimumChainWork = uint256S("0x00");
+
+        // By default assume that the signatures in ancestors of this block are valid.
+        consensus.defaultAssumeValid = uint256S("0x00");
 
         pchMessageStart[0] = 0x41;
         pchMessageStart[1] = 0x32;

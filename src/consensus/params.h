@@ -70,6 +70,7 @@ struct Params {
     uint256 defaultAssumeValid;
     unsigned int nStakeMinAge;
     unsigned int nModifierInterval;
+    unsigned int timeLimitChange;
     unsigned int nStakeSplitAge;
     int64_t nStakeCombineThreshold;
 };
