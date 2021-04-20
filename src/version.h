@@ -9,7 +9,7 @@
  * network protocol versioning
  */
 
-static const int PROTOCOL_VERSION = 85100; //m2: Boost wallet v5 base protocol version
+static const int PROTOCOL_VERSION = 85101; //m2: Boost wallet v5 base protocol version, until release will follow client verion number
 
 //! initial proto version, to be increased after version/verack negotiation
 static const int INIT_PROTO_VERSION = 209;
