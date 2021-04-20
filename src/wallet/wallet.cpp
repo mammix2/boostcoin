@@ -3872,6 +3872,9 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
     CScript scriptPubKeyKernel;
     BOOST_FOREACH(PAIRTYPE(const CWalletTx*, unsigned int) pcoin, setCoins)
     {
+        if (!mapBlockIndex.count(pcoin.first->hashBlock))
+            continue;
+
         CBlockIndex* pblockindex = mapBlockIndex[pcoin.first->hashBlock];
 
         CBlock block;
@@ -4012,9 +4015,7 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
             return error("%s: failed to calculate coin age", __func__);
 
         int64_t nReward = GetProofOfStakeReward(nCoinAge, nFees);
-        //int64_t nReward = GetProofOfStakeReward(pindexPrev->nHeight + 1, nCoinAge, nFees);
-        //int64_t nReward = GetProofOfStakeReward(pindexPrev->nHeight + 1, nCoinAge, nFees, pindexBestHeader);
-        if (nReward <= 0)
+        if (nReward < 0 || (nReward == 0 && chainActive.Tip()->nMoneySupply < MAX_MONEY))
             return false;
 
         nCredit += nReward;
