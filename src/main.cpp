@@ -2396,6 +2396,13 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     if (!CheckBlock(block, state, chainparams.GetConsensus(), !fJustCheck, !fJustCheck, !fJustCheck))
         return error("%s: Consensus::CheckBlock: %s", __func__, FormatStateMessage(state));
 
+    //m2: Reject PoS block rewards below nRejectPoSbelow
+    if (block.IsProofOfStake()){
+        if (pindex->nHeight +1 < chainparams.GetConsensus().nRejectPoSbelow) {
+            return state.DoS(1, error("ConnectBlock(): Reject PoS block rewards below MODIFIER_INTERVAL_SWITCH"));
+        }
+    }
+
     // verify that the view's current state corresponds to the previous block
     uint256 hashPrevBlock = pindex->pprev == NULL ? uint256() : pindex->pprev->GetBlockHash();
     assert(hashPrevBlock == view.GetBestBlock());

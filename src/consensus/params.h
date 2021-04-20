@@ -60,6 +60,7 @@ struct Params {
 	int64_t nPowTargetSpacing2_start;
     int64_t nPowTargetTimespan;
     int nLastPOWBlock;
+    int64_t nRejectPoSbelow;
     int nBlockVersionCheckStart;
 	int nTimeDriftCondition1;
 	int nTimeDriftCondition2;
