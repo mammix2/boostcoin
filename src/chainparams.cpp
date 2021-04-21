@@ -123,8 +123,21 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0x603add6547a4c67f12f5a5fb5100fb455e3515b05e58a44a29a4496f7fcaaaf7"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-		vSeeds.push_back(CDNSSeedData("ns1.bost.link", "myboost001.bost.link", false));
-		vSeeds.push_back(CDNSSeedData("ns2.bost.link", "myboost002.bost.link", false));
+		vSeeds.push_back(CDNSSeedData("ns1.phase8.net", "bnode01.ffptech.com", false));
+		vSeeds.push_back(CDNSSeedData("ns1.phase8.net", "bnode02.ffptech.com", false));
+		vSeeds.push_back(CDNSSeedData("ns1.phase8.net", "bnode03.ffptech.com", false));
+		vSeeds.push_back(CDNSSeedData("ns1.phase8.net", "bnode04.ffptech.com", false));
+		
+		vSeeds.push_back(CDNSSeedData("ns2.phase8.net", "bnode01.ffptech.com", false));
+		vSeeds.push_back(CDNSSeedData("ns2.phase8.net", "bnode02.ffptech.com", false));
+		vSeeds.push_back(CDNSSeedData("ns2.phase8.net", "bnode03.ffptech.com", false));
+		vSeeds.push_back(CDNSSeedData("ns2.phase8.net", "bnode04.ffptech.com", false));
+		
+		vSeeds.push_back(CDNSSeedData("ns0.phase8.net", "bnode01.ffptech.com", false));
+		vSeeds.push_back(CDNSSeedData("ns0.phase8.net", "bnode02.ffptech.com", false));
+		vSeeds.push_back(CDNSSeedData("ns0.phase8.net", "bnode03.ffptech.com", false));
+		vSeeds.push_back(CDNSSeedData("ns0.phase8.net", "bnode04.ffptech.com", false));
+
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,25);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,85);
@@ -235,8 +248,22 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.push_back(CDNSSeedData("test-myboost001.bost.link", "test-myboost001.bost.link", false));
-		vSeeds.push_back(CDNSSeedData("test-myboost002.bost.link", "test-myboost002.bost.link", false));
+		
+		vSeeds.push_back(CDNSSeedData("ns1.phase8.net", "test-bnode01.ffptech.com", false));
+		vSeeds.push_back(CDNSSeedData("ns1.phase8.net", "test-bnode02.ffptech.com", false));
+		vSeeds.push_back(CDNSSeedData("ns1.phase8.net", "test-bnode03.ffptech.com", false));
+		vSeeds.push_back(CDNSSeedData("ns1.phase8.net", "test-bnode04.ffptech.com", false));
+		
+		vSeeds.push_back(CDNSSeedData("ns2.phase8.net", "test-bnode01.ffptech.com", false));
+		vSeeds.push_back(CDNSSeedData("ns2.phase8.net", "test-bnode02.ffptech.com", false));
+		vSeeds.push_back(CDNSSeedData("ns2.phase8.net", "test-bnode03.ffptech.com", false));
+		vSeeds.push_back(CDNSSeedData("ns2.phase8.net", "test-bnode04.ffptech.com", false));
+		
+		vSeeds.push_back(CDNSSeedData("ns0.phase8.net", "test-bnode01.ffptech.com", false));
+		vSeeds.push_back(CDNSSeedData("ns0.phase8.net", "test-bnode02.ffptech.com", false));
+		vSeeds.push_back(CDNSSeedData("ns0.phase8.net", "test-bnode03.ffptech.com", false));
+		vSeeds.push_back(CDNSSeedData("ns0.phase8.net", "test-bnode04.ffptech.com", false));
+
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
