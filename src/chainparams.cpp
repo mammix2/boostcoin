@@ -71,7 +71,7 @@ public:
         consensus.nPowTargetSpacing2 = 2 * 60;
 		consensus.nPowTargetSpacing2_start = 640450;		
         consensus.nLastPOWBlock = 10000000;
-        consensus.nRejectPoSbelow = 0; //m2: check what first Pos block is
+        consensus.nRejectPoSbelow = 1440;
         consensus.nStakeMinAge = 24 * 60 * 60;
 		consensus.nBlockVersionCheckStart = 43201; //m2: blocks after this will be version checked.
 		consensus.nBlockDGW_start = 250;
@@ -187,7 +187,7 @@ public:
         consensus.nPowTargetSpacing2 = 2 * 60;	
 		consensus.nPowTargetSpacing2_start = 100;
         consensus.nLastPOWBlock = 150000;
-        consensus.nRejectPoSbelow = 0;
+        consensus.nRejectPoSbelow = 50
         consensus.nStakeMinAge = 15 * 60; // testnet min age is 15 mins
         consensus.nModifierInterval = 60;
         consensus.nStakeSplitAge = 24 * 60 * 60;
