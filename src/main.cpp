@@ -1743,7 +1743,7 @@ int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees)
 
     int64_t nRewardCoinYear;
 //	int64_t nSubsidy;
-//    nRewardCoinYear = MAX_MINT_PROOF_OF_STAKE;
+    nRewardCoinYear = MAX_MINT_PROOF_OF_STAKE;
 	
 //    if (pindexBestHeader->nHeight < 641250 ) {
     int64_t nSubsidy = nCoinAge * nRewardCoinYear / 365 / COIN;
